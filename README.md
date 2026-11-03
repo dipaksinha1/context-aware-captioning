@@ -101,8 +101,9 @@ src/context_caption/
   player.py                    Synchronized HTML media player
   exporters.py                 SRT, VTT, and JSON exports
   cli.py                       Local processing and project re-export CLI
+  evaluate.py                  WER/DER/timestamp scoring against a reference project
 examples/                      Synthetic demonstration project and audio
-tests/                        Core, media, pipeline, and Streamlit tests
+tests/                         Core, media, pipeline, evaluation, and Streamlit tests
 docs/                          Architecture, evaluation, and GitHub setup
 .github/workflows/ci.yml        Automated lint and tests
 ```

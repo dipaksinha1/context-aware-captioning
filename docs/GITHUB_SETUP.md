@@ -63,6 +63,7 @@ synthetic demonstration WAV is explicitly allowed.
 ## Next milestones
 
 - Run and record the real-model smoke test.
-- Annotate consented reference recordings and evaluate word/speaker/timestamp errors.
+- Annotate consented reference recordings and score them with `context-caption-eval`
+  (see `EVALUATION.md`).
 - Conduct the HCI review tasks in `EVALUATION.md`.
 - Choose a source-code license before public release; model licenses remain separate.

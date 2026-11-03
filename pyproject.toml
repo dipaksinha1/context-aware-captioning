@@ -20,6 +20,7 @@ dev = ["ruff>=0.9,<1"]
 
 [project.scripts]
 context-caption = "context_caption.cli:main"
+context-caption-eval = "context_caption.evaluate:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

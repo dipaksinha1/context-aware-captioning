@@ -3,7 +3,8 @@
 Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available.
 
 - Lint: `python -m ruff check .` — passed.
-- Test suite: `python -m unittest discover -s tests -v` — 23 tests passed on Python 3.10 and 3.13.
+- Test suite: `python -m unittest discover -s tests -v` — 23 tests passed on Python 3.10 and 3.13;
+  32 tests (including reference scoring) passed on Python 3.12 after adding `context-caption-eval`.
 - UI flow: Streamlit AppTest loaded the sample, renamed a speaker, and saved captions without exceptions.
 - Media: FFmpeg converted a real stereo WAV to 16 kHz mono; corrupt media was rejected.
 - Demo: FFmpeg/Flite generated two synthetic voices. Captions/times are predefined sample annotations.
@@ -26,6 +27,9 @@ Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available
 - CI matrix: Python 3.10, 3.11, 3.12, and 3.13; see the Actions tab for results of the compatibility fix.
 - GitHub repository: `dipaksinha1/context-aware-captioning`.
 - GitHub CI: workflow supplied; inspect the Actions tab for the current run status.
+
+- Reference scoring: unit tests cover WER counts, DER components, collar, label mapping, edited and
+  untimed words, and the CLI. The tool has not yet been applied to real model output.
 
 No ASR, diarization, emotion accuracy, or HCI study outcomes are claimed.
 

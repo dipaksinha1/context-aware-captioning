@@ -35,6 +35,26 @@ in the active environment to retain the exact dependencies used for your evaluat
 | Non-English recording | Alignment availability and emotion skipped status |
 | Silence | Empty transcript behavior |
 
+## Scoring against a reference
+
+Keep the unedited model output as the hypothesis. To build the reference, open a copy of that project in
+the app, correct text, speakers, and caption timing while listening, and save the JSON. Captions whose
+text or timing you change keep their original word records but are marked unaligned, so only words left
+untouched contribute to timestamp error. Speaker names in the reference need not match model labels.
+
+```bash
+context-caption-eval --reference outputs/reference.json --hypothesis outputs/captions.json
+context-caption-eval --reference outputs/reference.json --hypothesis outputs/captions.json --json > outputs/scores.json
+```
+
+The tool implements the formulas below without extra dependencies: WER over normalized caption-text tokens
+(lowercase, NFKC, punctuation removed; numbers are not expanded, so `2026` and `twenty twenty six` differ);
+frame-based DER at 10 ms over caption-level turns with an optimal one-to-one speaker mapping and a 0.25 s
+collar on each side of reference boundaries (`--collar`); overlapping reference turns are scored. It also
+reports word speaker accuracy on matched words and median/p95 word start and end error. Caption-level turns
+are coarser than a dedicated diarization annotation; for published DER, cross-check with pyannote.metrics
+on an RTTM reference and state the protocol.
+
 ## Metrics to measure
 
 - **Word error rate:** `(substitutions + deletions + insertions) / reference_word_count` after documenting
