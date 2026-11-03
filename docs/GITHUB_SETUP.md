@@ -1,11 +1,11 @@
 # GitHub repository and local development
 
-The private repository is https://github.com/pratheek96/context-aware-captioning.
+The repository is https://github.com/dipaksinha1/context-aware-captioning.
 Clone it to continue development. The creation instructions below apply only to a separate copy;
 do not run repository creation again for this existing repository.
 
 ```bash
-git clone https://github.com/pratheek96/context-aware-captioning.git
+git clone https://github.com/dipaksinha1/context-aware-captioning.git
 cd context-aware-captioning
 ```
 

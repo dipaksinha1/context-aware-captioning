@@ -14,16 +14,16 @@ pyannote speaker diarization, and optional transcript-based emotion cues in an e
 - Split captions on word-level speaker changes, with consistent speaker labels and colors.
 - Play media with synchronized captions, highlighted words, and click-to-seek controls.
 - Rename speakers, edit text/timing/speaker assignments, and search the transcript.
-- Optionally estimate English text emotion without modifying spoken content.
+- Optionally estimate English text emotion per speaker turn without modifying spoken content.
 - Export speaker-aware SRT, styled VTT, or a JSON project retaining original words and edits.
 - Reopen a JSON project and reattach its original media.
 - Try a predefined two-voice synthetic demo without downloading ML models or providing a token.
 
 ## Start with the demo
 
-Use Python 3.12 for the simplest match to local validation. The package accepts Python 3.11–3.13;
-Python 3.10 is unsupported because Streamlit 1.66.1 requires Python 3.11 or newer.
-CI checks all three supported Python versions.
+The package supports Python 3.10–3.13, as specified in the project proposal. Python 3.11+ installs
+Streamlit 1.66.1; Python 3.10 installs Streamlit 1.65.0, the last release supporting 3.10.
+CI checks all four supported Python versions. Python 3.12 is the simplest match to local validation.
 
 ```bash
 cd context-caption
@@ -134,8 +134,14 @@ FFmpeg as described above.
   exceed those targets; this is a prototype, not a broadcast subtitle compliance validator.
 - Editing text or cue times disables word highlighting for that cue; original word timings remain
   available in JSON and the Word timestamps tab. Text edits clear stale emotion predictions.
-- Emotion is inferred from English text, not vocal prosody or a person's internal state. Only predictions
-  at confidence >= 0.60 are shown; low confidence stays unlabeled. Emotion is hidden by default.
+- Emotion is inferred from English text, not vocal prosody or a person's internal state. Consecutive
+  cues by the same speaker are classified together as one speaker turn, so short cues share their turn's
+  label. Only predictions at confidence >= 0.60 are shown; low confidence stays unlabeled. Emotion is
+  hidden by default. Non-English recordings skip emotion and report that status.
+- Speaker colors come from a six-color palette. With more than six speakers, colors repeat; the
+  speaker name is always shown with the color, so labels stay distinguishable.
+- Words that diarization cannot attribute are labeled UNKNOWN rather than guessed from the nearest
+  speaker. Assign them in Review & edit.
 - SRT uses plain speaker names. VTT adds color classes; external players differ in styling support.
 - Upload limit: 200 MiB; processing limit: 60 minutes. FFmpeg conversion times out after five minutes.
   Model inference is synchronous and may take much longer on CPU. There is no background queue/cancel.
@@ -150,18 +156,36 @@ FFmpeg as described above.
 
 ## GitHub
 
-Repository: **[pratheek96/context-aware-captioning](https://github.com/pratheek96/context-aware-captioning)** (private).
+Repository: **[dipaksinha1/context-aware-captioning](https://github.com/dipaksinha1/context-aware-captioning)**.
 
 ```bash
-git clone https://github.com/pratheek96/context-aware-captioning.git
+git clone https://github.com/dipaksinha1/context-aware-captioning.git
 cd context-aware-captioning
 ```
 
-Authenticate with your GitHub account when cloning this private repository.
+Authenticate with your GitHub account if the repository is private.
 See [docs/GITHUB_SETUP.md](docs/GITHUB_SETUP.md) for development and upload instructions.
 The repository excludes access tokens, uploaded recordings, and downloaded model weights.
 
 ## References
+
+### Literature (from the project proposal)
+
+1. Ubur, S. D., et al. (2026). Speaker-Aware Affective Captioning for Multi-Speaker STEM Talk in
+   Inclusive Classrooms. *CHI EA 2026*. <https://doi.org/10.1145/3772363.3798718>
+2. Amorim, J., Pimentel, J., & Rudzicz, F. (2026). On the Limitations of Speaker Diarization.
+   *Expert Systems, 43*(3), e70221. <https://doi.org/10.1111/exsy.70221>
+3. Ubur, S. D., et al. (2025). Interpretive Caption: Real-Time Vocal Emotion Cues for DHH Users.
+   *ASSETS 2025*. <https://doi.org/10.1145/3663547.3759697>
+4. McDonnell, E. J., et al. (2024). "Caption It in an Accessible Way That Is Also Enjoyable."
+   *CHI 2024*. <https://doi.org/10.1145/3613904.3642177>
+5. de Lacerda Pataca, C., et al. (2024). Caption Royale: Exploring the Design Space of Affective
+   Captions from the Perspective of Deaf and Hard-of-Hearing Individuals. *CHI 2024*.
+   <https://doi.org/10.1145/3613904.3642258>
+6. Bain, M., Huh, J., Han, T., & Zisserman, A. (2023). WhisperX: Time-Accurate Speech Transcription
+   of Long-Form Audio. *INTERSPEECH 2023*. <https://doi.org/10.21437/Interspeech.2023-78>
+
+### Software and models
 
 - [WhisperX official repository and Python API](https://github.com/m-bain/whisperX)
 - [pyannote.audio official repository](https://github.com/pyannote/pyannote-audio)

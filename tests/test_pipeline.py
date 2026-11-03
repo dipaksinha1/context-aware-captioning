@@ -6,7 +6,8 @@ import unittest
 from unittest.mock import MagicMock, patch
 import wave
 
-from context_caption.pipeline import Settings, process
+from context_caption.pipeline import Settings, annotate_emotions, process, speaker_turns
+from context_caption.schema import Caption, Project
 
 
 class PipelineTests(unittest.TestCase):
@@ -74,3 +75,22 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(project.captions[0].text, "Hello there")
         self.assertIsNone(project.captions[0].emotion)
         self.assertIn("Unavailable", project.metadata["emotion_status"])
+
+    def test_emotion_classifies_whole_speaker_turns(self):
+        captions = [Caption(1, 0, 1, "A", "I passed", "I passed"),
+                    Caption(2, 1, 2, "A", "the exam!", "the exam!"),
+                    Caption(3, 2, 3, "B", "Oh no.", "Oh no."),
+                    Caption(4, 3, 4, "A", "Really.", "Really.")]
+        self.assertEqual([[c.id for c in t] for t in speaker_turns(captions)], [[1, 2], [3], [4]])
+        project = Project(captions, "en")
+        classifier = MagicMock(return_value=[{"label": "joy", "score": .9},
+                                             {"label": "sadness", "score": .7},
+                                             {"label": "neutral", "score": .4}])
+        transformers = ModuleType("transformers")
+        transformers.pipeline = MagicMock(return_value=classifier)
+        with patch.dict("sys.modules", {"transformers": transformers}):
+            annotate_emotions(project)
+        self.assertEqual(classifier.call_args.args[0], ["I passed the exam!", "Oh no.", "Really."])
+        self.assertEqual([c.emotion for c in project.captions], ["joy", "joy", "sadness", None])
+        self.assertEqual([c.text for c in project.captions],
+                         ["I passed", "the exam!", "Oh no.", "Really."])
