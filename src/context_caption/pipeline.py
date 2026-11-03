@@ -41,6 +41,17 @@ def release_memory(torch):
         torch.cuda.empty_cache()
 
 
+def speaker_turns(captions):
+    """Group consecutive cues by the same speaker so emotion sees a whole speaker segment."""
+    turns = []
+    for caption in sorted(captions, key=lambda c: (c.start, c.id)):
+        if turns and turns[-1][0].speaker == caption.speaker:
+            turns[-1].append(caption)
+        else:
+            turns.append([caption])
+    return turns
+
+
 def annotate_emotions(project):
     if project.language != "en":
         project.metadata["emotion_status"] = "Skipped: classifier supports English only."
@@ -49,13 +60,18 @@ def annotate_emotions(project):
     classifier = pipeline(
         "text-classification", model="j-hartmann/emotion-english-distilroberta-base", device=-1
     )
-    predictions = classifier([c.text for c in project.captions], truncation=True, batch_size=8)
-    for c, prediction in zip(project.captions, predictions):
+    turns = speaker_turns(project.captions)
+    texts = [" ".join(c.text for c in turn) for turn in turns]
+    predictions = classifier(texts, truncation=True, batch_size=8)
+    for turn, prediction in zip(turns, predictions):
         # Low confidence is unknown, rather than incorrectly relabeled as neutral.
         if prediction["score"] >= 0.6:
-            c.emotion = prediction["label"]
-            c.emotion_score = float(prediction["score"])
-    project.metadata["emotion_status"] = "Text inference; threshold 0.60. Not vocal emotion."
+            for c in turn:
+                c.emotion = prediction["label"]
+                c.emotion_score = float(prediction["score"])
+    project.metadata["emotion_status"] = (
+        "Text inference per speaker turn; threshold 0.60. Not vocal emotion."
+    )
 
 
 def process(source: Path, settings: Settings, progress=lambda value, label: None):

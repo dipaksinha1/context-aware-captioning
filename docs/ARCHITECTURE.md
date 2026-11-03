@@ -8,7 +8,7 @@ The prototype follows the seven-step workflow in the supplied COSC-5926 proposal
 | Speech transcription | `pipeline.process` loads WhisperX and transcribes in batches | Adapter contract test; real-model smoke test pending |
 | Speaker diarization | WhisperX `DiarizationPipeline` wraps pyannote community-1 | Adapter test; real-model quality pending |
 | Word/speaker alignment | Forced alignment followed by `assign_word_speakers`; cues split by word speaker | Core speaker-turn and untimed-word tests |
-| Optional emotion | English DistilRoBERTa classifier; separate cue metadata; confidence threshold | Optional branch adapter test; quality pending |
+| Optional emotion | English DistilRoBERTa classifier run per speaker turn (consecutive same-speaker cues); separate cue metadata; confidence threshold | Optional branch adapter test; quality pending |
 | Synchronized display | Streamlit and an embedded HTML player using the same media clock for cues and words | UI flow test; interactive browser verification pending |
 | Subtitle export | Speaker-prefixed SRT, styled VTT, and JSON for reopening | Serialization, escaping, and CLI export tests |
 
@@ -20,7 +20,8 @@ The prototype follows the seven-step workflow in the supplied COSC-5926 proposal
 4. Forced alignment produces word times and optional alignment confidence scores.
 5. pyannote clusters speaker turns; WhisperX assigns speakers by temporal overlap.
 6. The cue builder groups contiguous words, splitting at speaker changes and length targets.
-7. The optional emotion model adds labels to separate fields; it never rewrites transcript text.
+7. The optional emotion model classifies each speaker turn (consecutive cues by one speaker) and copies
+   the label to that turn's cues in separate fields; it never rewrites transcript text.
 8. The project is stored in session memory. Edits are applied to a deep copy and validated atomically.
 9. Exports serialize reviewed cues. JSON additionally retains original words and original caption text.
 
