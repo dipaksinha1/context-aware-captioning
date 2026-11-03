@@ -35,6 +35,29 @@ class CaptionTests(unittest.TestCase):
         self.assertEqual(captions[0].text, "$13 today")
         self.assertIsNone(captions[0].words[0].start)
 
+    def test_untimed_word_without_speaker_stays_in_cue(self):
+        # WhisperX leaves untimed words (e.g. numbers) without a speaker. They must not become
+        # a separate UNKNOWN cue spanning the whole segment.
+        captions = make_captions([{"start": 0, "end": 4, "words": [
+            {"word": "In", "start": 0, "end": .3, "speaker": "A"},
+            {"word": "2026", "score": None},
+            {"word": "we", "start": .8, "end": 1, "speaker": "A"},
+            {"word": "Yes", "start": 2, "end": 2.5, "speaker": "B"},
+            {"word": "42"}]}])
+        self.assertEqual([(c.speaker, c.text) for c in captions], [("A", "In 2026 we"), ("B", "Yes 42")])
+        self.assertEqual((captions[1].start, captions[1].end), (2, 2.5))
+        self.assertEqual(captions[0].words[1].speaker, "UNKNOWN")
+        self.assertIsNone(captions[0].words[1].start)
+
+    def test_leading_untimed_word_joins_next_speaker(self):
+        captions = make_captions([{"start": 0, "end": 2, "words": [
+            {"word": "$13"}, {"word": "today", "start": 1, "end": 2, "speaker": "B"}]}])
+        self.assertEqual([(c.speaker, c.text) for c in captions], [("B", "$13 today")])
+
+    def test_only_untimed_words_stay_unknown(self):
+        captions = make_captions([{"start": 0, "end": 2, "words": [{"word": "42"}]}])
+        self.assertEqual((captions[0].speaker, captions[0].start, captions[0].end), ("UNKNOWN", 0, 2))
+
     def test_no_words_fallback(self):
         captions = make_captions([{"start": 0, "end": 2, "text": "Hello"}])
         self.assertEqual(captions[0].speaker, "UNKNOWN")

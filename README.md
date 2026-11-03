@@ -129,7 +129,9 @@ FFmpeg as described above.
   or link people across recordings. Manual speaker names are review annotations.
 - Overlapping speech, accents, noise, short utterances, and rapid turns can reduce quality.
 - A word without alignment remains explicitly untimed (`null`). It is not silently dropped or assigned
-  a fabricated timestamp. Untimed groups use the original segment bounds for display and need review.
+  a fabricated timestamp. Such words (often numbers or symbols) have no speaker evidence, so they stay
+  in the surrounding caption instead of splitting it; their word record keeps speaker UNKNOWN. A cue made
+  only of untimed words uses the original segment bounds for display and needs review.
 - Cue length targets are 84 characters and six seconds. A single long token or fallback segment can
   exceed those targets; this is a prototype, not a broadcast subtitle compliance validator.
 - Editing text or cue times disables word highlighting for that cue; original word timings remain

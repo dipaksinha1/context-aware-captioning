@@ -2,6 +2,16 @@
 from .schema import Caption, Word
 
 
+def _floating(word):
+    # Untimed words (often numbers/symbols) get no speaker from diarization because they have
+    # no time. They carry no evidence of a speaker change, so they stay inside the surrounding cue.
+    return word.start is None and word.speaker == "UNKNOWN"
+
+
+def _cue_speaker(words):
+    return next((w.speaker for w in words if not _floating(w)), "UNKNOWN")
+
+
 def make_captions(segments, max_chars=84, max_duration=6.0):
     captions = []
     for segment in segments:
@@ -26,7 +36,7 @@ def make_captions(segments, max_chars=84, max_duration=6.0):
             if end <= start:
                 end = start + 0.001
             captions.append(Caption(
-                len(captions) + 1, start, end, pending[0].speaker, text, text, list(pending)
+                len(captions) + 1, start, end, _cue_speaker(pending), text, text, list(pending)
             ))
             pending.clear()
 
@@ -42,7 +52,11 @@ def make_captions(segments, max_chars=84, max_duration=6.0):
             timed = [w for w in pending if w.start is not None]
             too_long = timed and end is not None and end - timed[0].start > max_duration
             too_wide = sum(len(w.text) + 1 for w in pending) + len(text) > max_chars
-            if pending and (pending[0].speaker != word.speaker or too_long or too_wide):
+            speaker_change = (
+                not _floating(word) and any(not _floating(w) for w in pending)
+                and _cue_speaker(pending) != word.speaker
+            )
+            if pending and (speaker_change or too_long or too_wide):
                 flush()
             pending.append(word)
         flush()
