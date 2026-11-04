@@ -34,10 +34,16 @@ button:focus-visible{outline:3px solid #0f766e}
 <div id="seek" aria-label="Jump to caption"></div><script>
 const data=PAYLOAD;
 const media=document.getElementById('media'), box=document.getElementById('captions');
+const timed=(w,t)=>w.start!==null && t>=w.start && t<w.end;
+let shown=null, frame=null;
 function render(){
  const t=media.currentTime;
- box.replaceChildren();
  const active=data.captions.filter(c=>t>=c.start && t<c.end);
+ // Rebuild only when the active cue or word changes; playback calls this on every frame.
+ const key=active.map(c=>data.captions.indexOf(c)+':'+c.words.findIndex(w=>timed(w,t))).join('|');
+ if(key===shown)return;
+ shown=key;
+ box.replaceChildren();
  if(!active.length){box.textContent='Captions appear here during speech.';return;}
  for(const c of active){
   const line=document.createElement('div'), label=document.createElement('span');
@@ -46,12 +52,15 @@ function render(){
   if(c.words.length){
    for(const w of c.words){
     const span=document.createElement('span');span.textContent=w.text+' ';
-    if(w.start!==null && t>=w.start && t<w.end)span.className='active';line.append(span);
+    if(timed(w,t))span.className='active';line.append(span);
    }
   }else{const span=document.createElement('span');span.textContent=c.text;line.append(span);}
   box.append(line);
  }
 }
+// timeupdate fires only about every 250 ms, which skips short words; follow frames while playing.
+function tick(){render();frame=media.paused||media.ended?null:requestAnimationFrame(tick);}
+media.addEventListener('play',()=>{if(frame===null)frame=requestAnimationFrame(tick);});
 media.addEventListener('timeupdate',render);media.addEventListener('seeked',render);
 const seek=document.getElementById('seek');
 for(const c of data.captions){

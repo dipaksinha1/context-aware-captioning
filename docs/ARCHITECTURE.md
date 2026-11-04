@@ -43,7 +43,9 @@ restrictive proxies.
 **Resource use:** ASR and alignment models are released before the next heavy stage. CPU defaults to int8,
 CUDA to float16. Models are loaded per run rather than globally cached with a user's access token.
 
-**Playback:** a single HTML media element drives all active cues, including simultaneous cues. Labels
+**Playback:** a single HTML media element drives all active cues, including simultaneous cues. While
+playing, highlighting follows animation frames rather than `timeupdate` (about every 250 ms), so short
+words are not skipped; the caption DOM is rebuilt only when the active cue or word changes. Labels
 accompany colors, keyboard-accessible seek buttons jump to cue starts, and gaps clear captions.
 All transcript and speaker strings are inserted using DOM `textContent`; embedded JSON escapes HTML
 script delimiters. VTT text also escapes markup.

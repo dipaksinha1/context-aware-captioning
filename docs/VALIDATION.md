@@ -56,6 +56,15 @@ Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available
 - Reference scoring: unit tests cover WER counts, DER components, collar, label mapping, edited and
   untimed words, and the CLI; it was applied to the real-model run above.
 
+- Player timing (headless Chromium, full 41 s of the test video): with `timeupdate`-only rendering,
+  78 of 103 timed words were ever highlighted and highlights lagged word starts by a median 116 ms
+  (max 250 ms). Rendering on animation frames while playing highlighted 103 of 103, median lag 8 ms
+  (max 17 ms).
+- Demo video `docs/demo/app_demo.mp4` (2:00, 1280×800, recorded with `scripts/record_app_demo.js`):
+  real processing in the UI took 41 s. Audio is aligned by detecting highlight changes in the recorded
+  frames; in the final file they fall a median 38 ms after word starts in the audio (p10 −4 ms,
+  p90 81 ms over 99 changes). The script verifies the caption correction lands on the intended row.
+
 Results above come from one synthetic recording and do not establish accuracy on real conversation.
 No HCI study outcomes are claimed.
 

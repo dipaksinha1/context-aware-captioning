@@ -7,6 +7,18 @@ COSC-5926 — Advanced Human-Computer Interaction
 A local Streamlit prototype that combines WhisperX transcription and forced word alignment,
 pyannote speaker diarization, and optional transcript-based emotion cues in an editable caption workflow.
 
+## Demo
+
+[![End-to-end demo: synchronized speaker captions with word highlighting](docs/demo/playback.png)](docs/demo/app_demo.mp4)
+
+**[Watch the 2-minute end-to-end demo (MP4, with sound)](docs/demo/app_demo.mp4).** A 41-second, three-voice
+test recording goes through real WhisperX transcription, word alignment, pyannote diarization, and text
+emotion on CPU (processing shown 8× faster). It then shows naming the voices, correcting a misheard word,
+synchronized playback, seeking and search, exports, and the scores against the script: **2.9% word error rate,
+25.7% diarization error rate, 73.3% of words given the right speaker**. The voices are synthetic, so these numbers
+check the pipeline rather than accuracy on real conversation (see [docs/VALIDATION.md](docs/VALIDATION.md)).
+Re-record it with `node scripts/record_app_demo.js` while the app runs with model access.
+
 ## What you can do
 
 - Upload audio/video; convert it to 16 kHz mono audio using FFmpeg.
@@ -126,9 +138,10 @@ src/context_caption/
   cli.py                       Local processing and project re-export CLI
   evaluate.py                  WER/DER/timestamp scoring against a reference project
 scripts/make_test_recording.py  Synthetic three-speaker test video and reference
+scripts/record_app_demo.js      Records the narrated end-to-end demo (Playwright + FFmpeg)
 examples/                      Synthetic demo project/audio and three-speaker test video
 tests/                         Core, media, pipeline, evaluation, and Streamlit tests
-docs/                          Architecture, evaluation, and GitHub setup
+docs/                          Architecture, evaluation, validation, GitHub setup, and demo video
 .github/workflows/ci.yml        Automated lint and tests
 ```
 
