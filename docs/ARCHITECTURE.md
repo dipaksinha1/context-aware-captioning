@@ -42,6 +42,12 @@ renderers do not convey emoji reliably; JSON stores only the plain label.
 Silero VAD is downloaded from GitHub through `torch.hub` at run time, which fails offline or behind
 restrictive proxies.
 
+**Loudness-scaled words:** each aligned word's level is the RMS of the normalized 16 kHz waveform over its
+span, in dBFS. That is a property of the recording, not sound pressure at the speaker: microphone distance
+and gain shift every level, and overlapping speech is measured together. Sizes are therefore relative to
+the recording's median word level (+0.035 em per dB, clamped to 0.75–1.45 em) instead of fixed thresholds,
+the effect can be switched off, and levels for older projects are measured when their media is attached.
+
 **Resource use:** ASR and alignment models are released before the next heavy stage. CPU defaults to int8,
 CUDA to float16. Models are loaded per run rather than globally cached with a user's access token.
 

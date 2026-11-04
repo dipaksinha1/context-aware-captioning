@@ -3,16 +3,19 @@ import base64
 import html
 import json
 
+from .loudness import reference_level, size_scale
 from .schema import emotion_label
 
 
-def player_html(media: bytes, mime: str, project, emotions=False):
+def player_html(media: bytes, mime: str, project, emotions=False, loudness=True):
+    reference = reference_level(project) if loudness else None
     payload = json.dumps({
         "captions": [
             {"start": c.start, "end": c.end, "speaker": project.speakers[c.speaker],
              "color": project.colors()[c.speaker], "text": c.text,
              "emotion": emotion_label(c.emotion) if emotions and c.emotion else None,
-             "words": [w.__dict__ for w in c.words] if c.alignment_valid and c.text == c.original_text else []}
+             "words": [{**w.__dict__, "scale": size_scale(w.level_db, reference)} for w in c.words]
+             if c.alignment_valid and c.text == c.original_text else []}
             for c in project.captions
         ]
     }).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
@@ -54,6 +57,8 @@ function render(){
   if(c.words.length){
    for(const w of c.words){
     const span=document.createElement('span');span.textContent=w.text+' ';
+    if(w.scale!==1)span.style.fontSize=w.scale+'em';
+    if(w.level_db!==null)span.title=w.level_db.toFixed(1)+' dBFS';
     if(timed(w,t))span.className='active';line.append(span);
    }
   }else{const span=document.createElement('span');span.textContent=c.text;line.append(span);}

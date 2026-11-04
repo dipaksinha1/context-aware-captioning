@@ -6,6 +6,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from .captions import make_captions
+from .loudness import add_word_levels, read_wav
 from .media import normalize_audio
 from .schema import Project
 
@@ -127,7 +128,9 @@ def process(source: Path, settings: Settings, progress=lambda value, label: None
             "duration": duration, "mode": "real", "asr_model": settings.model,
             "diarization_model": "pyannote/speaker-diarization-community-1",
             "word_timings": "Forced alignment; missing word times remain null.",
+            "word_levels": "RMS dBFS of the normalized waveform over each aligned word.",
         })
+        add_word_levels(project, *read_wav(wav))
         if settings.emotions and project.captions:
             progress(0.9, "Estimating text emotion")
             try:

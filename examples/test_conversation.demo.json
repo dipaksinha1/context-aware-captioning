@@ -5,11 +5,21 @@
   "video": "app_demo.mp4",
   "speakers": 3,
   "describe": "41 s, 3 synthetic voices",
-  "edit": {"from": "Dude,", "to": "Good.", "label": "“Dude,” → “Good.”"},
+  "edit": {
+    "from": "Dude,",
+    "to": "Good.",
+    "label": "“Dude,” → “Good.”"
+  },
   "search": "Toronto",
   "notes": [
     "Main errors: quick replies attached to the previous speaker; “Good.” heard as “Dude,”.",
     "With speaker count on auto-detect, DER rose to 38.1% (two similar voices merged)."
   ],
-  "summary": "transcription is strong; speaker turns need review and correction"
+  "summary": "transcription is strong; speaker turns need review and correction",
+  "playbackNotes": [
+    {
+      "at": 19.5,
+      "text": "Word size follows loudness: each word's level in dBFS, relative to the recording's median"
+    }
+  ]
 }

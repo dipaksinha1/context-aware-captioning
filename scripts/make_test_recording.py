@@ -27,9 +27,10 @@ from context_caption.schema import Caption, Project  # noqa: E402
 
 RATE = 22050
 
-# Each line: (speaker, spoken text, gap after this line in seconds, reference text or None).
+# Each line: (speaker, spoken text, gap after this line in seconds, reference text or None[, gain dB]).
 # A negative gap starts the next line that many seconds before this one ends (crosstalk).
 # Reference text differs from spoken text only where speech is written differently ("$40 million").
+# The optional gain raises or lowers a line (a raised voice, an aside) for loudness-scaled captions.
 SCRIPTS = {
     "conversation": {
         "file": "test_conversation",
@@ -85,11 +86,11 @@ SCRIPTS = {
             ("Tom", "That's roughly enough to make every bus route free and add night service.", 0.6, None),
             ("Elena", "Honestly, I'm worried. If customers stop driving in, small shops like mine "
                       "could close within a year.", -0.45, None),
-            ("Dana", "Right.", 0.5, None),
+            ("Dana", "Right.", 0.5, None, -8),
             ("Dana", "That's a real fear. Tom, what do the studies say?", 0.5, None),
             ("Tom", "The studies the council cites show traffic falling by about a fifth, "
                     "but the effect on shops is mixed.", 0.4, None),
-            ("Elena", "Mixed isn't good enough when it's your livelihood on the line.", 0.5, None),
+            ("Elena", "Mixed isn't good enough when it's your livelihood on the line.", 0.5, None, 7),
             ("Marcus", "I hear you. That's why the plan includes a discount for delivery vans "
                        "in the first year.", 0.4, None),
             ("Elena", "Really? I didn't know that. That actually helps.", 0.7, None),
@@ -99,11 +100,11 @@ SCRIPTS = {
             ("Marcus", "Exactly.", 0.4, None),
             ("Marcus", "So the council added exemptions for low income households and people with "
                        "disabilities.", 0.5, None),
-            ("Elena", "It's sad that we only think about fairness after the backlash.", 0.7, None),
+            ("Elena", "It's sad that we only think about fairness after the backlash.", 0.7, None, -6),
             ("Dana", "Quick round to finish. Would you vote yes? Marcus?", 0.4, None),
             ("Marcus", "Yes, with an independent review after a couple of years.", 0.4, None),
             ("Elena", "Maybe. Show me the delivery rules in writing first.", 0.4, None),
-            ("Tom", "Yes. Free buses would change this city for the better.", 0.6, None),
+            ("Tom", "Yes. Free buses would change this city for the better.", 0.6, None, 5),
             ("Dana", "Thank you all. That's Policy Roundtable. Stay curious, and we'll see you next week.",
              1.0, None),
         ],
@@ -149,8 +150,8 @@ def main(argv=None):
         voices[name] = PiperVoice.load(str(model))
 
     placed, captions, cursor = [], [], 0.5
-    for i, (speaker, text, gap, reference) in enumerate(spec["lines"], 1):
-        audio = synthesize(voices[speaker], text)
+    for i, (speaker, text, gap, reference, *gain) in enumerate(spec["lines"], 1):
+        audio = synthesize(voices[speaker], text) * 10 ** ((gain[0] if gain else 0) / 20)
         start, end = cursor, cursor + len(audio) / RATE
         placed.append((speaker, int(round(start * RATE)), audio))
         captions.append(Caption(i, round(start, 3), round(end, 3), speaker, reference or text,
@@ -164,6 +165,12 @@ def main(argv=None):
         tracks[speaker][offset:offset + len(audio)] += audio
     if args.noise:
         mix += np.random.default_rng(0).normal(0, args.noise * 32767, total).astype(np.float32)
+    peak = float(np.abs(mix).max())
+    if peak > 0.95 * 32767:   # scale the whole mix down rather than clip; relative levels are kept
+        factor = 0.95 * 32767 / peak
+        mix *= factor
+        for name in tracks:
+            tracks[name] *= factor
     samples = np.clip(mix, -32768, 32767).astype(np.int16)
 
     base = args.output / spec["file"]
@@ -186,7 +193,7 @@ def main(argv=None):
             "-map", "[v]", "-map", "0:a", "-c:v", "libx264", "-preset", "veryfast", "-crf", "32",
             "-c:a", "aac", "-b:a", "64k", "-shortest", str(base.with_suffix(".mp4")),
         ], check=True)
-    overlaps = sum(1 for _, _, gap, _ in spec["lines"] if gap < 0)
+    overlaps = sum(1 for line in spec["lines"] if line[2] < 0)
     reference = Project(captions, speakers={k: k for k in spec["voices"]}, metadata={
         "mode": "reference", "duration": duration, "noise": args.noise, "voices": spec["voices"],
         "note": "Scripted Piper TTS recording; utterance-level reference without word times.",

@@ -6,6 +6,8 @@ import unittest
 from unittest.mock import MagicMock, patch
 import wave
 
+import numpy as np
+
 from context_caption.pipeline import Settings, annotate_emotions, process, speaker_turns
 from context_caption.schema import Caption, Project
 
@@ -48,7 +50,9 @@ class PipelineTests(unittest.TestCase):
             source = Path(directory) / "input.wav"
             with wave.open(str(source), "wb") as stream:
                 stream.setparams((1, 2, 16000, 0, "NONE", "not compressed"))
-                stream.writeframes(b"\0" * 32000)
+                # Silent first half ("Hello"), then a 1 kHz square wave at 0.25 full scale ("there").
+                tone = np.tile(np.array([8192] * 8 + [-8192] * 8, np.int16), 500)
+                stream.writeframes(np.zeros(8000, np.int16).tobytes() + tone.tobytes())
             progress = MagicMock()
             project = process(source, Settings(token="secret-test-token", emotions=emotion), progress)
         self.assertNotIn("secret-test-token", str(project.to_dict()))
@@ -61,6 +65,9 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(whisperx.load_model.call_args.kwargs["compute_type"], "int8")
         self.assertEqual(diarize.DiarizationPipeline.call_args.kwargs["model_name"],
                          "pyannote/speaker-diarization-community-1")
+        hello, there = project.captions[0].words
+        self.assertEqual(hello.level_db, -90.0)
+        self.assertAlmostEqual(there.level_db, -12.0, delta=0.1)
 
     def test_no_speech_skips_alignment_and_diarization(self):
         project, whisperx, diarize = self.run_pipeline(empty=True)

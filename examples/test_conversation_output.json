@@ -13,21 +13,24 @@
           "start": 0.503,
           "end": 0.683,
           "speaker": "SPEAKER_02",
-          "score": 0.972
+          "score": 0.972,
+          "level_db": -12.9
         },
         {
           "text": "morning",
           "start": 0.743,
           "end": 1.024,
           "speaker": "SPEAKER_02",
-          "score": 0.734
+          "score": 0.734,
+          "level_db": -10.2
         },
         {
           "text": "everyone.",
           "start": 1.084,
           "end": 1.524,
           "speaker": "SPEAKER_02",
-          "score": 0.83
+          "score": 0.83,
+          "level_db": -15.6
         }
       ],
       "alignment_valid": true,
@@ -47,42 +50,48 @@
           "start": 1.844,
           "end": 2.065,
           "speaker": "SPEAKER_02",
-          "score": 0.971
+          "score": 0.971,
+          "level_db": -13.7
         },
         {
           "text": "for",
           "start": 2.105,
           "end": 2.205,
           "speaker": "SPEAKER_02",
-          "score": 0.857
+          "score": 0.857,
+          "level_db": -15.6
         },
         {
           "text": "joining",
           "start": 2.245,
           "end": 2.585,
           "speaker": "SPEAKER_02",
-          "score": 0.697
+          "score": 0.697,
+          "level_db": -10.5
         },
         {
           "text": "the",
           "start": 2.625,
           "end": 2.705,
           "speaker": "SPEAKER_02",
-          "score": 0.851
+          "score": 0.851,
+          "level_db": -13.1
         },
         {
           "text": "Accessibility",
           "start": 2.785,
           "end": 3.606,
           "speaker": "SPEAKER_02",
-          "score": 0.9
+          "score": 0.9,
+          "level_db": -16.5
         },
         {
           "text": "Review.",
           "start": 3.666,
           "end": 4.006,
           "speaker": "SPEAKER_02",
-          "score": 0.862
+          "score": 0.862,
+          "level_db": -15.0
         }
       ],
       "alignment_valid": true,
@@ -102,28 +111,32 @@
           "start": 4.787,
           "end": 5.088,
           "speaker": "SPEAKER_00",
-          "score": 0.934
+          "score": 0.934,
+          "level_db": -15.7
         },
         {
           "text": "to",
           "start": 5.128,
           "end": 5.188,
           "speaker": "SPEAKER_00",
-          "score": 0.752
+          "score": 0.752,
+          "level_db": -21.8
         },
         {
           "text": "be",
           "start": 5.228,
           "end": 5.328,
           "speaker": "SPEAKER_00",
-          "score": 0.974
+          "score": 0.974,
+          "level_db": -20.6
         },
         {
           "text": "here.",
           "start": 5.388,
           "end": 5.608,
           "speaker": "SPEAKER_00",
-          "score": 0.894
+          "score": 0.894,
+          "level_db": -16.1
         }
       ],
       "alignment_valid": true,
@@ -143,49 +156,56 @@
           "start": 5.688,
           "end": 5.768,
           "speaker": "SPEAKER_00",
-          "score": 0.847
+          "score": 0.847,
+          "level_db": -15.5
         },
         {
           "text": "tested",
           "start": 5.828,
           "end": 6.169,
           "speaker": "SPEAKER_00",
-          "score": 0.847
+          "score": 0.847,
+          "level_db": -13.5
         },
         {
           "text": "the",
           "start": 6.189,
           "end": 6.269,
           "speaker": "SPEAKER_00",
-          "score": 0.83
+          "score": 0.83,
+          "level_db": -18.0
         },
         {
           "text": "caption",
           "start": 6.289,
           "end": 6.669,
           "speaker": "SPEAKER_00",
-          "score": 0.758
+          "score": 0.758,
+          "level_db": -15.0
         },
         {
           "text": "editor",
           "start": 6.709,
           "end": 7.029,
           "speaker": "SPEAKER_00",
-          "score": 0.832
+          "score": 0.832,
+          "level_db": -11.8
         },
         {
           "text": "on",
           "start": 7.11,
           "end": 7.19,
           "speaker": "SPEAKER_00",
-          "score": 0.724
+          "score": 0.724,
+          "level_db": -15.7
         },
         {
           "text": "Monday.",
           "start": 7.23,
           "end": 7.61,
           "speaker": "SPEAKER_00",
-          "score": 0.893
+          "score": 0.893,
+          "level_db": -16.6
         }
       ],
       "alignment_valid": true,
@@ -205,7 +225,8 @@
           "start": 8.271,
           "end": 8.571,
           "speaker": "SPEAKER_00",
-          "score": 0.808
+          "score": 0.808,
+          "level_db": -12.0
         }
       ],
       "alignment_valid": true,
@@ -225,28 +246,32 @@
           "start": 9.011,
           "end": 9.132,
           "speaker": "SPEAKER_00",
-          "score": 0.523
+          "score": 0.523,
+          "level_db": -12.9
         },
         {
           "text": "did",
           "start": 9.172,
           "end": 9.272,
           "speaker": "SPEAKER_00",
-          "score": 0.833
+          "score": 0.833,
+          "level_db": -18.4
         },
         {
           "text": "you",
           "start": 9.292,
           "end": 9.392,
           "speaker": "SPEAKER_00",
-          "score": 0.778
+          "score": 0.778,
+          "level_db": -14.9
         },
         {
           "text": "find?",
           "start": 9.432,
           "end": 9.712,
           "speaker": "SPEAKER_00",
-          "score": 0.755
+          "score": 0.755,
+          "level_db": -11.8
         }
       ],
       "alignment_valid": true,
@@ -266,77 +291,88 @@
           "start": 10.393,
           "end": 10.733,
           "speaker": "SPEAKER_00",
-          "score": 0.95
+          "score": 0.95,
+          "level_db": -14.3
         },
         {
           "text": "labels",
           "start": 10.773,
           "end": 11.114,
           "speaker": "SPEAKER_00",
-          "score": 0.801
+          "score": 0.801,
+          "level_db": -14.1
         },
         {
           "text": "stayed",
           "start": 11.154,
           "end": 11.414,
           "speaker": "SPEAKER_00",
-          "score": 0.878
+          "score": 0.878,
+          "level_db": -14.8
         },
         {
           "text": "consistent,",
           "start": 11.474,
           "end": 12.115,
           "speaker": "SPEAKER_00",
-          "score": 0.949
+          "score": 0.949,
+          "level_db": -18.2
         },
         {
           "text": "but",
           "start": 12.315,
           "end": 12.435,
           "speaker": "SPEAKER_00",
-          "score": 0.86
+          "score": 0.86,
+          "level_db": -18.8
         },
         {
           "text": "long",
           "start": 12.475,
           "end": 12.735,
           "speaker": "SPEAKER_00",
-          "score": 0.763
+          "score": 0.763,
+          "level_db": -12.8
         },
         {
           "text": "sentences",
           "start": 12.815,
           "end": 13.336,
           "speaker": "SPEAKER_00",
-          "score": 0.869
+          "score": 0.869,
+          "level_db": -17.2
         },
         {
           "text": "were",
           "start": 13.376,
           "end": 13.496,
           "speaker": "SPEAKER_00",
-          "score": 0.876
+          "score": 0.876,
+          "level_db": -22.2
         },
         {
           "text": "split",
           "start": 13.556,
           "end": 13.836,
           "speaker": "SPEAKER_00",
-          "score": 0.903
+          "score": 0.903,
+          "level_db": -13.5
         },
         {
           "text": "too",
           "start": 13.876,
           "end": 14.077,
           "speaker": "SPEAKER_00",
-          "score": 0.73
+          "score": 0.73,
+          "level_db": -11.9
         },
         {
           "text": "early.",
           "start": 14.197,
           "end": 14.437,
           "speaker": "SPEAKER_00",
-          "score": 0.831
+          "score": 0.831,
+          "level_db": -13.1
         }
       ],
       "alignment_valid": true,
@@ -356,84 +392,96 @@
           "start": 15.295,
           "end": 15.355,
           "speaker": "SPEAKER_01",
-          "score": 0.979
+          "score": 0.979,
+          "level_db": -11.4
         },
         {
           "text": "noticed",
           "start": 15.415,
           "end": 15.775,
           "speaker": "SPEAKER_01",
-          "score": 0.937
+          "score": 0.937,
+          "level_db": -15.5
         },
         {
           "text": "that",
           "start": 15.816,
           "end": 15.956,
           "speaker": "SPEAKER_01",
-          "score": 0.824
+          "score": 0.824,
+          "level_db": -21.4
         },
         {
           "text": "as",
           "start": 16.016,
           "end": 16.076,
           "speaker": "SPEAKER_01",
-          "score": 0.495
+          "score": 0.495,
+          "level_db": -31.4
         },
         {
           "text": "well,",
           "start": 16.116,
           "end": 16.356,
           "speaker": "SPEAKER_01",
-          "score": 0.969
+          "score": 0.969,
+          "level_db": -19.1
         },
         {
           "text": "especially",
           "start": 16.816,
           "end": 17.337,
           "speaker": "SPEAKER_01",
-          "score": 0.848
+          "score": 0.848,
+          "level_db": -17.5
         },
         {
           "text": "in",
           "start": 17.397,
           "end": 17.457,
           "speaker": "SPEAKER_01",
-          "score": 0.749
+          "score": 0.749,
+          "level_db": -15.7
         },
         {
           "text": "the",
           "start": 17.477,
           "end": 17.537,
           "speaker": "SPEAKER_01",
-          "score": 0.993
+          "score": 0.993,
+          "level_db": -15.7
         },
         {
           "text": "lecture",
           "start": 17.577,
           "end": 17.877,
           "speaker": "SPEAKER_01",
-          "score": 0.889
+          "score": 0.889,
+          "level_db": -18.2
         },
         {
           "text": "recording",
           "start": 17.897,
           "end": 18.318,
           "speaker": "SPEAKER_01",
-          "score": 0.852
+          "score": 0.852,
+          "level_db": -16.6
         },
         {
           "text": "from",
           "start": 18.358,
           "end": 18.498,
           "speaker": "SPEAKER_01",
-          "score": 0.972
+          "score": 0.972,
+          "level_db": -21.3
         },
         {
           "text": "Toronto.",
           "start": 18.558,
           "end": 19.038,
           "speaker": "SPEAKER_01",
-          "score": 0.767
+          "score": 0.767,
+          "level_db": -22.0
         }
       ],
       "alignment_valid": true,
@@ -453,28 +501,32 @@
           "start": 19.699,
           "end": 19.859,
           "speaker": "SPEAKER_01",
-          "score": 0.872
+          "score": 0.872,
+          "level_db": -11.2
         },
         {
           "text": "the",
           "start": 19.899,
           "end": 19.959,
           "speaker": "SPEAKER_01",
-          "score": 0.999
+          "score": 0.999,
+          "level_db": -15.5
         },
         {
           "text": "timing",
           "start": 19.999,
           "end": 20.34,
           "speaker": "SPEAKER_01",
-          "score": 0.86
+          "score": 0.86,
+          "level_db": -13.5
         },
         {
           "text": "accurate?",
           "start": 20.44,
           "end": 20.82,
           "speaker": "SPEAKER_01",
-          "score": 0.876
+          "score": 0.876,
+          "level_db": -16.7
         }
       ],
       "alignment_valid": true,
@@ -494,70 +546,80 @@
           "start": 21.24,
           "end": 21.701,
           "speaker": "SPEAKER_01",
-          "score": 0.929
+          "score": 0.929,
+          "level_db": -13.9
         },
         {
           "text": "each",
           "start": 22.041,
           "end": 22.201,
           "speaker": "SPEAKER_01",
-          "score": 0.792
+          "score": 0.792,
+          "level_db": -15.5
         },
         {
           "text": "caption",
           "start": 22.281,
           "end": 22.622,
           "speaker": "SPEAKER_01",
-          "score": 0.684
+          "score": 0.684,
+          "level_db": -15.4
         },
         {
           "text": "appeared",
           "start": 22.642,
           "end": 23.002,
           "speaker": "SPEAKER_01",
-          "score": 0.855
+          "score": 0.855,
+          "level_db": -16.6
         },
         {
           "text": "within",
           "start": 23.082,
           "end": 23.302,
           "speaker": "SPEAKER_01",
-          "score": 0.834
+          "score": 0.834,
+          "level_db": -16.3
         },
         {
           "text": "a",
           "start": 23.342,
           "end": 23.362,
           "speaker": "SPEAKER_01",
-          "score": 0.99
+          "score": 0.99,
+          "level_db": -37.0
         },
         {
           "text": "fraction",
           "start": 23.402,
           "end": 23.843,
           "speaker": "SPEAKER_01",
-          "score": 0.874
+          "score": 0.874,
+          "level_db": -17.4
         },
         {
           "text": "of",
           "start": 23.903,
           "end": 23.983,
           "speaker": "SPEAKER_01",
-          "score": 0.924
+          "score": 0.924,
+          "level_db": -20.8
         },
         {
           "text": "a",
           "start": 24.043,
           "end": 24.063,
           "speaker": "SPEAKER_01",
-          "score": 0.988
+          "score": 0.988,
+          "level_db": -27.7
         },
         {
           "text": "second.",
           "start": 24.103,
           "end": 24.523,
           "speaker": "SPEAKER_01",
-          "score": 0.867
+          "score": 0.867,
+          "level_db": -21.1
         }
       ],
       "alignment_valid": true,
@@ -577,7 +639,8 @@
           "start": 25.284,
           "end": 25.484,
           "speaker": "SPEAKER_02",
-          "score": 0.645
+          "score": 0.645,
+          "level_db": -11.9
         }
       ],
       "alignment_valid": true,
@@ -597,7 +660,8 @@
           "start": 25.804,
           "end": 26.125,
           "speaker": "SPEAKER_02",
-          "score": 0.754
+          "score": 0.754,
+          "level_db": -10.3
         }
       ],
       "alignment_valid": true,
@@ -617,56 +681,64 @@
           "start": 26.385,
           "end": 26.465,
           "speaker": "SPEAKER_01",
-          "score": 0.848
+          "score": 0.848,
+          "level_db": -19.3
         },
         {
           "text": "budget",
           "start": 26.505,
           "end": 26.805,
           "speaker": "SPEAKER_01",
-          "score": 0.887
+          "score": 0.887,
+          "level_db": -15.0
         },
         {
           "text": "for",
           "start": 26.825,
           "end": 26.925,
           "speaker": "SPEAKER_01",
-          "score": 0.992
+          "score": 0.992,
+          "level_db": -19.5
         },
         {
           "text": "the",
           "start": 26.965,
           "end": 27.046,
           "speaker": "SPEAKER_01",
-          "score": 0.832
+          "score": 0.832,
+          "level_db": -17.4
         },
         {
           "text": "next",
           "start": 27.086,
           "end": 27.306,
           "speaker": "SPEAKER_01",
-          "score": 0.832
+          "score": 0.832,
+          "level_db": -20.0
         },
         {
           "text": "study",
           "start": 27.426,
           "end": 27.746,
           "speaker": "SPEAKER_01",
-          "score": 0.925
+          "score": 0.925,
+          "level_db": -17.1
         },
         {
           "text": "is",
           "start": 27.786,
           "end": 27.866,
           "speaker": "SPEAKER_01",
-          "score": 0.666
+          "score": 0.666,
+          "level_db": -22.2
         },
         {
           "text": "about",
           "start": 27.906,
           "end": 28.086,
           "speaker": "SPEAKER_01",
-          "score": 0.946
+          "score": 0.946,
+          "level_db": -14.1
         }
       ],
       "alignment_valid": true,
@@ -686,7 +758,8 @@
           "start": 28.387,
           "end": 29.107,
           "speaker": "SPEAKER_02",
-          "score": 0.688
+          "score": 0.688,
+          "level_db": -16.5
         }
       ],
       "alignment_valid": true,
@@ -706,77 +779,88 @@
           "start": 29.808,
           "end": 29.968,
           "speaker": "SPEAKER_01",
-          "score": 0.96
+          "score": 0.96,
+          "level_db": -12.2
         },
         {
           "text": "should",
           "start": 30.008,
           "end": 30.188,
           "speaker": "SPEAKER_01",
-          "score": 0.904
+          "score": 0.904,
+          "level_db": -16.5
         },
         {
           "text": "cover",
           "start": 30.228,
           "end": 30.469,
           "speaker": "SPEAKER_01",
-          "score": 0.935
+          "score": 0.935,
+          "level_db": -15.1
         },
         {
           "text": "12",
           "start": 30.629,
           "end": 30.789,
           "speaker": "SPEAKER_01",
-          "score": 0.5
+          "score": 0.5,
+          "level_db": -16.7
         },
         {
           "text": "participants",
           "start": 30.849,
           "end": 31.469,
           "speaker": "SPEAKER_01",
-          "score": 0.859
+          "score": 0.859,
+          "level_db": -17.5
         },
         {
           "text": "if",
           "start": 31.57,
           "end": 31.65,
           "speaker": "SPEAKER_01",
-          "score": 0.96
+          "score": 0.96,
+          "level_db": -26.3
         },
         {
           "text": "sessions",
           "start": 31.71,
           "end": 32.07,
           "speaker": "SPEAKER_01",
-          "score": 0.896
+          "score": 0.896,
+          "level_db": -15.2
         },
         {
           "text": "stay",
           "start": 32.11,
           "end": 32.37,
           "speaker": "SPEAKER_01",
-          "score": 0.92
+          "score": 0.92,
+          "level_db": -14.4
         },
         {
           "text": "under",
           "start": 32.47,
           "end": 32.671,
           "speaker": "SPEAKER_01",
-          "score": 0.962
+          "score": 0.962,
+          "level_db": -11.5
         },
         {
           "text": "one",
           "start": 32.791,
           "end": 32.871,
           "speaker": "SPEAKER_01",
-          "score": 0.86
+          "score": 0.86,
+          "level_db": -9.7
         },
         {
           "text": "hour.",
           "start": 32.911,
           "end": 33.151,
           "speaker": "SPEAKER_01",
-          "score": 0.833
+          "score": 0.833,
+          "level_db": -15.3
         }
       ],
       "alignment_valid": true,
@@ -796,70 +880,80 @@
           "start": 33.972,
           "end": 34.032,
           "speaker": "SPEAKER_00",
-          "score": 0.982
+          "score": 0.982,
+          "level_db": -17.8
         },
         {
           "text": "can",
           "start": 34.072,
           "end": 34.232,
           "speaker": "SPEAKER_00",
-          "score": 0.923
+          "score": 0.923,
+          "level_db": -15.8
         },
         {
           "text": "schedule",
           "start": 34.272,
           "end": 34.652,
           "speaker": "SPEAKER_00",
-          "score": 0.871
+          "score": 0.871,
+          "level_db": -15.1
         },
         {
           "text": "them",
           "start": 34.692,
           "end": 34.832,
           "speaker": "SPEAKER_00",
-          "score": 0.919
+          "score": 0.919,
+          "level_db": -13.6
         },
         {
           "text": "for",
           "start": 34.872,
           "end": 34.973,
           "speaker": "SPEAKER_00",
-          "score": 0.96
+          "score": 0.96,
+          "level_db": -16.5
         },
         {
           "text": "the",
           "start": 35.013,
           "end": 35.113,
           "speaker": "SPEAKER_00",
-          "score": 0.885
+          "score": 0.885,
+          "level_db": -22.3
         },
         {
           "text": "second",
           "start": 35.153,
           "end": 35.453,
           "speaker": "SPEAKER_00",
-          "score": 0.892
+          "score": 0.892,
+          "level_db": -13.7
         },
         {
           "text": "week",
           "start": 35.493,
           "end": 35.693,
           "speaker": "SPEAKER_00",
-          "score": 0.789
+          "score": 0.789,
+          "level_db": -14.8
         },
         {
           "text": "of",
           "start": 35.733,
           "end": 35.793,
           "speaker": "SPEAKER_00",
-          "score": 0.75
+          "score": 0.75,
+          "level_db": -26.1
         },
         {
           "text": "March.",
           "start": 35.873,
           "end": 36.174,
           "speaker": "SPEAKER_00",
-          "score": 0.915
+          "score": 0.915,
+          "level_db": -15.3
         }
       ],
       "alignment_valid": true,
@@ -879,63 +973,72 @@
           "start": 36.814,
           "end": 37.255,
           "speaker": "SPEAKER_01",
-          "score": 0.967
+          "score": 0.967,
+          "level_db": -13.4
         },
         {
           "text": "let's",
           "start": 37.515,
           "end": 37.735,
           "speaker": "SPEAKER_01",
-          "score": 0.844
+          "score": 0.844,
+          "level_db": -14.1
         },
         {
           "text": "meet",
           "start": 37.795,
           "end": 37.975,
           "speaker": "SPEAKER_01",
-          "score": 0.856
+          "score": 0.856,
+          "level_db": -13.4
         },
         {
           "text": "again",
           "start": 38.015,
           "end": 38.296,
           "speaker": "SPEAKER_01",
-          "score": 0.901
+          "score": 0.901,
+          "level_db": -15.0
         },
         {
           "text": "on",
           "start": 38.396,
           "end": 38.496,
           "speaker": "SPEAKER_01",
-          "score": 0.854
+          "score": 0.854,
+          "level_db": -18.1
         },
         {
           "text": "Friday",
           "start": 38.556,
           "end": 38.936,
           "speaker": "SPEAKER_01",
-          "score": 0.784
+          "score": 0.784,
+          "level_db": -14.5
         },
         {
           "text": "and",
           "start": 39.016,
           "end": 39.136,
           "speaker": "SPEAKER_01",
-          "score": 0.834
+          "score": 0.834,
+          "level_db": -16.2
         },
         {
           "text": "compare",
           "start": 39.196,
           "end": 39.517,
           "speaker": "SPEAKER_01",
-          "score": 0.892
+          "score": 0.892,
+          "level_db": -13.8
         },
         {
           "text": "notes.",
           "start": 39.557,
           "end": 39.817,
           "speaker": "SPEAKER_01",
-          "score": 0.908
+          "score": 0.908,
+          "level_db": -20.9
         }
       ],
       "alignment_valid": true,
@@ -955,6 +1058,7 @@
     "asr_model": "base",
     "diarization_model": "pyannote/speaker-diarization-community-1",
     "word_timings": "Forced alignment; missing word times remain null.",
+    "word_levels": "RMS dBFS of the normalized waveform over each aligned word.",
     "emotion_status": "Text inference per speaker turn; threshold 0.60. Not vocal emotion."
   },
   "schema_version": 1

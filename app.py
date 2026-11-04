@@ -10,7 +10,8 @@ import streamlit as st
 
 from context_caption.captions import apply_edits
 from context_caption.exporters import to_json, to_srt, to_vtt
-from context_caption.media import MAX_BYTES, SUPPORTED
+from context_caption.loudness import add_word_levels, has_levels, read_wav
+from context_caption.media import MAX_BYTES, SUPPORTED, normalize_audio
 from context_caption.pipeline import Settings, process
 from context_caption.player import player_html
 from context_caption.schema import Project, emotion_label
@@ -98,6 +99,18 @@ with reopen_tab:
     if st.button("Attach media", disabled=attachment is None):
         st.session_state.media = attachment.getvalue()
         st.session_state.mime = mimetypes.guess_type(attachment.name)[0] or "audio/wav"
+        current = st.session_state.get("project")
+        if current is not None and not has_levels(current):
+            # Older projects lack word levels; measure them from the attached recording.
+            try:
+                with TemporaryDirectory(prefix="caption-levels-") as directory:
+                    source = Path(directory) / ("media" + Path(attachment.name).suffix.lower())
+                    source.write_bytes(attachment.getvalue())
+                    normalize_audio(source, Path(directory) / "audio.wav")
+                    add_word_levels(current, *read_wav(Path(directory) / "audio.wav"))
+                st.session_state.revision = st.session_state.get("revision", 0) + 1
+            except (ValueError, RuntimeError):
+                st.warning("Could not measure word loudness from this file; words keep one size.")
 
 project = st.session_state.get("project")
 if project is None:
@@ -147,11 +160,17 @@ with editor:
         except (ValueError, TypeError) as exc:
             st.error(str(exc))
 with preview:
-    show_emotions = st.checkbox("Show available emotion cues", value=False)
-    st.caption("Speaker names accompany colors. Text emotion is an uncertain inference, not a measurement of feelings.")
+    cue_options = st.columns(2)
+    show_emotions = cue_options[0].checkbox("Show available emotion cues", value=False)
+    size_by_loudness = cue_options[1].checkbox(
+        "Size words by loudness", value=True, disabled=not has_levels(project),
+        help="Louder words appear larger and quieter words smaller, relative to the recording's median "
+             "word level (RMS dBFS). Hover a word in the player to see its level.")
+    st.caption("Speaker names accompany colors. Text emotion is an uncertain inference, not a measurement of feelings. "
+               "Word size reflects loudness in the recording, not how a person felt.")
     if st.session_state.get("media"):
-        st.iframe(player_html(st.session_state.media, st.session_state.mime,
-                                    project, show_emotions), height=650, alt="Recording with synchronized speaker captions")
+        st.iframe(player_html(st.session_state.media, st.session_state.mime, project, show_emotions,
+                              size_by_loudness), height=650, alt="Recording with synchronized speaker captions")
     else:
         st.info("Attach the original recording in Open saved project to enable synchronized playback.")
     query = st.text_input("Search transcript")

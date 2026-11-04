@@ -13,18 +13,48 @@
   },
   "search": "delivery",
   "playbackNotes": [
-    {"at": 40.0, "text": "Elena: “Honestly, I'm worried.” → text emotion cue 😨 fear"},
-    {"at": 44.9, "text": "Crosstalk: Dana's “Right.” overlaps Elena; the end of Elena's sentence is attributed to Dana"},
-    {"at": 50.5, "text": "Each speaker keeps one label and color throughout the conversation"},
-    {"at": 65.2, "text": "“Really?” → 😮 surprise; the next line is wrongly given to Dana, a diarization error to fix in review"},
-    {"at": 77.9, "text": "Crosstalk: Marcus's “Exactly.” over Tom is attributed correctly"},
-    {"at": 84.3, "text": "😢 sadness, and a speaker switch mid-sentence (Elena → Dana)"},
-    {"at": 92.0, "text": "Word-by-word highlighting stays in sync across all four voices"}
+    {
+      "at": 21.5,
+      "text": "Word size follows loudness: each word's level in dBFS, relative to the recording's median"
+    },
+    {
+      "at": 40.4,
+      "text": "Elena: “Honestly, I'm worried.” → text emotion cue 😨 fear"
+    },
+    {
+      "at": 45.8,
+      "text": "Crosstalk: Dana's quiet “Right.” under Elena is attributed to Elena"
+    },
+    {
+      "at": 51.0,
+      "text": "Each speaker keeps one label and color throughout the conversation"
+    },
+    {
+      "at": 58.1,
+      "text": "Elena raises her voice (+7 dB): louder words are drawn larger"
+    },
+    {
+      "at": 65.8,
+      "text": "“Really?” → 😮 surprise, but Elena's line is given to Dana: a diarization error to fix in review"
+    },
+    {
+      "at": 78.6,
+      "text": "Crosstalk: Marcus's “Exactly.” over Tom is attributed correctly"
+    },
+    {
+      "at": 84.9,
+      "text": "A softer line (−6 dB): smaller words; 😢 sadness; the speaker switches mid-sentence"
+    },
+    {
+      "at": 99.4,
+      "text": "Tom's enthusiastic answer is louder, so its words grow"
+    }
   ],
   "notes": [
-    "Misheard names: “Riverton's” → “Everton's”, “Elena” → “Ilina”; “car per day” → “corporate day”.",
-    "Crosstalk: “Exactly.” attributed correctly; under Dana's “Right.” the end of Elena's line went to Dana.",
+    "Misheard: “Riverton's” → “Rivertons'”, “Elena” → “Elina”, “car per day” → “corporate day”, “burden” → “bird”.",
+    "Crosstalk: “Exactly.” attributed correctly; Dana's quiet “Right.” went to Elena. Two Elena lines went to Dana.",
+    "Word size: median word −23 dBFS; Elena's raised line reaches 1.30×, her soft line 0.75–1.0×.",
     "Auto-detecting the speaker count found all 4 speakers and gave the same scores."
   ],
-  "summary": "four voices separated well; names and crosstalk still need human review"
+  "summary": "four voices separated well; word size tracks loudness; names and crosstalk need review"
 }

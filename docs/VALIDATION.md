@@ -61,25 +61,37 @@ Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available
   (max 250 ms). Rendering on animation frames while playing highlighted 103 of 103, median lag 8 ms
   (max 17 ms).
 - Four-voice podcast `examples/podcast_policy.mp4` (110 s, Piper voices amy/ryan/alba/alan, animated
-  illustrated presenters, two overlapping lines), WhisperX `base`, CPU, emotion on, about 100 s to process:
+  illustrated presenters, two overlapping lines, one line raised +7 dB, one aside −8 dB, one line −6 dB,
+  one +5 dB), WhisperX `base`, CPU, emotion on, about 95 s to process:
 
   | Speaker count | WER | DER | Missed / confusion | Word speaker accuracy |
   | --- | --- | --- | --- | --- |
-  | Fixed at 4 | 4.9% | 10.2% | 5.94 s / 2.76 s of 85.4 s | 95.2% |
-  | Auto-detect | 4.9% | 10.2% | same (4 speakers found) | 95.2% |
+  | Fixed at 4 | 3.9% | 13.0% | 5.08 s / 6.11 s of 85.96 s | 90.9% |
+  | Auto-detect | 3.9% | 13.0% | same (4 speakers found) | 90.9% |
 
-  Word errors are mostly names and compounds: "Riverton's" → "Everton's", "Elena" → "Ilina",
-  "car per" → "corporate", "Roundtable" → "Round Table". Crosstalk: Marcus's "Exactly." over Tom was
-  attributed correctly; under Dana's "Right." the last words of Elena's sentence went to Dana. Two other
-  Elena lines were given to Dana. Emotion cues: 28 neutral, 6 fear, 1 surprise, 1 sadness, 10 below threshold.
+  Word errors are mostly names and compounds: "Riverton's" → "Rivertons'", "Elena" → "Elina",
+  "car per" → "corporate", "burden" → "bird", "Roundtable" → "Round Table". Crosstalk: Marcus's "Exactly."
+  over Tom was attributed correctly; Dana's quiet "Right." under Elena was attributed to Elena. Elena's
+  "Really? …" and "Maybe. …" lines went to Dana, and one of her sentences switches to Dana midway. Emotion
+  cues: 30 neutral, 5 fear, 4 surprise, 1 sadness, 3 below threshold. An earlier take of the same script
+  without volume changes scored 4.9% WER, 10.2% DER, 95.2% word speaker accuracy.
+- Word loudness: unit tests check levels against sine waves of known amplitude (0.5 → −9.0 dBFS,
+  0.05 → −29.0 dBFS), silence, untimed words, size scaling and clamping, the player toggle, JSON round trip
+  and older projects; the stubbed pipeline test checks a silent word (−90 dBFS floor) and a −12 dBFS tone.
+  On the podcast, the median word is −23.2 dBFS; Elena's raised line renders at 1.07–1.30× (−15 to
+  −21 dBFS, one unstressed word at 0.80×) and her soft line at 0.75–1.0× (−23 to −35 dBFS). In Chromium,
+  hovering shows each level, the toggle returns all words to 1.0×, and attaching media to the sample project
+  (saved without levels) measured them (−13 to −20 dBFS). No JavaScript errors.
 - Demo videos (1280×800, recorded with `scripts/record_app_demo.js --config examples/<name>.demo.json`;
   audio aligned by detecting highlight changes in the recorded frames; the script verifies the caption
   correction lands on the intended row and that the app's output matches the stored model output):
 
   | Video | Length | Processing in UI | Highlight vs. audio word start (median, p10, p90) |
   | --- | --- | --- | --- |
-  | `docs/demo/podcast_demo.mp4` | 3:21 | 96 s (shown 10×) | 22 ms, −14 ms, 57 ms over 284 changes |
-  | `docs/demo/app_demo.mp4` | 2:03 | 37 s (shown 8×) | 31 ms, −36 ms, 72 ms over 119 changes |
+  | `docs/demo/podcast_demo.mp4` | 3:23 | 108 s (shown 10×) | 27 ms, 2 ms, 51 ms over 285 changes |
+  | `docs/demo/app_demo.mp4` | 2:03 | 38 s (shown 8×) | 45 ms, −36 ms, 90 ms over 110 changes |
+
+  Both were recorded with loudness-sized words; their exported projects carry `level_db` for every timed word.
 
   A take right after a container restart took 193 s to process (cold caches) and was discarded.
 - Emotion emoji: unit tests cover SRT/VTT output and unknown labels; in Chromium with Noto Color Emoji,

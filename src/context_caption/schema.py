@@ -29,6 +29,7 @@ class Word:
     end: float | None = None
     speaker: str = "UNKNOWN"
     score: float | None = None
+    level_db: float | None = None   # RMS loudness in dBFS over the word's span (loudness.py)
 
     def __post_init__(self):
         if (self.start is None) != (self.end is None):

@@ -2,528 +2,579 @@
   "captions": [
     {
       "id": 1,
-      "start": 0.543,
-      "end": 2.683,
-      "speaker": "SPEAKER_02",
-      "text": "Welcome back to Policy Round Table.",
-      "original_text": "Welcome back to Policy Round Table.",
+      "start": 0.531,
+      "end": 2.753,
+      "speaker": "SPEAKER_03",
+      "text": "Welcome back to Policy Roundtable.",
+      "original_text": "Welcome back to Policy Roundtable.",
       "words": [
         {
           "text": "Welcome",
-          "start": 0.543,
-          "end": 0.923,
-          "speaker": "SPEAKER_02",
-          "score": 0.793
+          "start": 0.531,
+          "end": 0.932,
+          "speaker": "SPEAKER_03",
+          "score": 0.928,
+          "level_db": -21.2
         },
         {
           "text": "back",
-          "start": 1.023,
-          "end": 1.263,
-          "speaker": "SPEAKER_02",
-          "score": 0.997
+          "start": 1.012,
+          "end": 1.272,
+          "speaker": "SPEAKER_03",
+          "score": 1.0,
+          "level_db": -25.8
         },
         {
           "text": "to",
-          "start": 1.343,
-          "end": 1.443,
-          "speaker": "SPEAKER_02",
-          "score": 0.85
+          "start": 1.352,
+          "end": 1.452,
+          "speaker": "SPEAKER_03",
+          "score": 0.907,
+          "level_db": -28.8
         },
         {
           "text": "Policy",
-          "start": 1.483,
-          "end": 1.963,
-          "speaker": "SPEAKER_02",
-          "score": 0.891
+          "start": 1.512,
+          "end": 2.013,
+          "speaker": "SPEAKER_03",
+          "score": 0.929,
+          "level_db": -23.6
         },
         {
-          "text": "Round",
-          "start": 2.023,
-          "end": 2.283,
-          "speaker": "SPEAKER_02",
-          "score": 0.746
-        },
-        {
-          "text": "Table.",
-          "start": 2.323,
-          "end": 2.683,
-          "speaker": "SPEAKER_02",
-          "score": 0.965
+          "text": "Roundtable.",
+          "start": 2.073,
+          "end": 2.753,
+          "speaker": "SPEAKER_03",
+          "score": 0.807,
+          "level_db": -26.6
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8932123184204102
+      "emotion_score": 0.8487942218780518
     },
     {
       "id": 2,
-      "start": 3.003,
-      "end": 7.364,
-      "speaker": "SPEAKER_02",
-      "text": "I'm Dana, and today we're debating Everton's plan to charge drivers entering",
-      "original_text": "I'm Dana, and today we're debating Everton's plan to charge drivers entering",
+      "start": 3.094,
+      "end": 7.417,
+      "speaker": "SPEAKER_03",
+      "text": "I'm Dana, and today we're debating Rivertons' plan to charge drivers entering",
+      "original_text": "I'm Dana, and today we're debating Rivertons' plan to charge drivers entering",
       "words": [
         {
           "text": "I'm",
-          "start": 3.003,
-          "end": 3.163,
-          "speaker": "SPEAKER_02",
-          "score": 0.95
+          "start": 3.094,
+          "end": 3.254,
+          "speaker": "SPEAKER_03",
+          "score": 0.894,
+          "level_db": -20.9
         },
         {
           "text": "Dana,",
-          "start": 3.223,
-          "end": 3.584,
-          "speaker": "SPEAKER_02",
-          "score": 0.895
+          "start": 3.294,
+          "end": 3.674,
+          "speaker": "SPEAKER_03",
+          "score": 0.933,
+          "level_db": -24.7
         },
         {
           "text": "and",
-          "start": 3.864,
-          "end": 3.964,
-          "speaker": "SPEAKER_02",
-          "score": 0.943
+          "start": 3.974,
+          "end": 4.074,
+          "speaker": "SPEAKER_03",
+          "score": 0.907,
+          "level_db": -23.5
         },
         {
           "text": "today",
-          "start": 4.024,
-          "end": 4.344,
-          "speaker": "SPEAKER_02",
-          "score": 0.858
+          "start": 4.134,
+          "end": 4.475,
+          "speaker": "SPEAKER_03",
+          "score": 0.703,
+          "level_db": -25.3
         },
         {
           "text": "we're",
-          "start": 4.424,
-          "end": 4.584,
-          "speaker": "SPEAKER_02",
-          "score": 0.779
+          "start": 4.575,
+          "end": 4.715,
+          "speaker": "SPEAKER_03",
+          "score": 0.926,
+          "level_db": -24.4
         },
         {
           "text": "debating",
-          "start": 4.604,
-          "end": 5.004,
-          "speaker": "SPEAKER_02",
-          "score": 0.976
+          "start": 4.755,
+          "end": 5.095,
+          "speaker": "SPEAKER_03",
+          "score": 0.914,
+          "level_db": -23.5
         },
         {
-          "text": "Everton's",
-          "start": 5.184,
-          "end": 5.604,
-          "speaker": "SPEAKER_02",
-          "score": 0.798
+          "text": "Rivertons'",
+          "start": 5.155,
+          "end": 5.656,
+          "speaker": "SPEAKER_03",
+          "score": 0.76,
+          "level_db": -25.5
         },
         {
           "text": "plan",
-          "start": 5.644,
-          "end": 5.964,
-          "speaker": "SPEAKER_02",
-          "score": 0.89
+          "start": 5.716,
+          "end": 6.016,
+          "speaker": "SPEAKER_03",
+          "score": 0.816,
+          "level_db": -25.1
         },
         {
           "text": "to",
-          "start": 6.004,
-          "end": 6.084,
-          "speaker": "SPEAKER_02",
-          "score": 0.988
+          "start": 6.056,
+          "end": 6.156,
+          "speaker": "SPEAKER_03",
+          "score": 0.585,
+          "level_db": -33.7
         },
         {
           "text": "charge",
-          "start": 6.144,
-          "end": 6.484,
-          "speaker": "SPEAKER_02",
-          "score": 0.765
+          "start": 6.196,
+          "end": 6.556,
+          "speaker": "SPEAKER_03",
+          "score": 0.775,
+          "level_db": -25.1
         },
         {
           "text": "drivers",
-          "start": 6.544,
-          "end": 6.924,
-          "speaker": "SPEAKER_02",
-          "score": 0.818
+          "start": 6.596,
+          "end": 6.977,
+          "speaker": "SPEAKER_03",
+          "score": 0.878,
+          "level_db": -22.9
         },
         {
           "text": "entering",
-          "start": 7.024,
-          "end": 7.364,
-          "speaker": "SPEAKER_02",
-          "score": 0.929
+          "start": 7.077,
+          "end": 7.417,
+          "speaker": "SPEAKER_03",
+          "score": 0.839,
+          "level_db": -25.3
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8932123184204102
+      "emotion_score": 0.8487942218780518
     },
     {
       "id": 3,
-      "start": 7.404,
-      "end": 9.945,
-      "speaker": "SPEAKER_02",
+      "start": 7.457,
+      "end": 10.079,
+      "speaker": "SPEAKER_03",
       "text": "downtown and use the money for free buses.",
       "original_text": "downtown and use the money for free buses.",
       "words": [
         {
           "text": "downtown",
-          "start": 7.404,
-          "end": 7.964,
-          "speaker": "SPEAKER_02",
-          "score": 0.912
+          "start": 7.457,
+          "end": 8.018,
+          "speaker": "SPEAKER_03",
+          "score": 0.897,
+          "level_db": -26.4
         },
         {
           "text": "and",
-          "start": 8.104,
-          "end": 8.204,
-          "speaker": "SPEAKER_02",
-          "score": 0.847
+          "start": 8.178,
+          "end": 8.278,
+          "speaker": "SPEAKER_03",
+          "score": 0.789,
+          "level_db": -24.9
         },
         {
           "text": "use",
-          "start": 8.344,
-          "end": 8.504,
-          "speaker": "SPEAKER_02",
-          "score": 0.801
+          "start": 8.438,
+          "end": 8.598,
+          "speaker": "SPEAKER_03",
+          "score": 0.814,
+          "level_db": -25.9
         },
         {
           "text": "the",
-          "start": 8.544,
-          "end": 8.604,
-          "speaker": "SPEAKER_02",
-          "score": 0.996
+          "start": 8.658,
+          "end": 8.718,
+          "speaker": "SPEAKER_03",
+          "score": 0.999,
+          "level_db": -24.2
         },
         {
           "text": "money",
-          "start": 8.644,
-          "end": 8.904,
-          "speaker": "SPEAKER_02",
-          "score": 0.738
+          "start": 8.778,
+          "end": 9.018,
+          "speaker": "SPEAKER_03",
+          "score": 0.87,
+          "level_db": -24.2
         },
         {
           "text": "for",
-          "start": 9.044,
-          "end": 9.184,
-          "speaker": "SPEAKER_02",
-          "score": 0.886
+          "start": 9.138,
+          "end": 9.279,
+          "speaker": "SPEAKER_03",
+          "score": 0.806,
+          "level_db": -26.0
         },
         {
           "text": "free",
-          "start": 9.264,
-          "end": 9.485,
-          "speaker": "SPEAKER_02",
-          "score": 0.906
+          "start": 9.399,
+          "end": 9.619,
+          "speaker": "SPEAKER_03",
+          "score": 0.904,
+          "level_db": -25.6
         },
         {
           "text": "buses.",
-          "start": 9.545,
-          "end": 9.945,
-          "speaker": "SPEAKER_02",
-          "score": 0.919
+          "start": 9.659,
+          "end": 10.079,
+          "speaker": "SPEAKER_03",
+          "score": 0.849,
+          "level_db": -29.0
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8932123184204102
+      "emotion_score": 0.8487942218780518
     },
     {
       "id": 4,
-      "start": 10.725,
-      "end": 11.625,
+      "start": 10.84,
+      "end": 11.781,
       "speaker": "SPEAKER_01",
       "text": "Thanks, Dana.",
       "original_text": "Thanks, Dana.",
       "words": [
         {
           "text": "Thanks,",
-          "start": 10.725,
-          "end": 11.045,
+          "start": 10.84,
+          "end": 11.16,
           "speaker": "SPEAKER_01",
-          "score": 0.904
+          "score": 0.868,
+          "level_db": -20.4
         },
         {
           "text": "Dana.",
-          "start": 11.265,
-          "end": 11.625,
+          "start": 11.4,
+          "end": 11.781,
           "speaker": "SPEAKER_01",
-          "score": 0.951
+          "score": 0.973,
+          "level_db": -20.1
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8131911754608154
+      "emotion_score": 0.8263403177261353
     },
     {
       "id": 5,
-      "start": 11.705,
-      "end": 14.705,
+      "start": 11.921,
+      "end": 14.943,
       "speaker": "SPEAKER_01",
-      "text": "I'm Marcus, and I spend a decade in the city budget office.",
-      "original_text": "I'm Marcus, and I spend a decade in the city budget office.",
+      "text": "I'm Marcus, and I spent a decade in the city budget office.",
+      "original_text": "I'm Marcus, and I spent a decade in the city budget office.",
       "words": [
         {
           "text": "I'm",
-          "start": 11.705,
-          "end": 11.825,
+          "start": 11.921,
+          "end": 12.061,
           "speaker": "SPEAKER_01",
-          "score": 0.868
+          "score": 0.754,
+          "level_db": -19.0
         },
         {
           "text": "Marcus,",
-          "start": 11.865,
-          "end": 12.305,
+          "start": 12.121,
+          "end": 12.541,
           "speaker": "SPEAKER_01",
-          "score": 0.824
+          "score": 0.851,
+          "level_db": -21.3
         },
         {
           "text": "and",
-          "start": 12.565,
-          "end": 12.645,
+          "start": 12.701,
+          "end": 12.781,
           "speaker": "SPEAKER_01",
-          "score": 0.937
+          "score": 0.939,
+          "level_db": -19.5
         },
         {
           "text": "I",
-          "start": 12.685,
-          "end": 12.785,
+          "start": 12.821,
+          "end": 12.922,
           "speaker": "SPEAKER_01",
-          "score": 0.749
+          "score": 0.689,
+          "level_db": -23.0
         },
         {
-          "text": "spend",
-          "start": 12.805,
-          "end": 13.045,
+          "text": "spent",
+          "start": 12.962,
+          "end": 13.202,
           "speaker": "SPEAKER_01",
-          "score": 0.728
+          "score": 0.827,
+          "level_db": -19.8
         },
         {
           "text": "a",
-          "start": 13.065,
-          "end": 13.085,
+          "start": 13.262,
+          "end": 13.322,
           "speaker": "SPEAKER_01",
-          "score": 0.576
+          "score": 0.607,
+          "level_db": -31.5
         },
         {
           "text": "decade",
-          "start": 13.145,
-          "end": 13.505,
+          "start": 13.382,
+          "end": 13.722,
           "speaker": "SPEAKER_01",
-          "score": 0.662
+          "score": 0.876,
+          "level_db": -18.8
         },
         {
           "text": "in",
-          "start": 13.565,
-          "end": 13.645,
+          "start": 13.762,
+          "end": 13.842,
           "speaker": "SPEAKER_01",
-          "score": 0.851
+          "score": 0.833,
+          "level_db": -20.7
         },
         {
           "text": "the",
-          "start": 13.685,
-          "end": 13.745,
+          "start": 13.862,
+          "end": 13.962,
           "speaker": "SPEAKER_01",
-          "score": 0.986
+          "score": 0.705,
+          "level_db": -24.2
         },
         {
           "text": "city",
-          "start": 13.805,
-          "end": 14.005,
+          "start": 14.002,
+          "end": 14.223,
           "speaker": "SPEAKER_01",
-          "score": 0.973
+          "score": 0.98,
+          "level_db": -20.9
         },
         {
           "text": "budget",
-          "start": 14.045,
-          "end": 14.325,
+          "start": 14.263,
+          "end": 14.523,
           "speaker": "SPEAKER_01",
-          "score": 0.849
+          "score": 0.542,
+          "level_db": -22.5
         },
         {
           "text": "office.",
-          "start": 14.405,
-          "end": 14.705,
+          "start": 14.623,
+          "end": 14.943,
           "speaker": "SPEAKER_01",
-          "score": 0.987
+          "score": 0.964,
+          "level_db": -27.8
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8131911754608154
+      "emotion_score": 0.8263403177261353
     },
     {
       "id": 6,
-      "start": 15.345,
-      "end": 16.106,
-      "speaker": "SPEAKER_03",
+      "start": 15.584,
+      "end": 16.344,
+      "speaker": "SPEAKER_02",
       "text": "Hi, everyone.",
       "original_text": "Hi, everyone.",
       "words": [
         {
           "text": "Hi,",
-          "start": 15.345,
-          "end": 15.566,
-          "speaker": "SPEAKER_03",
-          "score": 0.882
+          "start": 15.584,
+          "end": 15.804,
+          "speaker": "SPEAKER_02",
+          "score": 0.96,
+          "level_db": -22.6
         },
         {
           "text": "everyone.",
-          "start": 15.686,
-          "end": 16.106,
-          "speaker": "SPEAKER_03",
-          "score": 0.926
+          "start": 15.924,
+          "end": 16.344,
+          "speaker": "SPEAKER_02",
+          "score": 0.961,
+          "level_db": -21.8
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.7695760130882263
+      "emotion_score": 0.7907595038414001
     },
     {
       "id": 7,
-      "start": 16.606,
-      "end": 17.226,
-      "speaker": "SPEAKER_03",
-      "text": "I'm Ilina.",
-      "original_text": "I'm Ilina.",
+      "start": 16.705,
+      "end": 17.365,
+      "speaker": "SPEAKER_02",
+      "text": "I'm Elina.",
+      "original_text": "I'm Elina.",
       "words": [
         {
           "text": "I'm",
-          "start": 16.606,
-          "end": 16.746,
-          "speaker": "SPEAKER_03",
-          "score": 0.96
+          "start": 16.705,
+          "end": 16.885,
+          "speaker": "SPEAKER_02",
+          "score": 0.748,
+          "level_db": -19.1
         },
         {
-          "text": "Ilina.",
-          "start": 16.846,
-          "end": 17.226,
-          "speaker": "SPEAKER_03",
-          "score": 0.911
+          "text": "Elina.",
+          "start": 16.985,
+          "end": 17.365,
+          "speaker": "SPEAKER_02",
+          "score": 0.946,
+          "level_db": -21.1
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.7695760130882263
+      "emotion_score": 0.7907595038414001
     },
     {
       "id": 8,
-      "start": 17.486,
-      "end": 20.706,
-      "speaker": "SPEAKER_03",
+      "start": 17.645,
+      "end": 20.988,
+      "speaker": "SPEAKER_02",
       "text": "I run a bakery on Main Street, so this affects me directly.",
       "original_text": "I run a bakery on Main Street, so this affects me directly.",
       "words": [
         {
           "text": "I",
-          "start": 17.486,
-          "end": 17.546,
-          "speaker": "SPEAKER_03",
-          "score": 0.992
+          "start": 17.645,
+          "end": 17.725,
+          "speaker": "SPEAKER_02",
+          "score": 0.933,
+          "level_db": -20.4
         },
         {
           "text": "run",
-          "start": 17.586,
-          "end": 17.726,
-          "speaker": "SPEAKER_03",
-          "score": 0.758
+          "start": 17.765,
+          "end": 17.906,
+          "speaker": "SPEAKER_02",
+          "score": 0.821,
+          "level_db": -19.7
         },
         {
           "text": "a",
-          "start": 17.746,
-          "end": 17.766,
-          "speaker": "SPEAKER_03",
-          "score": 0.992
+          "start": 17.946,
+          "end": 17.966,
+          "speaker": "SPEAKER_02",
+          "score": 0.997,
+          "level_db": -39.7
         },
         {
           "text": "bakery",
-          "start": 17.806,
-          "end": 18.226,
-          "speaker": "SPEAKER_03",
-          "score": 0.929
+          "start": 18.026,
+          "end": 18.426,
+          "speaker": "SPEAKER_02",
+          "score": 0.899,
+          "level_db": -24.5
         },
         {
           "text": "on",
-          "start": 18.326,
-          "end": 18.406,
-          "speaker": "SPEAKER_03",
-          "score": 0.84
+          "start": 18.546,
+          "end": 18.626,
+          "speaker": "SPEAKER_02",
+          "score": 0.891,
+          "level_db": -25.6
         },
         {
           "text": "Main",
-          "start": 18.446,
-          "end": 18.626,
-          "speaker": "SPEAKER_03",
-          "score": 0.672
+          "start": 18.686,
+          "end": 18.906,
+          "speaker": "SPEAKER_02",
+          "score": 0.863,
+          "level_db": -25.7
         },
         {
           "text": "Street,",
-          "start": 18.666,
-          "end": 18.986,
-          "speaker": "SPEAKER_03",
-          "score": 0.878
+          "start": 18.946,
+          "end": 19.267,
+          "speaker": "SPEAKER_02",
+          "score": 0.866,
+          "level_db": -31.4
         },
         {
           "text": "so",
-          "start": 19.446,
-          "end": 19.546,
-          "speaker": "SPEAKER_03",
-          "score": 0.994
+          "start": 19.707,
+          "end": 19.807,
+          "speaker": "SPEAKER_02",
+          "score": 0.988,
+          "level_db": -29.4
         },
         {
           "text": "this",
-          "start": 19.566,
-          "end": 19.706,
-          "speaker": "SPEAKER_03",
-          "score": 0.966
+          "start": 19.827,
+          "end": 19.967,
+          "speaker": "SPEAKER_02",
+          "score": 0.935,
+          "level_db": -27.5
         },
         {
           "text": "affects",
-          "start": 19.766,
-          "end": 20.066,
-          "speaker": "SPEAKER_03",
-          "score": 0.934
+          "start": 20.027,
+          "end": 20.348,
+          "speaker": "SPEAKER_02",
+          "score": 0.953,
+          "level_db": -30.0
         },
         {
           "text": "me",
-          "start": 20.106,
-          "end": 20.206,
-          "speaker": "SPEAKER_03",
-          "score": 0.97
+          "start": 20.388,
+          "end": 20.488,
+          "speaker": "SPEAKER_02",
+          "score": 0.984,
+          "level_db": -26.7
         },
         {
           "text": "directly.",
-          "start": 20.246,
-          "end": 20.706,
-          "speaker": "SPEAKER_03",
-          "score": 0.928
+          "start": 20.528,
+          "end": 20.988,
+          "speaker": "SPEAKER_02",
+          "score": 0.93,
+          "level_db": -26.5
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.7695760130882263
+      "emotion_score": 0.7907595038414001
     },
     {
       "id": 9,
-      "start": 21.326,
-      "end": 22.107,
+      "start": 21.589,
+      "end": 22.389,
       "speaker": "SPEAKER_00",
       "text": "And I'm Tom.",
       "original_text": "And I'm Tom.",
       "words": [
         {
           "text": "And",
-          "start": 21.326,
-          "end": 21.447,
+          "start": 21.589,
+          "end": 21.709,
           "speaker": "SPEAKER_00",
-          "score": 0.756
+          "score": 0.765,
+          "level_db": -18.5
         },
         {
           "text": "I'm",
-          "start": 21.567,
-          "end": 21.747,
+          "start": 21.809,
+          "end": 21.989,
           "speaker": "SPEAKER_00",
-          "score": 0.84
+          "score": 0.847,
+          "level_db": -19.2
         },
         {
           "text": "Tom.",
-          "start": 21.827,
-          "end": 22.107,
+          "start": 22.089,
+          "end": 22.389,
           "speaker": "SPEAKER_00",
-          "score": 0.872
+          "score": 0.841,
+          "level_db": -24.9
         }
       ],
       "alignment_valid": true,
@@ -532,60 +583,67 @@
     },
     {
       "id": 10,
-      "start": 22.387,
-      "end": 25.247,
+      "start": 22.73,
+      "end": 25.592,
       "speaker": "SPEAKER_00",
       "text": "I study public transport at the university.",
       "original_text": "I study public transport at the university.",
       "words": [
         {
           "text": "I",
-          "start": 22.387,
-          "end": 22.487,
+          "start": 22.73,
+          "end": 22.83,
           "speaker": "SPEAKER_00",
-          "score": 0.796
+          "score": 0.802,
+          "level_db": -25.3
         },
         {
           "text": "study",
-          "start": 22.527,
-          "end": 22.867,
+          "start": 22.89,
+          "end": 23.25,
           "speaker": "SPEAKER_00",
-          "score": 0.95
+          "score": 0.898,
+          "level_db": -19.6
         },
         {
           "text": "public",
-          "start": 22.927,
-          "end": 23.307,
+          "start": 23.31,
+          "end": 23.65,
           "speaker": "SPEAKER_00",
-          "score": 0.922
+          "score": 0.986,
+          "level_db": -22.5
         },
         {
           "text": "transport",
-          "start": 23.407,
-          "end": 24.007,
+          "start": 23.73,
+          "end": 24.351,
           "speaker": "SPEAKER_00",
-          "score": 0.798
+          "score": 0.913,
+          "level_db": -24.2
         },
         {
           "text": "at",
-          "start": 24.127,
-          "end": 24.207,
+          "start": 24.471,
+          "end": 24.551,
           "speaker": "SPEAKER_00",
-          "score": 0.705
+          "score": 0.937,
+          "level_db": -44.0
         },
         {
           "text": "the",
-          "start": 24.247,
-          "end": 24.347,
+          "start": 24.631,
+          "end": 24.751,
           "speaker": "SPEAKER_00",
-          "score": 0.86
+          "score": 0.827,
+          "level_db": -23.7
         },
         {
           "text": "university.",
-          "start": 24.467,
-          "end": 25.247,
+          "start": 24.851,
+          "end": 25.592,
           "speaker": "SPEAKER_00",
-          "score": 0.899
+          "score": 0.799,
+          "level_db": -23.7
         }
       ],
       "alignment_valid": true,
@@ -594,53 +652,59 @@
     },
     {
       "id": 11,
-      "start": 26.007,
-      "end": 28.248,
-      "speaker": "SPEAKER_02",
+      "start": 26.433,
+      "end": 28.674,
+      "speaker": "SPEAKER_03",
       "text": "Marcus, let's start with the numbers.",
       "original_text": "Marcus, let's start with the numbers.",
       "words": [
         {
           "text": "Marcus,",
-          "start": 26.007,
-          "end": 26.487,
-          "speaker": "SPEAKER_02",
-          "score": 0.841
+          "start": 26.433,
+          "end": 26.913,
+          "speaker": "SPEAKER_03",
+          "score": 0.923,
+          "level_db": -23.6
         },
         {
           "text": "let's",
-          "start": 26.687,
-          "end": 26.947,
-          "speaker": "SPEAKER_02",
-          "score": 0.763
+          "start": 27.113,
+          "end": 27.373,
+          "speaker": "SPEAKER_03",
+          "score": 0.792,
+          "level_db": -23.5
         },
         {
           "text": "start",
-          "start": 27.087,
-          "end": 27.408,
-          "speaker": "SPEAKER_02",
-          "score": 0.778
+          "start": 27.533,
+          "end": 27.853,
+          "speaker": "SPEAKER_03",
+          "score": 0.822,
+          "level_db": -23.1
         },
         {
           "text": "with",
-          "start": 27.508,
-          "end": 27.648,
-          "speaker": "SPEAKER_02",
-          "score": 0.905
+          "start": 27.933,
+          "end": 28.093,
+          "speaker": "SPEAKER_03",
+          "score": 0.914,
+          "level_db": -26.1
         },
         {
           "text": "the",
-          "start": 27.688,
-          "end": 27.768,
-          "speaker": "SPEAKER_02",
-          "score": 0.828
+          "start": 28.113,
+          "end": 28.193,
+          "speaker": "SPEAKER_03",
+          "score": 0.826,
+          "level_db": -21.7
         },
         {
           "text": "numbers.",
-          "start": 27.808,
-          "end": 28.248,
-          "speaker": "SPEAKER_02",
-          "score": 0.926
+          "start": 28.233,
+          "end": 28.674,
+          "speaker": "SPEAKER_03",
+          "score": 0.858,
+          "level_db": -24.3
         }
       ],
       "alignment_valid": true,
@@ -649,46 +713,51 @@
     },
     {
       "id": 12,
-      "start": 28.668,
-      "end": 29.908,
-      "speaker": "SPEAKER_02",
+      "start": 29.114,
+      "end": 30.414,
+      "speaker": "SPEAKER_03",
       "text": "What would the charge raise?",
       "original_text": "What would the charge raise?",
       "words": [
         {
           "text": "What",
-          "start": 28.668,
-          "end": 28.828,
-          "speaker": "SPEAKER_02",
-          "score": 1.0
+          "start": 29.114,
+          "end": 29.294,
+          "speaker": "SPEAKER_03",
+          "score": 0.82,
+          "level_db": -20.5
         },
         {
           "text": "would",
-          "start": 28.888,
-          "end": 29.048,
-          "speaker": "SPEAKER_02",
-          "score": 0.918
+          "start": 29.354,
+          "end": 29.534,
+          "speaker": "SPEAKER_03",
+          "score": 0.856,
+          "level_db": -23.9
         },
         {
           "text": "the",
-          "start": 29.088,
-          "end": 29.188,
-          "speaker": "SPEAKER_02",
-          "score": 0.75
+          "start": 29.554,
+          "end": 29.654,
+          "speaker": "SPEAKER_03",
+          "score": 0.702,
+          "level_db": -23.8
         },
         {
           "text": "charge",
-          "start": 29.208,
-          "end": 29.528,
-          "speaker": "SPEAKER_02",
-          "score": 0.938
+          "start": 29.674,
+          "end": 30.014,
+          "speaker": "SPEAKER_03",
+          "score": 0.883,
+          "level_db": -24.7
         },
         {
           "text": "raise?",
-          "start": 29.588,
-          "end": 29.908,
-          "speaker": "SPEAKER_02",
-          "score": 0.928
+          "start": 30.074,
+          "end": 30.414,
+          "speaker": "SPEAKER_03",
+          "score": 0.943,
+          "level_db": -24.1
         }
       ],
       "alignment_valid": true,
@@ -697,95 +766,107 @@
     },
     {
       "id": 13,
-      "start": 30.564,
-      "end": 34.528,
+      "start": 31.034,
+      "end": 34.975,
       "speaker": "SPEAKER_01",
       "text": "The Council estimates $40 million a year at $8 per corporate day.",
       "original_text": "The Council estimates $40 million a year at $8 per corporate day.",
       "words": [
         {
           "text": "The",
-          "start": 30.564,
-          "end": 30.644,
+          "start": 31.034,
+          "end": 31.134,
           "speaker": "SPEAKER_01",
-          "score": 0.748
+          "score": 0.893,
+          "level_db": -22.9
         },
         {
           "text": "Council",
-          "start": 30.684,
-          "end": 31.044,
+          "start": 31.174,
+          "end": 31.574,
           "speaker": "SPEAKER_01",
-          "score": 0.888
+          "score": 0.855,
+          "level_db": -19.9
         },
         {
           "text": "estimates",
-          "start": 31.125,
-          "end": 31.485,
+          "start": 31.654,
+          "end": 32.034,
           "speaker": "SPEAKER_01",
-          "score": 0.723
+          "score": 0.929,
+          "level_db": -27.3
         },
         {
           "text": "$40",
-          "start": 31.505,
-          "end": 31.725,
+          "start": 32.074,
+          "end": 32.294,
           "speaker": "SPEAKER_01",
-          "score": 0.829
+          "score": 0.829,
+          "level_db": -21.7
         },
         {
           "text": "million",
-          "start": 31.765,
-          "end": 32.085,
+          "start": 32.334,
+          "end": 32.675,
           "speaker": "SPEAKER_01",
-          "score": 0.769
+          "score": 0.895,
+          "level_db": -23.6
         },
         {
           "text": "a",
-          "start": 32.286,
-          "end": 32.406,
+          "start": 32.915,
+          "end": 33.055,
           "speaker": "SPEAKER_01",
-          "score": 0.38
+          "score": 0.286,
+          "level_db": -27.7
         },
         {
           "text": "year",
-          "start": 32.526,
-          "end": 32.766,
+          "start": 33.155,
+          "end": 33.395,
           "speaker": "SPEAKER_01",
-          "score": 0.69
+          "score": 0.849,
+          "level_db": -22.1
         },
         {
           "text": "at",
-          "start": 33.046,
-          "end": 33.347,
+          "start": 33.595,
+          "end": 33.875,
           "speaker": "SPEAKER_01",
-          "score": 0.676
+          "score": 0.623,
+          "level_db": -23.6
         },
         {
           "text": "$8",
-          "start": 33.487,
-          "end": 33.727,
+          "start": 33.915,
+          "end": 34.215,
           "speaker": "SPEAKER_01",
-          "score": 0.478
+          "score": 0.287,
+          "level_db": -20.9
         },
         {
           "text": "per",
-          "start": 33.767,
-          "end": 33.907,
+          "start": 34.255,
+          "end": 34.375,
           "speaker": "SPEAKER_01",
-          "score": 0.788
+          "score": 0.944,
+          "level_db": -24.7
         },
         {
           "text": "corporate",
-          "start": 33.947,
-          "end": 34.287,
+          "start": 34.415,
+          "end": 34.775,
           "speaker": "SPEAKER_01",
-          "score": 0.46
+          "score": 0.447,
+          "level_db": -21.1
         },
         {
           "text": "day.",
-          "start": 34.307,
-          "end": 34.528,
+          "start": 34.795,
+          "end": 34.975,
           "speaker": "SPEAKER_01",
-          "score": 0.967
+          "score": 0.798,
+          "level_db": -24.9
         }
       ],
       "alignment_valid": true,
@@ -794,611 +875,683 @@
     },
     {
       "id": 14,
-      "start": 34.948,
-      "end": 39.332,
+      "start": 35.395,
+      "end": 39.796,
       "speaker": "SPEAKER_00",
-      "text": "That's roughly enough to make every bus route-free and ad-night service.",
-      "original_text": "That's roughly enough to make every bus route-free and ad-night service.",
+      "text": "That's roughly enough to make every bus route free and at night service.",
+      "original_text": "That's roughly enough to make every bus route free and at night service.",
       "words": [
         {
           "text": "That's",
-          "start": 34.948,
-          "end": 35.188,
+          "start": 35.395,
+          "end": 35.635,
           "speaker": "SPEAKER_00",
-          "score": 0.707
+          "score": 0.902,
+          "level_db": -23.3
         },
         {
           "text": "roughly",
-          "start": 35.288,
-          "end": 35.689,
+          "start": 35.755,
+          "end": 36.175,
           "speaker": "SPEAKER_00",
-          "score": 0.9
+          "score": 0.862,
+          "level_db": -22.0
         },
         {
           "text": "enough",
-          "start": 35.829,
-          "end": 36.109,
+          "start": 36.295,
+          "end": 36.576,
           "speaker": "SPEAKER_00",
-          "score": 0.857
+          "score": 0.77,
+          "level_db": -23.6
         },
         {
           "text": "to",
-          "start": 36.169,
-          "end": 36.249,
+          "start": 36.636,
+          "end": 36.716,
           "speaker": "SPEAKER_00",
-          "score": 0.857
+          "score": 0.769,
+          "level_db": -22.5
         },
         {
           "text": "make",
-          "start": 36.329,
-          "end": 36.509,
+          "start": 36.776,
+          "end": 36.996,
           "speaker": "SPEAKER_00",
-          "score": 0.959
+          "score": 0.892,
+          "level_db": -23.0
         },
         {
           "text": "every",
-          "start": 36.65,
-          "end": 36.91,
+          "start": 37.136,
+          "end": 37.376,
           "speaker": "SPEAKER_00",
-          "score": 0.879
+          "score": 0.884,
+          "level_db": -21.4
         },
         {
           "text": "bus",
-          "start": 36.97,
-          "end": 37.21,
+          "start": 37.416,
+          "end": 37.636,
           "speaker": "SPEAKER_00",
-          "score": 0.867
+          "score": 0.843,
+          "level_db": -22.5
         },
         {
-          "text": "route-free",
-          "start": 37.25,
-          "end": 37.871,
+          "text": "route",
+          "start": 37.716,
+          "end": 37.956,
           "speaker": "SPEAKER_00",
-          "score": 0.752
+          "score": 0.762,
+          "level_db": -21.1
+        },
+        {
+          "text": "free",
+          "start": 38.016,
+          "end": 38.336,
+          "speaker": "SPEAKER_00",
+          "score": 0.867,
+          "level_db": -18.8
         },
         {
           "text": "and",
-          "start": 38.011,
-          "end": 38.131,
+          "start": 38.476,
+          "end": 38.596,
           "speaker": "SPEAKER_00",
-          "score": 0.646
+          "score": 0.638,
+          "level_db": -23.5
         },
         {
-          "text": "ad-night",
-          "start": 38.311,
-          "end": 38.811,
+          "text": "at",
+          "start": 38.796,
+          "end": 38.876,
           "speaker": "SPEAKER_00",
-          "score": 0.887
+          "score": 0.841,
+          "level_db": -28.7
+        },
+        {
+          "text": "night",
+          "start": 38.976,
+          "end": 39.276,
+          "speaker": "SPEAKER_00",
+          "score": 0.82,
+          "level_db": -24.0
         },
         {
           "text": "service.",
-          "start": 38.872,
-          "end": 39.332,
+          "start": 39.316,
+          "end": 39.796,
           "speaker": "SPEAKER_00",
-          "score": 0.906
+          "score": 0.892,
+          "level_db": -24.7
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.9301113486289978
+      "emotion_score": 0.9316532015800476
     },
     {
       "id": 15,
-      "start": 40.093,
-      "end": 41.354,
-      "speaker": "SPEAKER_03",
+      "start": 40.597,
+      "end": 41.877,
+      "speaker": "SPEAKER_02",
       "text": "Honestly, I'm worried.",
       "original_text": "Honestly, I'm worried.",
       "words": [
         {
           "text": "Honestly,",
-          "start": 40.093,
-          "end": 40.573,
-          "speaker": "SPEAKER_03",
-          "score": 0.857
+          "start": 40.597,
+          "end": 41.097,
+          "speaker": "SPEAKER_02",
+          "score": 0.885,
+          "level_db": -19.6
         },
         {
           "text": "I'm",
-          "start": 40.853,
-          "end": 40.993,
-          "speaker": "SPEAKER_03",
-          "score": 0.839
+          "start": 41.377,
+          "end": 41.497,
+          "speaker": "SPEAKER_02",
+          "score": 0.892,
+          "level_db": -17.6
         },
         {
           "text": "worried.",
-          "start": 41.034,
-          "end": 41.354,
-          "speaker": "SPEAKER_03",
-          "score": 0.938
+          "start": 41.537,
+          "end": 41.877,
+          "speaker": "SPEAKER_02",
+          "score": 0.888,
+          "level_db": -21.6
         }
       ],
       "alignment_valid": true,
       "emotion": "fear",
-      "emotion_score": 0.9675479531288147
+      "emotion_score": 0.9190530776977539
     },
     {
       "id": 16,
-      "start": 41.794,
-      "end": 45.297,
-      "speaker": "SPEAKER_03",
-      "text": "If customers stop driving in, small shops like mine could close within",
-      "original_text": "If customers stop driving in, small shops like mine could close within",
+      "start": 42.277,
+      "end": 46.178,
+      "speaker": "SPEAKER_02",
+      "text": "If customers stop driving in, small shops like mine could close within a year.",
+      "original_text": "If customers stop driving in, small shops like mine could close within a year.",
       "words": [
         {
           "text": "If",
-          "start": 41.794,
-          "end": 41.874,
-          "speaker": "SPEAKER_03",
-          "score": 0.947
+          "start": 42.277,
+          "end": 42.357,
+          "speaker": "SPEAKER_02",
+          "score": 0.845,
+          "level_db": -24.5
         },
         {
           "text": "customers",
-          "start": 41.934,
-          "end": 42.395,
-          "speaker": "SPEAKER_03",
-          "score": 0.599
+          "start": 42.417,
+          "end": 42.877,
+          "speaker": "SPEAKER_02",
+          "score": 0.8,
+          "level_db": -22.9
         },
         {
           "text": "stop",
-          "start": 42.415,
-          "end": 42.675,
-          "speaker": "SPEAKER_03",
-          "score": 0.662
+          "start": 42.897,
+          "end": 43.157,
+          "speaker": "SPEAKER_02",
+          "score": 0.873,
+          "level_db": -22.5
         },
         {
           "text": "driving",
-          "start": 42.695,
-          "end": 43.015,
-          "speaker": "SPEAKER_03",
-          "score": 0.838
+          "start": 43.197,
+          "end": 43.517,
+          "speaker": "SPEAKER_02",
+          "score": 0.812,
+          "level_db": -21.7
         },
         {
           "text": "in,",
-          "start": 43.115,
-          "end": 43.235,
-          "speaker": "SPEAKER_03",
-          "score": 0.836
+          "start": 43.617,
+          "end": 43.757,
+          "speaker": "SPEAKER_02",
+          "score": 0.897,
+          "level_db": -23.1
         },
         {
           "text": "small",
-          "start": 43.596,
-          "end": 43.816,
-          "speaker": "SPEAKER_03",
-          "score": 0.571
+          "start": 44.077,
+          "end": 44.337,
+          "speaker": "SPEAKER_02",
+          "score": 0.978,
+          "level_db": -20.8
         },
         {
           "text": "shops",
-          "start": 43.856,
-          "end": 44.116,
-          "speaker": "SPEAKER_03",
-          "score": 0.841
+          "start": 44.377,
+          "end": 44.618,
+          "speaker": "SPEAKER_02",
+          "score": 0.938,
+          "level_db": -24.0
         },
         {
           "text": "like",
-          "start": 44.136,
-          "end": 44.276,
-          "speaker": "SPEAKER_03",
-          "score": 0.918
+          "start": 44.638,
+          "end": 44.818,
+          "speaker": "SPEAKER_02",
+          "score": 0.846,
+          "level_db": -23.1
         },
         {
           "text": "mine",
-          "start": 44.316,
-          "end": 44.497,
-          "speaker": "SPEAKER_03",
-          "score": 0.559
+          "start": 44.858,
+          "end": 45.038,
+          "speaker": "SPEAKER_02",
+          "score": 0.891,
+          "level_db": -20.2
         },
         {
           "text": "could",
-          "start": 44.557,
-          "end": 44.717,
-          "speaker": "SPEAKER_03",
-          "score": 0.368
+          "start": 45.078,
+          "end": 45.238,
+          "speaker": "SPEAKER_02",
+          "score": 0.773,
+          "level_db": -30.0
         },
         {
           "text": "close",
-          "start": 44.757,
-          "end": 45.077,
-          "speaker": "SPEAKER_03",
-          "score": 0.751
+          "start": 45.278,
+          "end": 45.598,
+          "speaker": "SPEAKER_02",
+          "score": 0.927,
+          "level_db": -22.9
         },
         {
           "text": "within",
-          "start": 45.137,
-          "end": 45.297,
-          "speaker": "SPEAKER_03",
-          "score": 0.663
-        }
-      ],
-      "alignment_valid": true,
-      "emotion": "fear",
-      "emotion_score": 0.9675479531288147
-    },
-    {
-      "id": 17,
-      "start": 45.337,
-      "end": 45.538,
-      "speaker": "SPEAKER_02",
-      "text": "a year.",
-      "original_text": "a year.",
-      "words": [
+          "start": 45.658,
+          "end": 45.898,
+          "speaker": "SPEAKER_02",
+          "score": 0.684,
+          "level_db": -23.4
+        },
         {
           "text": "a",
-          "start": 45.337,
-          "end": 45.357,
+          "start": 45.918,
+          "end": 45.978,
           "speaker": "SPEAKER_02",
-          "score": 0.946
+          "score": 0.692,
+          "level_db": -21.0
         },
         {
           "text": "year.",
-          "start": 45.377,
-          "end": 45.538,
+          "start": 45.998,
+          "end": 46.178,
           "speaker": "SPEAKER_02",
-          "score": 0.362
+          "score": 0.394,
+          "level_db": -21.9
         }
       ],
       "alignment_valid": true,
       "emotion": "fear",
-      "emotion_score": 0.9810814261436462
+      "emotion_score": 0.9190530776977539
     },
     {
-      "id": 18,
-      "start": 45.598,
-      "end": 45.778,
+      "id": 17,
+      "start": 46.198,
+      "end": 46.338,
       "speaker": "SPEAKER_02",
       "text": "Right.",
       "original_text": "Right.",
       "words": [
         {
           "text": "Right.",
-          "start": 45.598,
-          "end": 45.778,
+          "start": 46.198,
+          "end": 46.338,
           "speaker": "SPEAKER_02",
-          "score": 0.395
+          "score": 0.243,
+          "level_db": -28.7
         }
       ],
       "alignment_valid": true,
       "emotion": "fear",
-      "emotion_score": 0.9810814261436462
+      "emotion_score": 0.9190530776977539
     },
     {
-      "id": 19,
-      "start": 46.358,
-      "end": 47.619,
-      "speaker": "SPEAKER_02",
+      "id": 18,
+      "start": 46.938,
+      "end": 48.238,
+      "speaker": "SPEAKER_03",
       "text": "That's a real fear.",
       "original_text": "That's a real fear.",
       "words": [
         {
           "text": "That's",
-          "start": 46.358,
-          "end": 46.639,
-          "speaker": "SPEAKER_02",
-          "score": 0.867
+          "start": 46.938,
+          "end": 47.238,
+          "speaker": "SPEAKER_03",
+          "score": 0.813,
+          "level_db": -22.2
         },
         {
           "text": "a",
-          "start": 46.699,
-          "end": 46.719,
-          "speaker": "SPEAKER_02",
-          "score": 0.992
+          "start": 47.318,
+          "end": 47.338,
+          "speaker": "SPEAKER_03",
+          "score": 0.997,
+          "level_db": -26.0
         },
         {
           "text": "real",
-          "start": 46.799,
-          "end": 47.199,
-          "speaker": "SPEAKER_02",
-          "score": 0.809
+          "start": 47.418,
+          "end": 47.818,
+          "speaker": "SPEAKER_03",
+          "score": 0.77,
+          "level_db": -21.4
         },
         {
           "text": "fear.",
-          "start": 47.299,
-          "end": 47.619,
-          "speaker": "SPEAKER_02",
-          "score": 0.906
+          "start": 47.938,
+          "end": 48.238,
+          "speaker": "SPEAKER_03",
+          "score": 0.912,
+          "level_db": -23.2
         }
       ],
       "alignment_valid": true,
       "emotion": "fear",
-      "emotion_score": 0.9810814261436462
+      "emotion_score": 0.9477550983428955
     },
     {
-      "id": 20,
-      "start": 47.86,
-      "end": 49.982,
-      "speaker": "SPEAKER_02",
+      "id": 19,
+      "start": 48.478,
+      "end": 50.559,
+      "speaker": "SPEAKER_03",
       "text": "Tom, what do the studies say?",
       "original_text": "Tom, what do the studies say?",
       "words": [
         {
           "text": "Tom,",
-          "start": 47.86,
-          "end": 48.22,
-          "speaker": "SPEAKER_02",
-          "score": 0.977
+          "start": 48.478,
+          "end": 48.839,
+          "speaker": "SPEAKER_03",
+          "score": 0.956,
+          "level_db": -20.2
         },
         {
           "text": "what",
-          "start": 48.56,
-          "end": 48.72,
-          "speaker": "SPEAKER_02",
-          "score": 0.958
+          "start": 49.239,
+          "end": 49.379,
+          "speaker": "SPEAKER_03",
+          "score": 0.916,
+          "level_db": -22.2
         },
         {
           "text": "do",
-          "start": 48.781,
-          "end": 48.981,
-          "speaker": "SPEAKER_02",
-          "score": 0.901
+          "start": 49.459,
+          "end": 49.639,
+          "speaker": "SPEAKER_03",
+          "score": 0.864,
+          "level_db": -20.3
         },
         {
           "text": "the",
-          "start": 49.041,
-          "end": 49.141,
-          "speaker": "SPEAKER_02",
-          "score": 0.991
+          "start": 49.699,
+          "end": 49.799,
+          "speaker": "SPEAKER_03",
+          "score": 0.739,
+          "level_db": -26.4
         },
         {
           "text": "studies",
-          "start": 49.201,
-          "end": 49.601,
-          "speaker": "SPEAKER_02",
-          "score": 0.853
+          "start": 49.839,
+          "end": 50.199,
+          "speaker": "SPEAKER_03",
+          "score": 0.848,
+          "level_db": -22.6
         },
         {
           "text": "say?",
-          "start": 49.681,
-          "end": 49.982,
-          "speaker": "SPEAKER_02",
-          "score": 0.914
+          "start": 50.279,
+          "end": 50.559,
+          "speaker": "SPEAKER_03",
+          "score": 0.926,
+          "level_db": -19.3
         }
       ],
       "alignment_valid": true,
       "emotion": "fear",
-      "emotion_score": 0.9810814261436462
+      "emotion_score": 0.9477550983428955
     },
     {
-      "id": 21,
-      "start": 50.542,
-      "end": 55.547,
+      "id": 20,
+      "start": 51.152,
+      "end": 56.235,
       "speaker": "SPEAKER_00",
-      "text": "The studies the Council sites show traffic falling by about a fifth, but the effect",
-      "original_text": "The studies the Council sites show traffic falling by about a fifth, but the effect",
+      "text": "The studies the council sites show traffic falling by about a fifth, but the effect",
+      "original_text": "The studies the council sites show traffic falling by about a fifth, but the effect",
       "words": [
         {
           "text": "The",
-          "start": 50.542,
-          "end": 50.642,
+          "start": 51.152,
+          "end": 51.232,
           "speaker": "SPEAKER_00",
-          "score": 0.997
+          "score": 0.667,
+          "level_db": -29.3
         },
         {
           "text": "studies",
-          "start": 50.702,
-          "end": 51.123,
+          "start": 51.292,
+          "end": 51.752,
           "speaker": "SPEAKER_00",
-          "score": 0.717
+          "score": 0.861,
+          "level_db": -22.6
         },
         {
           "text": "the",
-          "start": 51.183,
-          "end": 51.263,
+          "start": 51.812,
+          "end": 51.913,
           "speaker": "SPEAKER_00",
-          "score": 0.845
+          "score": 0.811,
+          "level_db": -25.4
         },
         {
-          "text": "Council",
-          "start": 51.303,
-          "end": 51.763,
+          "text": "council",
+          "start": 51.953,
+          "end": 52.453,
           "speaker": "SPEAKER_00",
-          "score": 0.882
+          "score": 0.901,
+          "level_db": -25.3
         },
         {
           "text": "sites",
-          "start": 51.843,
-          "end": 52.144,
+          "start": 52.513,
+          "end": 52.833,
           "speaker": "SPEAKER_00",
-          "score": 0.756
+          "score": 0.723,
+          "level_db": -25.6
         },
         {
           "text": "show",
-          "start": 52.244,
-          "end": 52.504,
+          "start": 52.933,
+          "end": 53.193,
           "speaker": "SPEAKER_00",
-          "score": 0.931
+          "score": 0.895,
+          "level_db": -23.5
         },
         {
           "text": "traffic",
-          "start": 52.564,
-          "end": 52.984,
+          "start": 53.253,
+          "end": 53.654,
           "speaker": "SPEAKER_00",
-          "score": 0.877
+          "score": 0.963,
+          "level_db": -26.1
         },
         {
           "text": "falling",
-          "start": 53.084,
-          "end": 53.465,
+          "start": 53.754,
+          "end": 54.134,
           "speaker": "SPEAKER_00",
-          "score": 0.902
+          "score": 0.885,
+          "level_db": -21.9
         },
         {
           "text": "by",
-          "start": 53.505,
-          "end": 53.665,
+          "start": 54.194,
+          "end": 54.354,
           "speaker": "SPEAKER_00",
-          "score": 0.928
+          "score": 0.978,
+          "level_db": -22.2
         },
         {
           "text": "about",
-          "start": 53.725,
-          "end": 54.025,
+          "start": 54.414,
+          "end": 54.714,
           "speaker": "SPEAKER_00",
-          "score": 0.926
+          "score": 0.88,
+          "level_db": -23.7
         },
         {
           "text": "a",
-          "start": 54.065,
-          "end": 54.085,
+          "start": 54.754,
+          "end": 54.795,
           "speaker": "SPEAKER_00",
-          "score": 0.995
+          "score": 0.511,
+          "level_db": -39.9
         },
         {
           "text": "fifth,",
-          "start": 54.145,
-          "end": 54.446,
+          "start": 54.855,
+          "end": 55.135,
           "speaker": "SPEAKER_00",
-          "score": 0.919
+          "score": 0.903,
+          "level_db": -30.6
         },
         {
           "text": "but",
-          "start": 54.766,
-          "end": 54.906,
+          "start": 55.415,
+          "end": 55.575,
           "speaker": "SPEAKER_00",
-          "score": 0.873
+          "score": 0.6,
+          "level_db": -32.0
         },
         {
           "text": "the",
-          "start": 54.946,
-          "end": 55.066,
+          "start": 55.615,
+          "end": 55.755,
           "speaker": "SPEAKER_00",
-          "score": 0.85
+          "score": 0.786,
+          "level_db": -25.0
         },
         {
           "text": "effect",
-          "start": 55.186,
-          "end": 55.547,
+          "start": 55.875,
+          "end": 56.235,
           "speaker": "SPEAKER_00",
-          "score": 0.924
+          "score": 0.881,
+          "level_db": -29.1
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8910421133041382
+      "emotion_score": 0.8831164240837097
     },
     {
-      "id": 22,
-      "start": 55.647,
-      "end": 56.888,
+      "id": 21,
+      "start": 56.356,
+      "end": 57.636,
       "speaker": "SPEAKER_00",
       "text": "on shops is mixed.",
       "original_text": "on shops is mixed.",
       "words": [
         {
           "text": "on",
-          "start": 55.647,
-          "end": 55.767,
+          "start": 56.356,
+          "end": 56.476,
           "speaker": "SPEAKER_00",
-          "score": 0.995
+          "score": 0.891,
+          "level_db": -25.9
         },
         {
           "text": "shops",
-          "start": 55.867,
-          "end": 56.167,
+          "start": 56.576,
+          "end": 56.896,
           "speaker": "SPEAKER_00",
-          "score": 0.871
+          "score": 0.889,
+          "level_db": -27.3
         },
         {
           "text": "is",
-          "start": 56.367,
-          "end": 56.447,
+          "start": 57.076,
+          "end": 57.156,
           "speaker": "SPEAKER_00",
-          "score": 0.742
+          "score": 0.696,
+          "level_db": -30.0
         },
         {
           "text": "mixed.",
-          "start": 56.528,
-          "end": 56.888,
+          "start": 57.236,
+          "end": 57.636,
           "speaker": "SPEAKER_00",
-          "score": 0.902
+          "score": 0.997,
+          "level_db": -30.3
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8910421133041382
+      "emotion_score": 0.8831164240837097
     },
     {
-      "id": 23,
-      "start": 57.523,
-      "end": 60.285,
-      "speaker": "SPEAKER_03",
+      "id": 22,
+      "start": 58.237,
+      "end": 60.999,
+      "speaker": "SPEAKER_02",
       "text": "Mixed isn't good enough when it's your livelihood on the line.",
       "original_text": "Mixed isn't good enough when it's your livelihood on the line.",
       "words": [
         {
           "text": "Mixed",
-          "start": 57.523,
-          "end": 57.763,
-          "speaker": "SPEAKER_03",
-          "score": 0.899
+          "start": 58.237,
+          "end": 58.477,
+          "speaker": "SPEAKER_02",
+          "score": 0.879,
+          "level_db": -17.5
         },
         {
           "text": "isn't",
-          "start": 57.823,
-          "end": 57.963,
-          "speaker": "SPEAKER_03",
-          "score": 0.998
+          "start": 58.537,
+          "end": 58.717,
+          "speaker": "SPEAKER_02",
+          "score": 0.747,
+          "level_db": -21.3
         },
         {
           "text": "good",
-          "start": 58.003,
-          "end": 58.143,
-          "speaker": "SPEAKER_03",
-          "score": 0.991
+          "start": 58.737,
+          "end": 58.877,
+          "speaker": "SPEAKER_02",
+          "score": 0.994,
+          "level_db": -15.8
         },
         {
           "text": "enough",
-          "start": 58.184,
-          "end": 58.424,
-          "speaker": "SPEAKER_03",
-          "score": 0.824
+          "start": 58.937,
+          "end": 59.197,
+          "speaker": "SPEAKER_02",
+          "score": 0.748,
+          "level_db": -17.6
         },
         {
           "text": "when",
-          "start": 58.724,
-          "end": 58.844,
-          "speaker": "SPEAKER_03",
-          "score": 0.877
+          "start": 59.498,
+          "end": 59.618,
+          "speaker": "SPEAKER_02",
+          "score": 0.993,
+          "level_db": -19.0
         },
         {
           "text": "it's",
-          "start": 58.884,
-          "end": 59.004,
-          "speaker": "SPEAKER_03",
-          "score": 0.924
+          "start": 59.658,
+          "end": 59.798,
+          "speaker": "SPEAKER_02",
+          "score": 0.816,
+          "level_db": -29.0
         },
         {
           "text": "your",
-          "start": 59.024,
-          "end": 59.164,
-          "speaker": "SPEAKER_03",
-          "score": 0.946
+          "start": 59.818,
+          "end": 59.958,
+          "speaker": "SPEAKER_02",
+          "score": 0.839,
+          "level_db": -15.3
         },
         {
           "text": "livelihood",
-          "start": 59.204,
-          "end": 59.705,
-          "speaker": "SPEAKER_03",
-          "score": 0.901
+          "start": 59.998,
+          "end": 60.438,
+          "speaker": "SPEAKER_02",
+          "score": 0.87,
+          "level_db": -18.1
         },
         {
           "text": "on",
-          "start": 59.785,
-          "end": 59.885,
-          "speaker": "SPEAKER_03",
-          "score": 0.823
+          "start": 60.518,
+          "end": 60.598,
+          "speaker": "SPEAKER_02",
+          "score": 0.988,
+          "level_db": -14.7
         },
         {
           "text": "the",
-          "start": 59.905,
-          "end": 59.985,
-          "speaker": "SPEAKER_03",
-          "score": 0.994
+          "start": 60.638,
+          "end": 60.719,
+          "speaker": "SPEAKER_02",
+          "score": 0.953,
+          "level_db": -17.0
         },
         {
           "text": "line.",
-          "start": 60.025,
-          "end": 60.285,
-          "speaker": "SPEAKER_03",
-          "score": 0.99
+          "start": 60.759,
+          "end": 60.999,
+          "speaker": "SPEAKER_02",
+          "score": 0.879,
+          "level_db": -18.8
         }
       ],
       "alignment_valid": true,
@@ -1406,33 +1559,161 @@
       "emotion_score": null
     },
     {
-      "id": 24,
-      "start": 60.845,
-      "end": 61.306,
+      "id": 23,
+      "start": 61.579,
+      "end": 61.999,
       "speaker": "SPEAKER_01",
       "text": "I hear you.",
       "original_text": "I hear you.",
       "words": [
         {
           "text": "I",
-          "start": 60.845,
-          "end": 60.905,
+          "start": 61.579,
+          "end": 61.639,
           "speaker": "SPEAKER_01",
-          "score": 0.955
+          "score": 0.845,
+          "level_db": -18.2
         },
         {
           "text": "hear",
-          "start": 60.945,
-          "end": 61.126,
+          "start": 61.679,
+          "end": 61.819,
           "speaker": "SPEAKER_01",
-          "score": 0.818
+          "score": 0.917,
+          "level_db": -19.8
         },
         {
           "text": "you.",
-          "start": 61.166,
-          "end": 61.306,
+          "start": 61.859,
+          "end": 61.999,
           "speaker": "SPEAKER_01",
-          "score": 0.764
+          "score": 0.988,
+          "level_db": -22.4
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.737805187702179
+    },
+    {
+      "id": 24,
+      "start": 62.099,
+      "end": 65.402,
+      "speaker": "SPEAKER_01",
+      "text": "That's why the plan includes a discount for delivery vans in the first year.",
+      "original_text": "That's why the plan includes a discount for delivery vans in the first year.",
+      "words": [
+        {
+          "text": "That's",
+          "start": 62.099,
+          "end": 62.28,
+          "speaker": "SPEAKER_01",
+          "score": 0.848,
+          "level_db": -19.3
+        },
+        {
+          "text": "why",
+          "start": 62.3,
+          "end": 62.42,
+          "speaker": "SPEAKER_01",
+          "score": 0.66,
+          "level_db": -17.5
+        },
+        {
+          "text": "the",
+          "start": 62.46,
+          "end": 62.54,
+          "speaker": "SPEAKER_01",
+          "score": 0.891,
+          "level_db": -23.9
+        },
+        {
+          "text": "plan",
+          "start": 62.58,
+          "end": 62.82,
+          "speaker": "SPEAKER_01",
+          "score": 0.839,
+          "level_db": -21.3
+        },
+        {
+          "text": "includes",
+          "start": 62.86,
+          "end": 63.26,
+          "speaker": "SPEAKER_01",
+          "score": 0.825,
+          "level_db": -23.3
+        },
+        {
+          "text": "a",
+          "start": 63.3,
+          "end": 63.34,
+          "speaker": "SPEAKER_01",
+          "score": 0.504,
+          "level_db": -34.3
+        },
+        {
+          "text": "discount",
+          "start": 63.38,
+          "end": 63.781,
+          "speaker": "SPEAKER_01",
+          "score": 0.947,
+          "level_db": -21.8
+        },
+        {
+          "text": "for",
+          "start": 63.801,
+          "end": 63.921,
+          "speaker": "SPEAKER_01",
+          "score": 0.888,
+          "level_db": -30.1
+        },
+        {
+          "text": "delivery",
+          "start": 63.941,
+          "end": 64.321,
+          "speaker": "SPEAKER_01",
+          "score": 0.917,
+          "level_db": -24.2
+        },
+        {
+          "text": "vans",
+          "start": 64.361,
+          "end": 64.681,
+          "speaker": "SPEAKER_01",
+          "score": 0.792,
+          "level_db": -25.4
+        },
+        {
+          "text": "in",
+          "start": 64.701,
+          "end": 64.761,
+          "speaker": "SPEAKER_01",
+          "score": 0.716,
+          "level_db": -28.9
+        },
+        {
+          "text": "the",
+          "start": 64.781,
+          "end": 64.841,
+          "speaker": "SPEAKER_01",
+          "score": 0.758,
+          "level_db": -37.4
+        },
+        {
+          "text": "first",
+          "start": 64.881,
+          "end": 65.142,
+          "speaker": "SPEAKER_01",
+          "score": 0.808,
+          "level_db": -23.7
+        },
+        {
+          "text": "year.",
+          "start": 65.182,
+          "end": 65.402,
+          "speaker": "SPEAKER_01",
+          "score": 0.876,
+          "level_db": -23.8
         }
       ],
       "alignment_valid": true,
@@ -1441,829 +1722,772 @@
     },
     {
       "id": 25,
-      "start": 61.346,
-      "end": 64.508,
-      "speaker": "SPEAKER_01",
-      "text": "That's why the plan includes a discount for delivery vans in the first year.",
-      "original_text": "That's why the plan includes a discount for delivery vans in the first year.",
-      "words": [
-        {
-          "text": "That's",
-          "start": 61.346,
-          "end": 61.546,
-          "speaker": "SPEAKER_01",
-          "score": 0.848
-        },
-        {
-          "text": "why",
-          "start": 61.566,
-          "end": 61.666,
-          "speaker": "SPEAKER_01",
-          "score": 0.992
-        },
-        {
-          "text": "the",
-          "start": 61.706,
-          "end": 61.766,
-          "speaker": "SPEAKER_01",
-          "score": 0.999
-        },
-        {
-          "text": "plan",
-          "start": 61.806,
-          "end": 62.046,
-          "speaker": "SPEAKER_01",
-          "score": 0.922
-        },
-        {
-          "text": "includes",
-          "start": 62.106,
-          "end": 62.466,
-          "speaker": "SPEAKER_01",
-          "score": 0.862
-        },
-        {
-          "text": "a",
-          "start": 62.506,
-          "end": 62.546,
-          "speaker": "SPEAKER_01",
-          "score": 0.5
-        },
-        {
-          "text": "discount",
-          "start": 62.586,
-          "end": 62.927,
-          "speaker": "SPEAKER_01",
-          "score": 0.845
-        },
-        {
-          "text": "for",
-          "start": 62.947,
-          "end": 63.087,
-          "speaker": "SPEAKER_01",
-          "score": 0.907
-        },
-        {
-          "text": "delivery",
-          "start": 63.107,
-          "end": 63.487,
-          "speaker": "SPEAKER_01",
-          "score": 0.79
-        },
-        {
-          "text": "vans",
-          "start": 63.527,
-          "end": 63.827,
-          "speaker": "SPEAKER_01",
-          "score": 0.824
-        },
-        {
-          "text": "in",
-          "start": 63.867,
-          "end": 63.927,
-          "speaker": "SPEAKER_01",
-          "score": 0.751
-        },
-        {
-          "text": "the",
-          "start": 63.947,
-          "end": 64.007,
-          "speaker": "SPEAKER_01",
-          "score": 0.998
-        },
-        {
-          "text": "first",
-          "start": 64.047,
-          "end": 64.268,
-          "speaker": "SPEAKER_01",
-          "score": 0.828
-        },
-        {
-          "text": "year.",
-          "start": 64.308,
-          "end": 64.508,
-          "speaker": "SPEAKER_01",
-          "score": 0.869
-        }
-      ],
-      "alignment_valid": true,
-      "emotion": "neutral",
-      "emotion_score": 0.737805187702179
-    },
-    {
-      "id": 26,
-      "start": 65.268,
-      "end": 65.569,
+      "start": 66.082,
+      "end": 66.382,
       "speaker": "SPEAKER_03",
       "text": "Really?",
       "original_text": "Really?",
       "words": [
         {
           "text": "Really?",
-          "start": 65.268,
-          "end": 65.569,
+          "start": 66.082,
+          "end": 66.382,
           "speaker": "SPEAKER_03",
-          "score": 0.856
+          "score": 0.915,
+          "level_db": -17.7
         }
       ],
       "alignment_valid": true,
       "emotion": "surprise",
-      "emotion_score": 0.9695847630500793
+      "emotion_score": 0.9299784898757935
     },
     {
-      "id": 27,
-      "start": 66.109,
-      "end": 66.789,
-      "speaker": "SPEAKER_02",
+      "id": 26,
+      "start": 66.963,
+      "end": 67.703,
+      "speaker": "SPEAKER_03",
       "text": "I didn't know that.",
       "original_text": "I didn't know that.",
       "words": [
         {
           "text": "I",
-          "start": 66.109,
-          "end": 66.149,
-          "speaker": "SPEAKER_02",
-          "score": 1.0
+          "start": 66.963,
+          "end": 67.003,
+          "speaker": "SPEAKER_03",
+          "score": 0.88,
+          "level_db": -19.3
         },
         {
           "text": "didn't",
-          "start": 66.189,
-          "end": 66.369,
-          "speaker": "SPEAKER_02",
-          "score": 0.92
+          "start": 67.043,
+          "end": 67.283,
+          "speaker": "SPEAKER_03",
+          "score": 0.744,
+          "level_db": -20.7
         },
         {
           "text": "know",
-          "start": 66.409,
-          "end": 66.549,
-          "speaker": "SPEAKER_02",
-          "score": 0.629
+          "start": 67.323,
+          "end": 67.463,
+          "speaker": "SPEAKER_03",
+          "score": 0.828,
+          "level_db": -19.5
         },
         {
           "text": "that.",
-          "start": 66.589,
-          "end": 66.789,
-          "speaker": "SPEAKER_02",
-          "score": 0.976
+          "start": 67.503,
+          "end": 67.703,
+          "speaker": "SPEAKER_03",
+          "score": 0.969,
+          "level_db": -25.6
         }
       ],
       "alignment_valid": true,
-      "emotion": null,
-      "emotion_score": null
+      "emotion": "surprise",
+      "emotion_score": 0.9299784898757935
     },
     {
-      "id": 28,
-      "start": 67.45,
-      "end": 68.45,
-      "speaker": "SPEAKER_02",
+      "id": 27,
+      "start": 68.003,
+      "end": 69.024,
+      "speaker": "SPEAKER_03",
       "text": "That actually helps.",
       "original_text": "That actually helps.",
       "words": [
         {
           "text": "That",
-          "start": 67.45,
-          "end": 67.63,
-          "speaker": "SPEAKER_02",
-          "score": 0.911
+          "start": 68.003,
+          "end": 68.184,
+          "speaker": "SPEAKER_03",
+          "score": 0.866,
+          "level_db": -22.1
         },
         {
           "text": "actually",
-          "start": 67.77,
-          "end": 68.11,
-          "speaker": "SPEAKER_02",
-          "score": 0.947
+          "start": 68.324,
+          "end": 68.684,
+          "speaker": "SPEAKER_03",
+          "score": 0.883,
+          "level_db": -26.8
         },
         {
           "text": "helps.",
-          "start": 68.17,
-          "end": 68.45,
-          "speaker": "SPEAKER_02",
-          "score": 0.892
+          "start": 68.724,
+          "end": 69.024,
+          "speaker": "SPEAKER_03",
+          "score": 0.871,
+          "level_db": -28.7
         }
       ],
       "alignment_valid": true,
-      "emotion": null,
-      "emotion_score": null
+      "emotion": "surprise",
+      "emotion_score": 0.9299784898757935
     },
     {
-      "id": 29,
-      "start": 69.331,
-      "end": 70.892,
-      "speaker": "SPEAKER_02",
-      "text": "Let's talk about fairness.",
-      "original_text": "Let's talk about fairness.",
+      "id": 28,
+      "start": 69.905,
+      "end": 72.867,
+      "speaker": "SPEAKER_03",
+      "text": "Let's talk about fairness, who pays the most.",
+      "original_text": "Let's talk about fairness, who pays the most.",
       "words": [
         {
           "text": "Let's",
-          "start": 69.331,
-          "end": 69.611,
-          "speaker": "SPEAKER_02",
-          "score": 0.776
+          "start": 69.905,
+          "end": 70.185,
+          "speaker": "SPEAKER_03",
+          "score": 0.706,
+          "level_db": -22.0
         },
         {
           "text": "talk",
-          "start": 69.671,
-          "end": 69.951,
-          "speaker": "SPEAKER_02",
-          "score": 0.813
+          "start": 70.265,
+          "end": 70.545,
+          "speaker": "SPEAKER_03",
+          "score": 0.905,
+          "level_db": -24.9
         },
         {
           "text": "about",
-          "start": 70.072,
-          "end": 70.312,
-          "speaker": "SPEAKER_02",
-          "score": 0.992
+          "start": 70.665,
+          "end": 70.945,
+          "speaker": "SPEAKER_03",
+          "score": 0.857,
+          "level_db": -22.8
         },
         {
-          "text": "fairness.",
-          "start": 70.412,
-          "end": 70.892,
-          "speaker": "SPEAKER_02",
-          "score": 0.928
-        }
-      ],
-      "alignment_valid": true,
-      "emotion": null,
-      "emotion_score": null
-    },
-    {
-      "id": 30,
-      "start": 71.232,
-      "end": 72.313,
-      "speaker": "SPEAKER_02",
-      "text": "Who pays the most?",
-      "original_text": "Who pays the most?",
-      "words": [
+          "text": "fairness,",
+          "start": 71.006,
+          "end": 71.506,
+          "speaker": "SPEAKER_03",
+          "score": 0.865,
+          "level_db": -25.0
+        },
         {
-          "text": "Who",
-          "start": 71.232,
-          "end": 71.392,
-          "speaker": "SPEAKER_02",
-          "score": 0.615
+          "text": "who",
+          "start": 71.866,
+          "end": 72.026,
+          "speaker": "SPEAKER_03",
+          "score": 0.679,
+          "level_db": -20.0
         },
         {
           "text": "pays",
-          "start": 71.432,
-          "end": 71.793,
-          "speaker": "SPEAKER_02",
-          "score": 0.84
+          "start": 72.086,
+          "end": 72.406,
+          "speaker": "SPEAKER_03",
+          "score": 0.838,
+          "level_db": -18.2
         },
         {
           "text": "the",
-          "start": 71.873,
-          "end": 71.953,
-          "speaker": "SPEAKER_02",
-          "score": 0.994
+          "start": 72.467,
+          "end": 72.567,
+          "speaker": "SPEAKER_03",
+          "score": 0.842,
+          "level_db": -19.4
         },
         {
-          "text": "most?",
-          "start": 71.993,
-          "end": 72.313,
-          "speaker": "SPEAKER_02",
-          "score": 0.937
+          "text": "most.",
+          "start": 72.587,
+          "end": 72.867,
+          "speaker": "SPEAKER_03",
+          "score": 0.899,
+          "level_db": -21.4
         }
       ],
       "alignment_valid": true,
-      "emotion": null,
-      "emotion_score": null
+      "emotion": "surprise",
+      "emotion_score": 0.9299784898757935
     },
     {
-      "id": 31,
-      "start": 72.913,
-      "end": 76.276,
+      "id": 29,
+      "start": 73.508,
+      "end": 77.469,
       "speaker": "SPEAKER_00",
-      "text": "Commuters from the outer suburbs with no train line.",
-      "original_text": "Commuters from the outer suburbs with no train line.",
+      "text": "commuters from the outer suburbs with no train line for them.",
+      "original_text": "commuters from the outer suburbs with no train line for them.",
       "words": [
         {
-          "text": "Commuters",
-          "start": 72.913,
-          "end": 73.494,
+          "text": "commuters",
+          "start": 73.508,
+          "end": 74.068,
           "speaker": "SPEAKER_00",
-          "score": 0.837
+          "score": 0.833,
+          "level_db": -19.5
         },
         {
           "text": "from",
-          "start": 73.574,
-          "end": 73.774,
+          "start": 74.168,
+          "end": 74.348,
           "speaker": "SPEAKER_00",
-          "score": 0.907
+          "score": 0.859,
+          "level_db": -23.4
         },
         {
           "text": "the",
-          "start": 73.814,
-          "end": 73.954,
+          "start": 74.408,
+          "end": 74.548,
           "speaker": "SPEAKER_00",
-          "score": 0.707
+          "score": 0.736,
+          "level_db": -25.1
         },
         {
           "text": "outer",
-          "start": 74.134,
-          "end": 74.435,
+          "start": 74.708,
+          "end": 74.988,
           "speaker": "SPEAKER_00",
-          "score": 0.847
+          "score": 0.945,
+          "level_db": -22.5
         },
         {
           "text": "suburbs",
-          "start": 74.475,
-          "end": 74.915,
+          "start": 75.048,
+          "end": 75.489,
           "speaker": "SPEAKER_00",
-          "score": 0.836
+          "score": 0.874,
+          "level_db": -23.2
         },
         {
           "text": "with",
-          "start": 74.975,
-          "end": 75.155,
+          "start": 75.549,
+          "end": 75.729,
           "speaker": "SPEAKER_00",
-          "score": 0.878
+          "score": 0.879,
+          "level_db": -25.1
         },
         {
           "text": "no",
-          "start": 75.215,
-          "end": 75.415,
+          "start": 75.829,
+          "end": 76.029,
           "speaker": "SPEAKER_00",
-          "score": 0.89
+          "score": 0.973,
+          "level_db": -21.3
         },
         {
           "text": "train",
-          "start": 75.495,
-          "end": 75.875,
+          "start": 76.109,
+          "end": 76.469,
           "speaker": "SPEAKER_00",
-          "score": 0.827
+          "score": 0.826,
+          "level_db": -20.2
         },
         {
-          "text": "line.",
-          "start": 75.936,
-          "end": 76.276,
+          "text": "line",
+          "start": 76.529,
+          "end": 76.849,
           "speaker": "SPEAKER_00",
-          "score": 0.868
+          "score": 0.976,
+          "level_db": -23.5
+        },
+        {
+          "text": "for",
+          "start": 77.069,
+          "end": 77.229,
+          "speaker": "SPEAKER_00",
+          "score": 0.966,
+          "level_db": -23.9
+        },
+        {
+          "text": "them.",
+          "start": 77.269,
+          "end": 77.469,
+          "speaker": "SPEAKER_00",
+          "score": 0.99,
+          "level_db": -25.7
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8647323846817017
+      "emotion_score": 0.9408488273620605
     },
     {
-      "id": 32,
-      "start": 76.476,
-      "end": 78.277,
+      "id": 30,
+      "start": 77.749,
+      "end": 78.869,
       "speaker": "SPEAKER_00",
-      "text": "For them, it's a genuine burden.",
-      "original_text": "For them, it's a genuine burden.",
+      "text": "It's a genuine bird.",
+      "original_text": "It's a genuine bird.",
       "words": [
         {
-          "text": "For",
-          "start": 76.476,
-          "end": 76.636,
+          "text": "It's",
+          "start": 77.749,
+          "end": 77.909,
           "speaker": "SPEAKER_00",
-          "score": 0.94
-        },
-        {
-          "text": "them,",
-          "start": 76.676,
-          "end": 76.876,
-          "speaker": "SPEAKER_00",
-          "score": 0.967
-        },
-        {
-          "text": "it's",
-          "start": 77.136,
-          "end": 77.296,
-          "speaker": "SPEAKER_00",
-          "score": 0.731
+          "score": 0.716,
+          "level_db": -29.6
         },
         {
           "text": "a",
-          "start": 77.357,
-          "end": 77.377,
+          "start": 77.969,
+          "end": 78.009,
           "speaker": "SPEAKER_00",
-          "score": 0.992
+          "score": 0.556,
+          "level_db": -25.8
         },
         {
           "text": "genuine",
-          "start": 77.437,
-          "end": 77.957,
+          "start": 78.069,
+          "end": 78.589,
           "speaker": "SPEAKER_00",
-          "score": 0.801
+          "score": 0.811,
+          "level_db": -18.7
         },
         {
-          "text": "burden.",
-          "start": 78.017,
-          "end": 78.277,
+          "text": "bird.",
+          "start": 78.669,
+          "end": 78.869,
           "speaker": "SPEAKER_00",
-          "score": 0.392
+          "score": 0.468,
+          "level_db": -18.5
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.8647323846817017
+      "emotion_score": 0.9408488273620605
     },
     {
-      "id": 33,
-      "start": 78.337,
-      "end": 78.898,
+      "id": 31,
+      "start": 78.889,
+      "end": 79.47,
       "speaker": "SPEAKER_01",
       "text": "Exactly.",
       "original_text": "Exactly.",
       "words": [
         {
           "text": "Exactly.",
-          "start": 78.337,
-          "end": 78.898,
+          "start": 78.889,
+          "end": 79.47,
           "speaker": "SPEAKER_01",
-          "score": 0.898
+          "score": 0.727,
+          "level_db": -22.9
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.9469998478889465
+      "emotion_score": 0.942619264125824
     },
     {
-      "id": 34,
-      "start": 79.358,
-      "end": 83.16,
+      "id": 32,
+      "start": 79.91,
+      "end": 83.751,
       "speaker": "SPEAKER_01",
-      "text": "So the council added exemptions for low income households and people with",
-      "original_text": "So the council added exemptions for low income households and people with",
+      "text": "So the council added exemptions for low-income households and people with",
+      "original_text": "So the council added exemptions for low-income households and people with",
       "words": [
         {
           "text": "So",
-          "start": 79.358,
-          "end": 79.498,
+          "start": 79.91,
+          "end": 80.03,
           "speaker": "SPEAKER_01",
-          "score": 0.777
+          "score": 0.831,
+          "level_db": -21.4
         },
         {
           "text": "the",
-          "start": 79.518,
-          "end": 79.598,
+          "start": 80.05,
+          "end": 80.13,
           "speaker": "SPEAKER_01",
-          "score": 0.921
+          "score": 0.836,
+          "level_db": -19.2
         },
         {
           "text": "council",
-          "start": 79.638,
-          "end": 79.998,
+          "start": 80.17,
+          "end": 80.57,
           "speaker": "SPEAKER_01",
-          "score": 0.77
+          "score": 0.828,
+          "level_db": -21.7
         },
         {
           "text": "added",
-          "start": 80.078,
-          "end": 80.278,
+          "start": 80.65,
+          "end": 80.87,
           "speaker": "SPEAKER_01",
-          "score": 0.919
+          "score": 0.836,
+          "level_db": -20.6
         },
         {
           "text": "exemptions",
-          "start": 80.339,
-          "end": 80.879,
+          "start": 80.95,
+          "end": 81.49,
           "speaker": "SPEAKER_01",
-          "score": 0.895
+          "score": 0.854,
+          "level_db": -24.0
         },
         {
           "text": "for",
-          "start": 80.939,
-          "end": 81.079,
+          "start": 81.55,
+          "end": 81.69,
           "speaker": "SPEAKER_01",
-          "score": 0.787
+          "score": 0.884,
+          "level_db": -25.8
         },
         {
-          "text": "low",
-          "start": 81.139,
-          "end": 81.359,
+          "text": "low-income",
+          "start": 81.77,
+          "end": 82.33,
           "speaker": "SPEAKER_01",
-          "score": 0.951
-        },
-        {
-          "text": "income",
-          "start": 81.459,
-          "end": 81.84,
-          "speaker": "SPEAKER_01",
-          "score": 0.908
+          "score": 0.85,
+          "level_db": -21.5
         },
         {
           "text": "households",
-          "start": 81.9,
-          "end": 82.5,
+          "start": 82.39,
+          "end": 82.971,
           "speaker": "SPEAKER_01",
-          "score": 0.878
+          "score": 0.779,
+          "level_db": -22.5
         },
         {
           "text": "and",
-          "start": 82.6,
-          "end": 82.7,
+          "start": 83.071,
+          "end": 83.171,
           "speaker": "SPEAKER_01",
-          "score": 0.759
+          "score": 0.851,
+          "level_db": -30.5
         },
         {
           "text": "people",
-          "start": 82.74,
-          "end": 83.02,
+          "start": 83.231,
+          "end": 83.571,
           "speaker": "SPEAKER_01",
-          "score": 0.906
+          "score": 0.903,
+          "level_db": -25.1
         },
         {
           "text": "with",
-          "start": 83.06,
-          "end": 83.16,
+          "start": 83.611,
+          "end": 83.751,
           "speaker": "SPEAKER_01",
-          "score": 0.888
+          "score": 0.852,
+          "level_db": -24.9
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.9469998478889465
+      "emotion_score": 0.942619264125824
     },
     {
-      "id": 35,
-      "start": 83.2,
-      "end": 83.841,
+      "id": 33,
+      "start": 83.791,
+      "end": 84.491,
       "speaker": "SPEAKER_01",
       "text": "disabilities.",
       "original_text": "disabilities.",
       "words": [
         {
           "text": "disabilities.",
-          "start": 83.2,
-          "end": 83.841,
+          "start": 83.791,
+          "end": 84.491,
           "speaker": "SPEAKER_01",
-          "score": 0.867
+          "score": 0.883,
+          "level_db": -24.5
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.9469998478889465
+      "emotion_score": 0.942619264125824
     },
     {
-      "id": 36,
-      "start": 84.418,
-      "end": 85.979,
-      "speaker": "SPEAKER_03",
-      "text": "It's sad that we only think about",
-      "original_text": "It's sad that we only think about",
+      "id": 34,
+      "start": 85.091,
+      "end": 85.911,
+      "speaker": "SPEAKER_02",
+      "text": "It's sad that we",
+      "original_text": "It's sad that we",
       "words": [
         {
           "text": "It's",
-          "start": 84.418,
-          "end": 84.518,
-          "speaker": "SPEAKER_03",
-          "score": 0.702
+          "start": 85.091,
+          "end": 85.231,
+          "speaker": "SPEAKER_02",
+          "score": 0.871,
+          "level_db": -34.0
         },
         {
           "text": "sad",
-          "start": 84.558,
-          "end": 84.858,
-          "speaker": "SPEAKER_03",
-          "score": 0.713
+          "start": 85.271,
+          "end": 85.551,
+          "speaker": "SPEAKER_02",
+          "score": 0.79,
+          "level_db": -25.8
         },
         {
           "text": "that",
-          "start": 84.918,
-          "end": 85.038,
-          "speaker": "SPEAKER_03",
-          "score": 0.793
+          "start": 85.631,
+          "end": 85.751,
+          "speaker": "SPEAKER_02",
+          "score": 0.906,
+          "level_db": -33.5
         },
         {
           "text": "we",
-          "start": 85.058,
-          "end": 85.178,
-          "speaker": "SPEAKER_03",
-          "score": 0.988
-        },
-        {
-          "text": "only",
-          "start": 85.258,
-          "end": 85.459,
-          "speaker": "SPEAKER_03",
-          "score": 0.799
-        },
-        {
-          "text": "think",
-          "start": 85.519,
-          "end": 85.719,
-          "speaker": "SPEAKER_03",
-          "score": 0.843
-        },
-        {
-          "text": "about",
-          "start": 85.759,
-          "end": 85.979,
-          "speaker": "SPEAKER_03",
-          "score": 0.645
+          "start": 85.771,
+          "end": 85.911,
+          "speaker": "SPEAKER_02",
+          "score": 0.92,
+          "level_db": -30.8
         }
       ],
       "alignment_valid": true,
       "emotion": "sadness",
-      "emotion_score": 0.9608712792396545
+      "emotion_score": 0.9782892465591431
     },
     {
-      "id": 37,
-      "start": 86.059,
-      "end": 87.42,
-      "speaker": "SPEAKER_02",
-      "text": "fairness after the backlash.",
-      "original_text": "fairness after the backlash.",
+      "id": 35,
+      "start": 85.971,
+      "end": 88.132,
+      "speaker": "SPEAKER_03",
+      "text": "only think about fairness after the backlash.",
+      "original_text": "only think about fairness after the backlash.",
       "words": [
         {
+          "text": "only",
+          "start": 85.971,
+          "end": 86.191,
+          "speaker": "SPEAKER_03",
+          "score": 0.951,
+          "level_db": -23.3
+        },
+        {
+          "text": "think",
+          "start": 86.251,
+          "end": 86.472,
+          "speaker": "SPEAKER_03",
+          "score": 0.958,
+          "level_db": -28.0
+        },
+        {
+          "text": "about",
+          "start": 86.512,
+          "end": 86.712,
+          "speaker": "SPEAKER_03",
+          "score": 0.666,
+          "level_db": -33.3
+        },
+        {
           "text": "fairness",
-          "start": 86.059,
-          "end": 86.419,
-          "speaker": "SPEAKER_02",
-          "score": 0.824
+          "start": 86.792,
+          "end": 87.172,
+          "speaker": "SPEAKER_03",
+          "score": 0.814,
+          "level_db": -27.7
         },
         {
           "text": "after",
-          "start": 86.539,
-          "end": 86.759,
-          "speaker": "SPEAKER_02",
-          "score": 0.899
+          "start": 87.292,
+          "end": 87.512,
+          "speaker": "SPEAKER_03",
+          "score": 0.772,
+          "level_db": -34.7
         },
         {
           "text": "the",
-          "start": 86.779,
-          "end": 86.859,
-          "speaker": "SPEAKER_02",
-          "score": 0.833
+          "start": 87.532,
+          "end": 87.612,
+          "speaker": "SPEAKER_03",
+          "score": 0.829,
+          "level_db": -34.5
         },
         {
           "text": "backlash.",
-          "start": 86.879,
-          "end": 87.42,
-          "speaker": "SPEAKER_02",
-          "score": 0.833
+          "start": 87.632,
+          "end": 88.132,
+          "speaker": "SPEAKER_03",
+          "score": 0.847,
+          "level_db": -31.2
         }
       ],
       "alignment_valid": true,
-      "emotion": null,
-      "emotion_score": null
+      "emotion": "neutral",
+      "emotion_score": 0.7590113878250122
     },
     {
-      "id": 38,
-      "start": 88.26,
-      "end": 89.581,
-      "speaker": "SPEAKER_02",
+      "id": 36,
+      "start": 88.932,
+      "end": 90.273,
+      "speaker": "SPEAKER_03",
       "text": "Quick round to finish.",
       "original_text": "Quick round to finish.",
       "words": [
         {
           "text": "Quick",
-          "start": 88.26,
-          "end": 88.48,
-          "speaker": "SPEAKER_02",
-          "score": 0.95
+          "start": 88.932,
+          "end": 89.152,
+          "speaker": "SPEAKER_03",
+          "score": 0.943,
+          "level_db": -21.7
         },
         {
           "text": "round",
-          "start": 88.56,
-          "end": 88.92,
-          "speaker": "SPEAKER_02",
-          "score": 0.82
+          "start": 89.252,
+          "end": 89.592,
+          "speaker": "SPEAKER_03",
+          "score": 0.785,
+          "level_db": -21.9
         },
         {
           "text": "to",
-          "start": 89.02,
-          "end": 89.14,
-          "speaker": "SPEAKER_02",
-          "score": 0.644
+          "start": 89.672,
+          "end": 89.792,
+          "speaker": "SPEAKER_03",
+          "score": 0.736,
+          "level_db": -30.2
         },
         {
           "text": "finish.",
-          "start": 89.18,
-          "end": 89.581,
-          "speaker": "SPEAKER_02",
-          "score": 0.822
+          "start": 89.852,
+          "end": 90.273,
+          "speaker": "SPEAKER_03",
+          "score": 0.9,
+          "level_db": -24.4
         }
       ],
       "alignment_valid": true,
-      "emotion": null,
-      "emotion_score": null
+      "emotion": "neutral",
+      "emotion_score": 0.7590113878250122
     },
     {
-      "id": 39,
-      "start": 89.981,
-      "end": 91.802,
-      "speaker": "SPEAKER_02",
+      "id": 37,
+      "start": 90.653,
+      "end": 92.453,
+      "speaker": "SPEAKER_03",
       "text": "Would you vote yes, Marcus?",
       "original_text": "Would you vote yes, Marcus?",
       "words": [
         {
           "text": "Would",
-          "start": 89.981,
-          "end": 90.121,
-          "speaker": "SPEAKER_02",
-          "score": 0.937
+          "start": 90.653,
+          "end": 90.813,
+          "speaker": "SPEAKER_03",
+          "score": 0.875,
+          "level_db": -20.9
         },
         {
           "text": "you",
-          "start": 90.161,
-          "end": 90.261,
-          "speaker": "SPEAKER_02",
-          "score": 0.987
+          "start": 90.833,
+          "end": 90.953,
+          "speaker": "SPEAKER_03",
+          "score": 0.884,
+          "level_db": -22.6
         },
         {
           "text": "vote",
-          "start": 90.321,
-          "end": 90.561,
-          "speaker": "SPEAKER_02",
-          "score": 0.752
+          "start": 90.993,
+          "end": 91.193,
+          "speaker": "SPEAKER_03",
+          "score": 0.943,
+          "level_db": -21.0
         },
         {
           "text": "yes,",
-          "start": 90.601,
-          "end": 90.941,
-          "speaker": "SPEAKER_02",
-          "score": 0.877
+          "start": 91.233,
+          "end": 91.553,
+          "speaker": "SPEAKER_03",
+          "score": 0.912,
+          "level_db": -25.6
         },
         {
           "text": "Marcus?",
-          "start": 91.341,
-          "end": 91.802,
-          "speaker": "SPEAKER_02",
-          "score": 0.832
+          "start": 91.973,
+          "end": 92.453,
+          "speaker": "SPEAKER_03",
+          "score": 0.868,
+          "level_db": -22.9
         }
       ],
       "alignment_valid": true,
-      "emotion": null,
-      "emotion_score": null
+      "emotion": "neutral",
+      "emotion_score": 0.7590113878250122
     },
     {
-      "id": 40,
-      "start": 92.342,
-      "end": 95.003,
+      "id": 38,
+      "start": 92.973,
+      "end": 95.634,
       "speaker": "SPEAKER_01",
       "text": "Yes, with an independent review after a couple of years.",
       "original_text": "Yes, with an independent review after a couple of years.",
       "words": [
         {
           "text": "Yes,",
-          "start": 92.342,
-          "end": 92.642,
+          "start": 92.973,
+          "end": 93.253,
           "speaker": "SPEAKER_01",
-          "score": 0.853
+          "score": 0.945,
+          "level_db": -20.7
         },
         {
           "text": "with",
-          "start": 92.842,
-          "end": 92.982,
+          "start": 93.433,
+          "end": 93.553,
           "speaker": "SPEAKER_01",
-          "score": 0.973
+          "score": 0.933,
+          "level_db": -28.2
         },
         {
           "text": "an",
-          "start": 93.022,
-          "end": 93.082,
+          "start": 93.593,
+          "end": 93.653,
           "speaker": "SPEAKER_01",
-          "score": 0.748
+          "score": 0.746,
+          "level_db": -27.5
         },
         {
           "text": "independent",
-          "start": 93.122,
-          "end": 93.563,
+          "start": 93.713,
+          "end": 94.174,
           "speaker": "SPEAKER_01",
-          "score": 0.961
+          "score": 0.998,
+          "level_db": -22.8
         },
         {
           "text": "review",
-          "start": 93.603,
-          "end": 93.863,
+          "start": 94.194,
+          "end": 94.454,
           "speaker": "SPEAKER_01",
-          "score": 0.926
+          "score": 0.919,
+          "level_db": -23.4
         },
         {
           "text": "after",
-          "start": 93.963,
-          "end": 94.203,
+          "start": 94.554,
+          "end": 94.794,
           "speaker": "SPEAKER_01",
-          "score": 0.784
+          "score": 0.88,
+          "level_db": -22.8
         },
         {
           "text": "a",
-          "start": 94.243,
-          "end": 94.283,
+          "start": 94.814,
+          "end": 94.854,
           "speaker": "SPEAKER_01",
-          "score": 0.501
+          "score": 0.499,
+          "level_db": -36.6
         },
         {
           "text": "couple",
-          "start": 94.323,
-          "end": 94.603,
+          "start": 94.894,
+          "end": 95.174,
           "speaker": "SPEAKER_01",
-          "score": 0.886
+          "score": 0.87,
+          "level_db": -20.7
         },
         {
           "text": "of",
-          "start": 94.623,
-          "end": 94.683,
+          "start": 95.214,
+          "end": 95.274,
           "speaker": "SPEAKER_01",
-          "score": 0.751
+          "score": 0.75,
+          "level_db": -35.2
         },
         {
           "text": "years.",
-          "start": 94.723,
-          "end": 95.003,
+          "start": 95.334,
+          "end": 95.634,
           "speaker": "SPEAKER_01",
-          "score": 0.877
+          "score": 0.735,
+          "level_db": -29.6
         }
       ],
       "alignment_valid": true,
@@ -2271,19 +2495,20 @@
       "emotion_score": 0.8311755657196045
     },
     {
-      "id": 41,
-      "start": 95.543,
-      "end": 95.884,
+      "id": 39,
+      "start": 96.154,
+      "end": 96.474,
       "speaker": "SPEAKER_03",
       "text": "Maybe.",
       "original_text": "Maybe.",
       "words": [
         {
           "text": "Maybe.",
-          "start": 95.543,
-          "end": 95.884,
+          "start": 96.154,
+          "end": 96.474,
           "speaker": "SPEAKER_03",
-          "score": 0.943
+          "score": 0.895,
+          "level_db": -19.2
         }
       ],
       "alignment_valid": true,
@@ -2291,68 +2516,76 @@
       "emotion_score": 0.9444759488105774
     },
     {
-      "id": 42,
-      "start": 96.204,
-      "end": 98.385,
+      "id": 40,
+      "start": 96.814,
+      "end": 98.975,
       "speaker": "SPEAKER_03",
       "text": "Show me the delivery rules in writing first.",
       "original_text": "Show me the delivery rules in writing first.",
       "words": [
         {
           "text": "Show",
-          "start": 96.204,
-          "end": 96.404,
+          "start": 96.814,
+          "end": 96.994,
           "speaker": "SPEAKER_03",
-          "score": 0.856
+          "score": 0.983,
+          "level_db": -17.8
         },
         {
           "text": "me",
-          "start": 96.424,
-          "end": 96.524,
+          "start": 97.034,
+          "end": 97.134,
           "speaker": "SPEAKER_03",
-          "score": 0.843
+          "score": 0.83,
+          "level_db": -17.2
         },
         {
           "text": "the",
-          "start": 96.544,
-          "end": 96.604,
+          "start": 97.154,
+          "end": 97.214,
           "speaker": "SPEAKER_03",
-          "score": 0.96
+          "score": 0.982,
+          "level_db": -19.7
         },
         {
           "text": "delivery",
-          "start": 96.644,
-          "end": 97.024,
+          "start": 97.254,
+          "end": 97.635,
           "speaker": "SPEAKER_03",
-          "score": 0.93
+          "score": 0.859,
+          "level_db": -18.6
         },
         {
           "text": "rules",
-          "start": 97.084,
-          "end": 97.384,
+          "start": 97.695,
+          "end": 97.975,
           "speaker": "SPEAKER_03",
-          "score": 0.85
+          "score": 0.898,
+          "level_db": -18.4
         },
         {
           "text": "in",
-          "start": 97.444,
-          "end": 97.524,
+          "start": 98.055,
+          "end": 98.135,
           "speaker": "SPEAKER_03",
-          "score": 0.849
+          "score": 0.862,
+          "level_db": -19.1
         },
         {
           "text": "writing",
-          "start": 97.544,
-          "end": 97.925,
+          "start": 98.175,
+          "end": 98.535,
           "speaker": "SPEAKER_03",
-          "score": 0.832
+          "score": 0.863,
+          "level_db": -24.7
         },
         {
           "text": "first.",
-          "start": 97.985,
-          "end": 98.385,
+          "start": 98.595,
+          "end": 98.975,
           "speaker": "SPEAKER_03",
-          "score": 0.879
+          "score": 0.814,
+          "level_db": -28.6
         }
       ],
       "alignment_valid": true,
@@ -2360,82 +2593,92 @@
       "emotion_score": 0.9444759488105774
     },
     {
-      "id": 43,
-      "start": 98.985,
-      "end": 102.347,
+      "id": 41,
+      "start": 99.555,
+      "end": 102.756,
       "speaker": "SPEAKER_00",
       "text": "Yes, free buses would change this city for the better.",
       "original_text": "Yes, free buses would change this city for the better.",
       "words": [
         {
           "text": "Yes,",
-          "start": 98.985,
-          "end": 99.345,
+          "start": 99.555,
+          "end": 99.935,
           "speaker": "SPEAKER_00",
-          "score": 0.862
+          "score": 0.871,
+          "level_db": -15.9
         },
         {
           "text": "free",
-          "start": 99.666,
-          "end": 99.926,
+          "start": 100.235,
+          "end": 100.475,
           "speaker": "SPEAKER_00",
-          "score": 0.924
+          "score": 0.876,
+          "level_db": -15.0
         },
         {
           "text": "buses",
-          "start": 99.986,
-          "end": 100.406,
+          "start": 100.515,
+          "end": 100.895,
           "speaker": "SPEAKER_00",
-          "score": 0.808
+          "score": 0.863,
+          "level_db": -19.4
         },
         {
           "text": "would",
-          "start": 100.466,
-          "end": 100.646,
+          "start": 100.955,
+          "end": 101.135,
           "speaker": "SPEAKER_00",
-          "score": 0.95
+          "score": 0.905,
+          "level_db": -21.2
         },
         {
           "text": "change",
-          "start": 100.746,
-          "end": 101.106,
+          "start": 101.196,
+          "end": 101.556,
           "speaker": "SPEAKER_00",
-          "score": 0.878
+          "score": 0.872,
+          "level_db": -18.3
         },
         {
           "text": "this",
-          "start": 101.166,
-          "end": 101.306,
+          "start": 101.616,
+          "end": 101.776,
           "speaker": "SPEAKER_00",
-          "score": 0.561
+          "score": 0.863,
+          "level_db": -20.6
         },
         {
           "text": "city",
-          "start": 101.346,
-          "end": 101.646,
+          "start": 101.816,
+          "end": 102.096,
           "speaker": "SPEAKER_00",
-          "score": 0.894
+          "score": 0.959,
+          "level_db": -20.9
         },
         {
           "text": "for",
-          "start": 101.687,
-          "end": 101.827,
+          "start": 102.156,
+          "end": 102.296,
           "speaker": "SPEAKER_00",
-          "score": 0.677
+          "score": 0.808,
+          "level_db": -22.8
         },
         {
           "text": "the",
-          "start": 101.847,
-          "end": 101.947,
+          "start": 102.316,
+          "end": 102.416,
           "speaker": "SPEAKER_00",
-          "score": 0.748
+          "score": 0.73,
+          "level_db": -22.0
         },
         {
           "text": "better.",
-          "start": 101.987,
-          "end": 102.347,
+          "start": 102.456,
+          "end": 102.756,
           "speaker": "SPEAKER_00",
-          "score": 0.838
+          "score": 0.939,
+          "level_db": -21.8
         }
       ],
       "alignment_valid": true,
@@ -2443,163 +2686,166 @@
       "emotion_score": 0.925906240940094
     },
     {
-      "id": 44,
-      "start": 103.007,
-      "end": 103.808,
-      "speaker": "SPEAKER_02",
-      "text": "Thank you all.",
-      "original_text": "Thank you all.",
+      "id": 42,
+      "start": 103.458,
+      "end": 106.249,
+      "speaker": "SPEAKER_03",
+      "text": "Thank you all, that's policy round table.",
+      "original_text": "Thank you all, that's policy round table.",
       "words": [
         {
           "text": "Thank",
-          "start": 103.007,
-          "end": 103.247,
-          "speaker": "SPEAKER_02",
-          "score": 0.904
+          "start": 103.458,
+          "end": 103.679,
+          "speaker": "SPEAKER_03",
+          "score": 0.99,
+          "level_db": -21.4
         },
         {
           "text": "you",
-          "start": 103.287,
-          "end": 103.467,
-          "speaker": "SPEAKER_02",
-          "score": 0.747
+          "start": 103.719,
+          "end": 103.9,
+          "speaker": "SPEAKER_03",
+          "score": 0.912,
+          "level_db": -19.1
         },
         {
-          "text": "all.",
-          "start": 103.647,
-          "end": 103.808,
-          "speaker": "SPEAKER_02",
-          "score": 0.822
-        }
-      ],
-      "alignment_valid": true,
-      "emotion": "neutral",
-      "emotion_score": 0.903007984161377
-    },
-    {
-      "id": 45,
-      "start": 104.108,
-      "end": 105.688,
-      "speaker": "SPEAKER_02",
-      "text": "That's policy round table.",
-      "original_text": "That's policy round table.",
-      "words": [
+          "text": "all,",
+          "start": 104.1,
+          "end": 104.261,
+          "speaker": "SPEAKER_03",
+          "score": 0.876,
+          "level_db": -23.7
+        },
         {
-          "text": "That's",
-          "start": 104.108,
-          "end": 104.388,
-          "speaker": "SPEAKER_02",
-          "score": 0.882
+          "text": "that's",
+          "start": 104.623,
+          "end": 104.924,
+          "speaker": "SPEAKER_03",
+          "score": 0.744,
+          "level_db": -22.7
         },
         {
           "text": "policy",
-          "start": 104.488,
-          "end": 104.968,
-          "speaker": "SPEAKER_02",
-          "score": 0.884
+          "start": 105.024,
+          "end": 105.506,
+          "speaker": "SPEAKER_03",
+          "score": 0.954,
+          "level_db": -22.1
         },
         {
           "text": "round",
-          "start": 105.028,
-          "end": 105.288,
-          "speaker": "SPEAKER_02",
-          "score": 0.804
+          "start": 105.566,
+          "end": 105.827,
+          "speaker": "SPEAKER_03",
+          "score": 0.864,
+          "level_db": -24.0
         },
         {
           "text": "table.",
-          "start": 105.348,
-          "end": 105.688,
-          "speaker": "SPEAKER_02",
-          "score": 0.783
+          "start": 105.867,
+          "end": 106.249,
+          "speaker": "SPEAKER_03",
+          "score": 0.921,
+          "level_db": -25.7
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.903007984161377
+      "emotion_score": 0.9019064903259277
     },
     {
-      "id": 46,
-      "start": 105.949,
-      "end": 108.63,
-      "speaker": "SPEAKER_02",
+      "id": 43,
+      "start": 106.55,
+      "end": 109.18,
+      "speaker": "SPEAKER_03",
       "text": "Stay curious and we'll see you next week.",
       "original_text": "Stay curious and we'll see you next week.",
       "words": [
         {
           "text": "Stay",
-          "start": 105.949,
-          "end": 106.209,
-          "speaker": "SPEAKER_02",
-          "score": 0.776
+          "start": 106.55,
+          "end": 106.791,
+          "speaker": "SPEAKER_03",
+          "score": 0.835,
+          "level_db": -19.7
         },
         {
           "text": "curious",
-          "start": 106.269,
-          "end": 106.809,
-          "speaker": "SPEAKER_02",
-          "score": 0.826
+          "start": 106.871,
+          "end": 107.454,
+          "speaker": "SPEAKER_03",
+          "score": 0.898,
+          "level_db": -22.7
         },
         {
           "text": "and",
-          "start": 107.009,
-          "end": 107.109,
-          "speaker": "SPEAKER_02",
-          "score": 0.846
+          "start": 107.694,
+          "end": 107.795,
+          "speaker": "SPEAKER_03",
+          "score": 0.793,
+          "level_db": -20.9
         },
         {
           "text": "we'll",
-          "start": 107.149,
-          "end": 107.449,
-          "speaker": "SPEAKER_02",
-          "score": 0.85
+          "start": 107.835,
+          "end": 108.096,
+          "speaker": "SPEAKER_03",
+          "score": 0.981,
+          "level_db": -20.6
         },
         {
           "text": "see",
-          "start": 107.509,
-          "end": 107.729,
-          "speaker": "SPEAKER_02",
-          "score": 0.806
+          "start": 108.136,
+          "end": 108.337,
+          "speaker": "SPEAKER_03",
+          "score": 0.815,
+          "level_db": -21.5
         },
         {
           "text": "you",
-          "start": 107.769,
-          "end": 107.89,
-          "speaker": "SPEAKER_02",
-          "score": 0.997
+          "start": 108.377,
+          "end": 108.518,
+          "speaker": "SPEAKER_03",
+          "score": 0.936,
+          "level_db": -19.5
         },
         {
           "text": "next",
-          "start": 107.95,
-          "end": 108.23,
-          "speaker": "SPEAKER_02",
-          "score": 0.836
+          "start": 108.558,
+          "end": 108.859,
+          "speaker": "SPEAKER_03",
+          "score": 0.788,
+          "level_db": -25.7
         },
         {
           "text": "week.",
-          "start": 108.33,
-          "end": 108.63,
-          "speaker": "SPEAKER_02",
-          "score": 0.915
+          "start": 108.959,
+          "end": 109.18,
+          "speaker": "SPEAKER_03",
+          "score": 0.93,
+          "level_db": -23.6
         }
       ],
       "alignment_valid": true,
       "emotion": "neutral",
-      "emotion_score": 0.903007984161377
+      "emotion_score": 0.9019064903259277
     }
   ],
   "language": "en",
   "speakers": {
-    "SPEAKER_02": "SPEAKER_02",
-    "SPEAKER_01": "SPEAKER_01",
     "SPEAKER_03": "SPEAKER_03",
+    "SPEAKER_01": "SPEAKER_01",
+    "SPEAKER_02": "SPEAKER_02",
     "SPEAKER_00": "SPEAKER_00"
   },
   "metadata": {
-    "duration": 109.784,
+    "duration": 110.3876875,
     "mode": "real",
     "asr_model": "base",
     "diarization_model": "pyannote/speaker-diarization-community-1",
     "word_timings": "Forced alignment; missing word times remain null.",
+    "word_levels": "RMS dBFS of the normalized waveform over each aligned word.",
     "emotion_status": "Text inference per speaker turn; threshold 0.60. Not vocal emotion."
   },
   "schema_version": 1

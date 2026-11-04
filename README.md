@@ -11,16 +11,17 @@ pyannote speaker diarization, and optional transcript-based emotion cues in an e
 
 ### Four-person policy podcast
 
-[![Podcast demo: four illustrated presenters, the active speaker highlighted, with synchronized captions and emotion cues](docs/demo/podcast_playback.png)](docs/demo/podcast_demo.mp4)
+[![Podcast demo: four illustrated presenters, the active speaker highlighted, with synchronized captions whose words are sized by loudness](docs/demo/podcast_playback.png)](docs/demo/podcast_demo.mp4)
 
 **[Watch the 3½-minute podcast demo (MP4, with sound)](docs/demo/podcast_demo.mp4).** Four presenters (Dana,
 Marcus, Elena, Tom) debate a fictional city's plan to charge drivers entering downtown and fund free buses.
 The 110-second video shows four illustrated presenters whose mouths follow their own voices, with two moments
-of crosstalk. Real WhisperX, alignment, pyannote, and emotion models process it on CPU (shown 10× faster),
-then the demo names the voices, corrects "$8 per corporate day" to "$8 per car per day", plays it back with
-emoji emotion cues, and scores it against the script: **4.9% word error rate, 10.2% diarization error rate,
-95.2% of words given the right speaker**. Auto-detecting the speaker count found all four. Misheard names
-("Everton's", "Ilina") and speech under crosstalk still need human review.
+of crosstalk, a raised voice, and a quiet aside. Real WhisperX, alignment, pyannote, and emotion models process
+it on CPU (shown 10× faster), then the demo names the voices, corrects "$8 per corporate day" to "$8 per car per
+day", and plays it back with emoji emotion cues and words sized by loudness. Scores against the script:
+**3.9% word error rate, 13.0% diarization error rate, 90.9% of words given the right speaker**; auto-detecting the
+speaker count found all four. Misheard names ("Rivertons'", "Elina"), a quiet backchannel under crosstalk, and
+two short replies given to the wrong speaker still need human review.
 
 ### Three-voice meeting
 
@@ -41,6 +42,10 @@ runs with model access. All voices are synthetic and all people are illustrated;
 - Transcribe speech and inspect original word timestamps and alignment scores.
 - Split captions on word-level speaker changes, with consistent speaker labels and colors.
 - Play media with synchronized captions, highlighted words, and click-to-seek controls.
+- Size each word by how loud it was: the pipeline measures every aligned word's RMS level in dBFS, and
+  playback draws words above the recording's median level larger (+10 dB is 1.35×) and quieter ones
+  smaller, limited to 0.75–1.45× for readability. Hover a word to see its level; turn it off with
+  **Size words by loudness**. Levels are saved in JSON and shown in the Word timestamps tab.
 - Rename speakers, edit text/timing/speaker assignments, and search the transcript.
 - Optionally estimate English text emotion per speaker turn without modifying spoken content; cues show
   an emoji with the label (😠 anger, 🤢 disgust, 😨 fear, 😄 joy, 😐 neutral, 😢 sadness, 😮 surprise) in
@@ -155,6 +160,7 @@ src/context_caption/
   pipeline.py                  WhisperX → alignment → pyannote → optional emotion
   captions.py                  Speaker-aware cue building and atomic edits
   player.py                    Synchronized HTML media player
+  loudness.py                  Per-word loudness (RMS dBFS) and caption size scaling
   exporters.py                 SRT, VTT, and JSON exports
   cli.py                       Local processing and project re-export CLI
   evaluate.py                  WER/DER/timestamp scoring against a reference project
