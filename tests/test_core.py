@@ -8,7 +8,7 @@ from context_caption.cli import main
 from context_caption.exporters import timestamp, to_json, to_srt, to_vtt
 from context_caption.pipeline import Settings
 from context_caption.player import player_html
-from context_caption.schema import Caption, Project, Word
+from context_caption.schema import Caption, Project, Word, emotion_label
 
 
 def fixture():
@@ -108,7 +108,10 @@ class CaptionTests(unittest.TestCase):
         project = fixture()
         self.assertIn("Alex: Hello world.", to_srt(project))
         self.assertNotIn("joy", to_srt(project))
-        self.assertIn("Alex [joy]", to_srt(project, True))
+        self.assertIn("Alex [\U0001F604 joy]", to_srt(project, True))
+        self.assertIn("Alex [\U0001F604 joy]", to_vtt(project, True))
+        self.assertEqual(emotion_label("sadness"), "\U0001F622 sadness")
+        self.assertEqual(emotion_label("curious"), "curious")
         self.assertIn("00:00:00,100 --> 00:00:01,200", to_srt(project))
         self.assertTrue(to_vtt(project).startswith("WEBVTT\n\nSTYLE"))
         project.captions[0].text = "<script>& danger"

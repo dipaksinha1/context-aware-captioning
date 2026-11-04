@@ -3,6 +3,8 @@ import html
 import json
 import textwrap
 
+from .schema import emotion_label
+
 
 def timestamp(seconds, separator="."):
     milliseconds = round(seconds * 1000)
@@ -14,7 +16,7 @@ def timestamp(seconds, separator="."):
 
 def subtitle_text(caption, project, emotions=False):
     name = " ".join(project.speakers[caption.speaker].split())
-    emotion = f" [{caption.emotion}]" if emotions and caption.emotion else ""
+    emotion = f" [{emotion_label(caption.emotion)}]" if emotions and caption.emotion else ""
     text = " ".join(caption.text.split())
     return f"{name}{emotion}: {text}"
 

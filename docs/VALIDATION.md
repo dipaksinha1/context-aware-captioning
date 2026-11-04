@@ -60,10 +60,13 @@ Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available
   78 of 103 timed words were ever highlighted and highlights lagged word starts by a median 116 ms
   (max 250 ms). Rendering on animation frames while playing highlighted 103 of 103, median lag 8 ms
   (max 17 ms).
-- Demo video `docs/demo/app_demo.mp4` (2:00, 1280×800, recorded with `scripts/record_app_demo.js`):
-  real processing in the UI took 41 s. Audio is aligned by detecting highlight changes in the recorded
-  frames; in the final file they fall a median 38 ms after word starts in the audio (p10 −4 ms,
-  p90 81 ms over 99 changes). The script verifies the caption correction lands on the intended row.
+- Demo video `docs/demo/app_demo.mp4` (2:01, 1280×800, recorded with `scripts/record_app_demo.js`):
+  real processing in the UI took 39 s with warm caches (193 s in a take right after a container restart,
+  which was discarded). Audio is aligned by detecting highlight changes in the recorded frames; in the
+  final file they fall a median 67 ms after word starts in the audio (p10 −47 ms, p90 124 ms over
+  109 changes). The script verifies the caption correction lands on the intended row.
+- Emotion emoji: unit tests cover SRT/VTT output and unknown labels; in Chromium with Noto Color Emoji,
+  the player label ("Raj · 😄 joy") and transcript lines rendered with no JavaScript errors.
 
 Results above come from one synthetic recording and do not establish accuracy on real conversation.
 No HCI study outcomes are claimed.

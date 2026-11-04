@@ -34,7 +34,9 @@ shows UNKNOWN rather than presenting a guessed identity as established.
 disabled after text/time edits; the old alignment remains an inspectable record.
 
 **Emotion:** a text classifier is an approximation of sentiment expressed in words. It cannot reliably
-infer sarcasm, intonation, or feelings. It is English-only and optional; its failure does not discard captions.
+infer sarcasm, intonation, or feelings. It is English-only and optional; its failure does not discard captions. Cues show an emoji beside the
+label word (`schema.emotion_label`), never instead of it, because screen readers and some subtitle
+renderers do not convey emoji reliably; JSON stores only the plain label.
 
 **Voice activity detection:** WhisperX runs pyannote VAD, whose weights ship in the WhisperX wheel.
 Silero VAD is downloaded from GitHub through `torch.hub` at run time, which fails offline or behind

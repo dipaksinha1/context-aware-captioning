@@ -3,6 +3,18 @@ from dataclasses import asdict, dataclass, field
 import math
 
 PALETTE = ["#0F766E", "#7C3AED", "#B45309", "#BE185D", "#1D4ED8", "#475569"]
+# Labels of j-hartmann/emotion-english-distilroberta-base. The emoji accompanies the word, never
+# replaces it: screen readers and some subtitle renderers do not convey emoji reliably.
+EMOTION_EMOJI = {
+    "anger": "\U0001F620", "disgust": "\U0001F922", "fear": "\U0001F628", "joy": "\U0001F604",
+    "neutral": "\U0001F610", "sadness": "\U0001F622", "surprise": "\U0001F62E",
+}
+
+
+def emotion_label(emotion):
+    """'joy' -> '😄 joy'; labels without a known emoji are returned unchanged."""
+    emoji = EMOTION_EMOJI.get(emotion)
+    return f"{emoji} {emotion}" if emoji else emotion
 
 
 def validate_interval(start, end):

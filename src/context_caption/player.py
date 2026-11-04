@@ -3,13 +3,15 @@ import base64
 import html
 import json
 
+from .schema import emotion_label
+
 
 def player_html(media: bytes, mime: str, project, emotions=False):
     payload = json.dumps({
         "captions": [
             {"start": c.start, "end": c.end, "speaker": project.speakers[c.speaker],
              "color": project.colors()[c.speaker], "text": c.text,
-             "emotion": c.emotion if emotions else None,
+             "emotion": emotion_label(c.emotion) if emotions and c.emotion else None,
              "words": [w.__dict__ for w in c.words] if c.alignment_valid and c.text == c.original_text else []}
             for c in project.captions
         ]

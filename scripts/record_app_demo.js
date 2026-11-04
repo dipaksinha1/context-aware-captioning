@@ -226,8 +226,10 @@ async function scrollTo(locator) {
   // 8. Export.
   await page.evaluate(() => window.scrollTo(0, 0));
   await click(page, page.getByRole('tab', { name: 'Export' }));
-  await banner(page, '8 · Export speaker-named SRT, color-styled VTT, or a JSON project to reopen later');
+  await banner(page, '8 · Export speaker-named SRT, color-styled VTT, or a JSON project; emotion cues (with emoji) are opt-in');
   await page.waitForTimeout(1200);
+  await click(page, page.getByText('Include available emotion cues in subtitles'));
+  await page.waitForTimeout(2000);
   const dl = async name => {
     const btn = page.getByRole('button', { name });
     await moveTo(page, btn);

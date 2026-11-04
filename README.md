@@ -26,7 +26,9 @@ Re-record it with `node scripts/record_app_demo.js` while the app runs with mode
 - Split captions on word-level speaker changes, with consistent speaker labels and colors.
 - Play media with synchronized captions, highlighted words, and click-to-seek controls.
 - Rename speakers, edit text/timing/speaker assignments, and search the transcript.
-- Optionally estimate English text emotion per speaker turn without modifying spoken content.
+- Optionally estimate English text emotion per speaker turn without modifying spoken content; cues show
+  an emoji with the label (😠 anger, 🤢 disgust, 😨 fear, 😄 joy, 😐 neutral, 😢 sadness, 😮 surprise) in
+  playback, the transcript, and opt-in SRT/VTT exports, e.g. `Raj [😄 joy]: Happy to be here.`
 - Export speaker-aware SRT, styled VTT, or a JSON project retaining original words and edits.
 - Reopen a JSON project and reattach its original media.
 - Try a predefined two-voice synthetic demo without downloading ML models or providing a token.

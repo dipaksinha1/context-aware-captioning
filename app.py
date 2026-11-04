@@ -13,7 +13,7 @@ from context_caption.exporters import to_json, to_srt, to_vtt
 from context_caption.media import MAX_BYTES, SUPPORTED
 from context_caption.pipeline import Settings, process
 from context_caption.player import player_html
-from context_caption.schema import Project
+from context_caption.schema import Project, emotion_label
 
 ROOT = Path(__file__).parent
 st.set_page_config(page_title="Context Caption", page_icon="💬", layout="wide")
@@ -157,7 +157,8 @@ with preview:
     query = st.text_input("Search transcript")
     for c in project.captions:
         if not query or query.casefold() in c.text.casefold():
-            st.write(f"{c.start:.2f}–{c.end:.2f}s · **{project.speakers[c.speaker]}**")
+            cue = f" · {emotion_label(c.emotion)}" if show_emotions and c.emotion else ""
+            st.write(f"{c.start:.2f}–{c.end:.2f}s · **{project.speakers[c.speaker]}**{cue}")
             st.text(c.text)
 with words:
     st.caption("These are original model/sample words. Empty times mean alignment was unavailable.")
