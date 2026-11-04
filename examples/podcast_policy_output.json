@@ -1,0 +1,2606 @@
+{
+  "captions": [
+    {
+      "id": 1,
+      "start": 0.543,
+      "end": 2.683,
+      "speaker": "SPEAKER_02",
+      "text": "Welcome back to Policy Round Table.",
+      "original_text": "Welcome back to Policy Round Table.",
+      "words": [
+        {
+          "text": "Welcome",
+          "start": 0.543,
+          "end": 0.923,
+          "speaker": "SPEAKER_02",
+          "score": 0.793
+        },
+        {
+          "text": "back",
+          "start": 1.023,
+          "end": 1.263,
+          "speaker": "SPEAKER_02",
+          "score": 0.997
+        },
+        {
+          "text": "to",
+          "start": 1.343,
+          "end": 1.443,
+          "speaker": "SPEAKER_02",
+          "score": 0.85
+        },
+        {
+          "text": "Policy",
+          "start": 1.483,
+          "end": 1.963,
+          "speaker": "SPEAKER_02",
+          "score": 0.891
+        },
+        {
+          "text": "Round",
+          "start": 2.023,
+          "end": 2.283,
+          "speaker": "SPEAKER_02",
+          "score": 0.746
+        },
+        {
+          "text": "Table.",
+          "start": 2.323,
+          "end": 2.683,
+          "speaker": "SPEAKER_02",
+          "score": 0.965
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8932123184204102
+    },
+    {
+      "id": 2,
+      "start": 3.003,
+      "end": 7.364,
+      "speaker": "SPEAKER_02",
+      "text": "I'm Dana, and today we're debating Everton's plan to charge drivers entering",
+      "original_text": "I'm Dana, and today we're debating Everton's plan to charge drivers entering",
+      "words": [
+        {
+          "text": "I'm",
+          "start": 3.003,
+          "end": 3.163,
+          "speaker": "SPEAKER_02",
+          "score": 0.95
+        },
+        {
+          "text": "Dana,",
+          "start": 3.223,
+          "end": 3.584,
+          "speaker": "SPEAKER_02",
+          "score": 0.895
+        },
+        {
+          "text": "and",
+          "start": 3.864,
+          "end": 3.964,
+          "speaker": "SPEAKER_02",
+          "score": 0.943
+        },
+        {
+          "text": "today",
+          "start": 4.024,
+          "end": 4.344,
+          "speaker": "SPEAKER_02",
+          "score": 0.858
+        },
+        {
+          "text": "we're",
+          "start": 4.424,
+          "end": 4.584,
+          "speaker": "SPEAKER_02",
+          "score": 0.779
+        },
+        {
+          "text": "debating",
+          "start": 4.604,
+          "end": 5.004,
+          "speaker": "SPEAKER_02",
+          "score": 0.976
+        },
+        {
+          "text": "Everton's",
+          "start": 5.184,
+          "end": 5.604,
+          "speaker": "SPEAKER_02",
+          "score": 0.798
+        },
+        {
+          "text": "plan",
+          "start": 5.644,
+          "end": 5.964,
+          "speaker": "SPEAKER_02",
+          "score": 0.89
+        },
+        {
+          "text": "to",
+          "start": 6.004,
+          "end": 6.084,
+          "speaker": "SPEAKER_02",
+          "score": 0.988
+        },
+        {
+          "text": "charge",
+          "start": 6.144,
+          "end": 6.484,
+          "speaker": "SPEAKER_02",
+          "score": 0.765
+        },
+        {
+          "text": "drivers",
+          "start": 6.544,
+          "end": 6.924,
+          "speaker": "SPEAKER_02",
+          "score": 0.818
+        },
+        {
+          "text": "entering",
+          "start": 7.024,
+          "end": 7.364,
+          "speaker": "SPEAKER_02",
+          "score": 0.929
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8932123184204102
+    },
+    {
+      "id": 3,
+      "start": 7.404,
+      "end": 9.945,
+      "speaker": "SPEAKER_02",
+      "text": "downtown and use the money for free buses.",
+      "original_text": "downtown and use the money for free buses.",
+      "words": [
+        {
+          "text": "downtown",
+          "start": 7.404,
+          "end": 7.964,
+          "speaker": "SPEAKER_02",
+          "score": 0.912
+        },
+        {
+          "text": "and",
+          "start": 8.104,
+          "end": 8.204,
+          "speaker": "SPEAKER_02",
+          "score": 0.847
+        },
+        {
+          "text": "use",
+          "start": 8.344,
+          "end": 8.504,
+          "speaker": "SPEAKER_02",
+          "score": 0.801
+        },
+        {
+          "text": "the",
+          "start": 8.544,
+          "end": 8.604,
+          "speaker": "SPEAKER_02",
+          "score": 0.996
+        },
+        {
+          "text": "money",
+          "start": 8.644,
+          "end": 8.904,
+          "speaker": "SPEAKER_02",
+          "score": 0.738
+        },
+        {
+          "text": "for",
+          "start": 9.044,
+          "end": 9.184,
+          "speaker": "SPEAKER_02",
+          "score": 0.886
+        },
+        {
+          "text": "free",
+          "start": 9.264,
+          "end": 9.485,
+          "speaker": "SPEAKER_02",
+          "score": 0.906
+        },
+        {
+          "text": "buses.",
+          "start": 9.545,
+          "end": 9.945,
+          "speaker": "SPEAKER_02",
+          "score": 0.919
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8932123184204102
+    },
+    {
+      "id": 4,
+      "start": 10.725,
+      "end": 11.625,
+      "speaker": "SPEAKER_01",
+      "text": "Thanks, Dana.",
+      "original_text": "Thanks, Dana.",
+      "words": [
+        {
+          "text": "Thanks,",
+          "start": 10.725,
+          "end": 11.045,
+          "speaker": "SPEAKER_01",
+          "score": 0.904
+        },
+        {
+          "text": "Dana.",
+          "start": 11.265,
+          "end": 11.625,
+          "speaker": "SPEAKER_01",
+          "score": 0.951
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8131911754608154
+    },
+    {
+      "id": 5,
+      "start": 11.705,
+      "end": 14.705,
+      "speaker": "SPEAKER_01",
+      "text": "I'm Marcus, and I spend a decade in the city budget office.",
+      "original_text": "I'm Marcus, and I spend a decade in the city budget office.",
+      "words": [
+        {
+          "text": "I'm",
+          "start": 11.705,
+          "end": 11.825,
+          "speaker": "SPEAKER_01",
+          "score": 0.868
+        },
+        {
+          "text": "Marcus,",
+          "start": 11.865,
+          "end": 12.305,
+          "speaker": "SPEAKER_01",
+          "score": 0.824
+        },
+        {
+          "text": "and",
+          "start": 12.565,
+          "end": 12.645,
+          "speaker": "SPEAKER_01",
+          "score": 0.937
+        },
+        {
+          "text": "I",
+          "start": 12.685,
+          "end": 12.785,
+          "speaker": "SPEAKER_01",
+          "score": 0.749
+        },
+        {
+          "text": "spend",
+          "start": 12.805,
+          "end": 13.045,
+          "speaker": "SPEAKER_01",
+          "score": 0.728
+        },
+        {
+          "text": "a",
+          "start": 13.065,
+          "end": 13.085,
+          "speaker": "SPEAKER_01",
+          "score": 0.576
+        },
+        {
+          "text": "decade",
+          "start": 13.145,
+          "end": 13.505,
+          "speaker": "SPEAKER_01",
+          "score": 0.662
+        },
+        {
+          "text": "in",
+          "start": 13.565,
+          "end": 13.645,
+          "speaker": "SPEAKER_01",
+          "score": 0.851
+        },
+        {
+          "text": "the",
+          "start": 13.685,
+          "end": 13.745,
+          "speaker": "SPEAKER_01",
+          "score": 0.986
+        },
+        {
+          "text": "city",
+          "start": 13.805,
+          "end": 14.005,
+          "speaker": "SPEAKER_01",
+          "score": 0.973
+        },
+        {
+          "text": "budget",
+          "start": 14.045,
+          "end": 14.325,
+          "speaker": "SPEAKER_01",
+          "score": 0.849
+        },
+        {
+          "text": "office.",
+          "start": 14.405,
+          "end": 14.705,
+          "speaker": "SPEAKER_01",
+          "score": 0.987
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8131911754608154
+    },
+    {
+      "id": 6,
+      "start": 15.345,
+      "end": 16.106,
+      "speaker": "SPEAKER_03",
+      "text": "Hi, everyone.",
+      "original_text": "Hi, everyone.",
+      "words": [
+        {
+          "text": "Hi,",
+          "start": 15.345,
+          "end": 15.566,
+          "speaker": "SPEAKER_03",
+          "score": 0.882
+        },
+        {
+          "text": "everyone.",
+          "start": 15.686,
+          "end": 16.106,
+          "speaker": "SPEAKER_03",
+          "score": 0.926
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.7695760130882263
+    },
+    {
+      "id": 7,
+      "start": 16.606,
+      "end": 17.226,
+      "speaker": "SPEAKER_03",
+      "text": "I'm Ilina.",
+      "original_text": "I'm Ilina.",
+      "words": [
+        {
+          "text": "I'm",
+          "start": 16.606,
+          "end": 16.746,
+          "speaker": "SPEAKER_03",
+          "score": 0.96
+        },
+        {
+          "text": "Ilina.",
+          "start": 16.846,
+          "end": 17.226,
+          "speaker": "SPEAKER_03",
+          "score": 0.911
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.7695760130882263
+    },
+    {
+      "id": 8,
+      "start": 17.486,
+      "end": 20.706,
+      "speaker": "SPEAKER_03",
+      "text": "I run a bakery on Main Street, so this affects me directly.",
+      "original_text": "I run a bakery on Main Street, so this affects me directly.",
+      "words": [
+        {
+          "text": "I",
+          "start": 17.486,
+          "end": 17.546,
+          "speaker": "SPEAKER_03",
+          "score": 0.992
+        },
+        {
+          "text": "run",
+          "start": 17.586,
+          "end": 17.726,
+          "speaker": "SPEAKER_03",
+          "score": 0.758
+        },
+        {
+          "text": "a",
+          "start": 17.746,
+          "end": 17.766,
+          "speaker": "SPEAKER_03",
+          "score": 0.992
+        },
+        {
+          "text": "bakery",
+          "start": 17.806,
+          "end": 18.226,
+          "speaker": "SPEAKER_03",
+          "score": 0.929
+        },
+        {
+          "text": "on",
+          "start": 18.326,
+          "end": 18.406,
+          "speaker": "SPEAKER_03",
+          "score": 0.84
+        },
+        {
+          "text": "Main",
+          "start": 18.446,
+          "end": 18.626,
+          "speaker": "SPEAKER_03",
+          "score": 0.672
+        },
+        {
+          "text": "Street,",
+          "start": 18.666,
+          "end": 18.986,
+          "speaker": "SPEAKER_03",
+          "score": 0.878
+        },
+        {
+          "text": "so",
+          "start": 19.446,
+          "end": 19.546,
+          "speaker": "SPEAKER_03",
+          "score": 0.994
+        },
+        {
+          "text": "this",
+          "start": 19.566,
+          "end": 19.706,
+          "speaker": "SPEAKER_03",
+          "score": 0.966
+        },
+        {
+          "text": "affects",
+          "start": 19.766,
+          "end": 20.066,
+          "speaker": "SPEAKER_03",
+          "score": 0.934
+        },
+        {
+          "text": "me",
+          "start": 20.106,
+          "end": 20.206,
+          "speaker": "SPEAKER_03",
+          "score": 0.97
+        },
+        {
+          "text": "directly.",
+          "start": 20.246,
+          "end": 20.706,
+          "speaker": "SPEAKER_03",
+          "score": 0.928
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.7695760130882263
+    },
+    {
+      "id": 9,
+      "start": 21.326,
+      "end": 22.107,
+      "speaker": "SPEAKER_00",
+      "text": "And I'm Tom.",
+      "original_text": "And I'm Tom.",
+      "words": [
+        {
+          "text": "And",
+          "start": 21.326,
+          "end": 21.447,
+          "speaker": "SPEAKER_00",
+          "score": 0.756
+        },
+        {
+          "text": "I'm",
+          "start": 21.567,
+          "end": 21.747,
+          "speaker": "SPEAKER_00",
+          "score": 0.84
+        },
+        {
+          "text": "Tom.",
+          "start": 21.827,
+          "end": 22.107,
+          "speaker": "SPEAKER_00",
+          "score": 0.872
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.6365158557891846
+    },
+    {
+      "id": 10,
+      "start": 22.387,
+      "end": 25.247,
+      "speaker": "SPEAKER_00",
+      "text": "I study public transport at the university.",
+      "original_text": "I study public transport at the university.",
+      "words": [
+        {
+          "text": "I",
+          "start": 22.387,
+          "end": 22.487,
+          "speaker": "SPEAKER_00",
+          "score": 0.796
+        },
+        {
+          "text": "study",
+          "start": 22.527,
+          "end": 22.867,
+          "speaker": "SPEAKER_00",
+          "score": 0.95
+        },
+        {
+          "text": "public",
+          "start": 22.927,
+          "end": 23.307,
+          "speaker": "SPEAKER_00",
+          "score": 0.922
+        },
+        {
+          "text": "transport",
+          "start": 23.407,
+          "end": 24.007,
+          "speaker": "SPEAKER_00",
+          "score": 0.798
+        },
+        {
+          "text": "at",
+          "start": 24.127,
+          "end": 24.207,
+          "speaker": "SPEAKER_00",
+          "score": 0.705
+        },
+        {
+          "text": "the",
+          "start": 24.247,
+          "end": 24.347,
+          "speaker": "SPEAKER_00",
+          "score": 0.86
+        },
+        {
+          "text": "university.",
+          "start": 24.467,
+          "end": 25.247,
+          "speaker": "SPEAKER_00",
+          "score": 0.899
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.6365158557891846
+    },
+    {
+      "id": 11,
+      "start": 26.007,
+      "end": 28.248,
+      "speaker": "SPEAKER_02",
+      "text": "Marcus, let's start with the numbers.",
+      "original_text": "Marcus, let's start with the numbers.",
+      "words": [
+        {
+          "text": "Marcus,",
+          "start": 26.007,
+          "end": 26.487,
+          "speaker": "SPEAKER_02",
+          "score": 0.841
+        },
+        {
+          "text": "let's",
+          "start": 26.687,
+          "end": 26.947,
+          "speaker": "SPEAKER_02",
+          "score": 0.763
+        },
+        {
+          "text": "start",
+          "start": 27.087,
+          "end": 27.408,
+          "speaker": "SPEAKER_02",
+          "score": 0.778
+        },
+        {
+          "text": "with",
+          "start": 27.508,
+          "end": 27.648,
+          "speaker": "SPEAKER_02",
+          "score": 0.905
+        },
+        {
+          "text": "the",
+          "start": 27.688,
+          "end": 27.768,
+          "speaker": "SPEAKER_02",
+          "score": 0.828
+        },
+        {
+          "text": "numbers.",
+          "start": 27.808,
+          "end": 28.248,
+          "speaker": "SPEAKER_02",
+          "score": 0.926
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 12,
+      "start": 28.668,
+      "end": 29.908,
+      "speaker": "SPEAKER_02",
+      "text": "What would the charge raise?",
+      "original_text": "What would the charge raise?",
+      "words": [
+        {
+          "text": "What",
+          "start": 28.668,
+          "end": 28.828,
+          "speaker": "SPEAKER_02",
+          "score": 1.0
+        },
+        {
+          "text": "would",
+          "start": 28.888,
+          "end": 29.048,
+          "speaker": "SPEAKER_02",
+          "score": 0.918
+        },
+        {
+          "text": "the",
+          "start": 29.088,
+          "end": 29.188,
+          "speaker": "SPEAKER_02",
+          "score": 0.75
+        },
+        {
+          "text": "charge",
+          "start": 29.208,
+          "end": 29.528,
+          "speaker": "SPEAKER_02",
+          "score": 0.938
+        },
+        {
+          "text": "raise?",
+          "start": 29.588,
+          "end": 29.908,
+          "speaker": "SPEAKER_02",
+          "score": 0.928
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 13,
+      "start": 30.564,
+      "end": 34.528,
+      "speaker": "SPEAKER_01",
+      "text": "The Council estimates $40 million a year at $8 per corporate day.",
+      "original_text": "The Council estimates $40 million a year at $8 per corporate day.",
+      "words": [
+        {
+          "text": "The",
+          "start": 30.564,
+          "end": 30.644,
+          "speaker": "SPEAKER_01",
+          "score": 0.748
+        },
+        {
+          "text": "Council",
+          "start": 30.684,
+          "end": 31.044,
+          "speaker": "SPEAKER_01",
+          "score": 0.888
+        },
+        {
+          "text": "estimates",
+          "start": 31.125,
+          "end": 31.485,
+          "speaker": "SPEAKER_01",
+          "score": 0.723
+        },
+        {
+          "text": "$40",
+          "start": 31.505,
+          "end": 31.725,
+          "speaker": "SPEAKER_01",
+          "score": 0.829
+        },
+        {
+          "text": "million",
+          "start": 31.765,
+          "end": 32.085,
+          "speaker": "SPEAKER_01",
+          "score": 0.769
+        },
+        {
+          "text": "a",
+          "start": 32.286,
+          "end": 32.406,
+          "speaker": "SPEAKER_01",
+          "score": 0.38
+        },
+        {
+          "text": "year",
+          "start": 32.526,
+          "end": 32.766,
+          "speaker": "SPEAKER_01",
+          "score": 0.69
+        },
+        {
+          "text": "at",
+          "start": 33.046,
+          "end": 33.347,
+          "speaker": "SPEAKER_01",
+          "score": 0.676
+        },
+        {
+          "text": "$8",
+          "start": 33.487,
+          "end": 33.727,
+          "speaker": "SPEAKER_01",
+          "score": 0.478
+        },
+        {
+          "text": "per",
+          "start": 33.767,
+          "end": 33.907,
+          "speaker": "SPEAKER_01",
+          "score": 0.788
+        },
+        {
+          "text": "corporate",
+          "start": 33.947,
+          "end": 34.287,
+          "speaker": "SPEAKER_01",
+          "score": 0.46
+        },
+        {
+          "text": "day.",
+          "start": 34.307,
+          "end": 34.528,
+          "speaker": "SPEAKER_01",
+          "score": 0.967
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8573346734046936
+    },
+    {
+      "id": 14,
+      "start": 34.948,
+      "end": 39.332,
+      "speaker": "SPEAKER_00",
+      "text": "That's roughly enough to make every bus route-free and ad-night service.",
+      "original_text": "That's roughly enough to make every bus route-free and ad-night service.",
+      "words": [
+        {
+          "text": "That's",
+          "start": 34.948,
+          "end": 35.188,
+          "speaker": "SPEAKER_00",
+          "score": 0.707
+        },
+        {
+          "text": "roughly",
+          "start": 35.288,
+          "end": 35.689,
+          "speaker": "SPEAKER_00",
+          "score": 0.9
+        },
+        {
+          "text": "enough",
+          "start": 35.829,
+          "end": 36.109,
+          "speaker": "SPEAKER_00",
+          "score": 0.857
+        },
+        {
+          "text": "to",
+          "start": 36.169,
+          "end": 36.249,
+          "speaker": "SPEAKER_00",
+          "score": 0.857
+        },
+        {
+          "text": "make",
+          "start": 36.329,
+          "end": 36.509,
+          "speaker": "SPEAKER_00",
+          "score": 0.959
+        },
+        {
+          "text": "every",
+          "start": 36.65,
+          "end": 36.91,
+          "speaker": "SPEAKER_00",
+          "score": 0.879
+        },
+        {
+          "text": "bus",
+          "start": 36.97,
+          "end": 37.21,
+          "speaker": "SPEAKER_00",
+          "score": 0.867
+        },
+        {
+          "text": "route-free",
+          "start": 37.25,
+          "end": 37.871,
+          "speaker": "SPEAKER_00",
+          "score": 0.752
+        },
+        {
+          "text": "and",
+          "start": 38.011,
+          "end": 38.131,
+          "speaker": "SPEAKER_00",
+          "score": 0.646
+        },
+        {
+          "text": "ad-night",
+          "start": 38.311,
+          "end": 38.811,
+          "speaker": "SPEAKER_00",
+          "score": 0.887
+        },
+        {
+          "text": "service.",
+          "start": 38.872,
+          "end": 39.332,
+          "speaker": "SPEAKER_00",
+          "score": 0.906
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.9301113486289978
+    },
+    {
+      "id": 15,
+      "start": 40.093,
+      "end": 41.354,
+      "speaker": "SPEAKER_03",
+      "text": "Honestly, I'm worried.",
+      "original_text": "Honestly, I'm worried.",
+      "words": [
+        {
+          "text": "Honestly,",
+          "start": 40.093,
+          "end": 40.573,
+          "speaker": "SPEAKER_03",
+          "score": 0.857
+        },
+        {
+          "text": "I'm",
+          "start": 40.853,
+          "end": 40.993,
+          "speaker": "SPEAKER_03",
+          "score": 0.839
+        },
+        {
+          "text": "worried.",
+          "start": 41.034,
+          "end": 41.354,
+          "speaker": "SPEAKER_03",
+          "score": 0.938
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "fear",
+      "emotion_score": 0.9675479531288147
+    },
+    {
+      "id": 16,
+      "start": 41.794,
+      "end": 45.297,
+      "speaker": "SPEAKER_03",
+      "text": "If customers stop driving in, small shops like mine could close within",
+      "original_text": "If customers stop driving in, small shops like mine could close within",
+      "words": [
+        {
+          "text": "If",
+          "start": 41.794,
+          "end": 41.874,
+          "speaker": "SPEAKER_03",
+          "score": 0.947
+        },
+        {
+          "text": "customers",
+          "start": 41.934,
+          "end": 42.395,
+          "speaker": "SPEAKER_03",
+          "score": 0.599
+        },
+        {
+          "text": "stop",
+          "start": 42.415,
+          "end": 42.675,
+          "speaker": "SPEAKER_03",
+          "score": 0.662
+        },
+        {
+          "text": "driving",
+          "start": 42.695,
+          "end": 43.015,
+          "speaker": "SPEAKER_03",
+          "score": 0.838
+        },
+        {
+          "text": "in,",
+          "start": 43.115,
+          "end": 43.235,
+          "speaker": "SPEAKER_03",
+          "score": 0.836
+        },
+        {
+          "text": "small",
+          "start": 43.596,
+          "end": 43.816,
+          "speaker": "SPEAKER_03",
+          "score": 0.571
+        },
+        {
+          "text": "shops",
+          "start": 43.856,
+          "end": 44.116,
+          "speaker": "SPEAKER_03",
+          "score": 0.841
+        },
+        {
+          "text": "like",
+          "start": 44.136,
+          "end": 44.276,
+          "speaker": "SPEAKER_03",
+          "score": 0.918
+        },
+        {
+          "text": "mine",
+          "start": 44.316,
+          "end": 44.497,
+          "speaker": "SPEAKER_03",
+          "score": 0.559
+        },
+        {
+          "text": "could",
+          "start": 44.557,
+          "end": 44.717,
+          "speaker": "SPEAKER_03",
+          "score": 0.368
+        },
+        {
+          "text": "close",
+          "start": 44.757,
+          "end": 45.077,
+          "speaker": "SPEAKER_03",
+          "score": 0.751
+        },
+        {
+          "text": "within",
+          "start": 45.137,
+          "end": 45.297,
+          "speaker": "SPEAKER_03",
+          "score": 0.663
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "fear",
+      "emotion_score": 0.9675479531288147
+    },
+    {
+      "id": 17,
+      "start": 45.337,
+      "end": 45.538,
+      "speaker": "SPEAKER_02",
+      "text": "a year.",
+      "original_text": "a year.",
+      "words": [
+        {
+          "text": "a",
+          "start": 45.337,
+          "end": 45.357,
+          "speaker": "SPEAKER_02",
+          "score": 0.946
+        },
+        {
+          "text": "year.",
+          "start": 45.377,
+          "end": 45.538,
+          "speaker": "SPEAKER_02",
+          "score": 0.362
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "fear",
+      "emotion_score": 0.9810814261436462
+    },
+    {
+      "id": 18,
+      "start": 45.598,
+      "end": 45.778,
+      "speaker": "SPEAKER_02",
+      "text": "Right.",
+      "original_text": "Right.",
+      "words": [
+        {
+          "text": "Right.",
+          "start": 45.598,
+          "end": 45.778,
+          "speaker": "SPEAKER_02",
+          "score": 0.395
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "fear",
+      "emotion_score": 0.9810814261436462
+    },
+    {
+      "id": 19,
+      "start": 46.358,
+      "end": 47.619,
+      "speaker": "SPEAKER_02",
+      "text": "That's a real fear.",
+      "original_text": "That's a real fear.",
+      "words": [
+        {
+          "text": "That's",
+          "start": 46.358,
+          "end": 46.639,
+          "speaker": "SPEAKER_02",
+          "score": 0.867
+        },
+        {
+          "text": "a",
+          "start": 46.699,
+          "end": 46.719,
+          "speaker": "SPEAKER_02",
+          "score": 0.992
+        },
+        {
+          "text": "real",
+          "start": 46.799,
+          "end": 47.199,
+          "speaker": "SPEAKER_02",
+          "score": 0.809
+        },
+        {
+          "text": "fear.",
+          "start": 47.299,
+          "end": 47.619,
+          "speaker": "SPEAKER_02",
+          "score": 0.906
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "fear",
+      "emotion_score": 0.9810814261436462
+    },
+    {
+      "id": 20,
+      "start": 47.86,
+      "end": 49.982,
+      "speaker": "SPEAKER_02",
+      "text": "Tom, what do the studies say?",
+      "original_text": "Tom, what do the studies say?",
+      "words": [
+        {
+          "text": "Tom,",
+          "start": 47.86,
+          "end": 48.22,
+          "speaker": "SPEAKER_02",
+          "score": 0.977
+        },
+        {
+          "text": "what",
+          "start": 48.56,
+          "end": 48.72,
+          "speaker": "SPEAKER_02",
+          "score": 0.958
+        },
+        {
+          "text": "do",
+          "start": 48.781,
+          "end": 48.981,
+          "speaker": "SPEAKER_02",
+          "score": 0.901
+        },
+        {
+          "text": "the",
+          "start": 49.041,
+          "end": 49.141,
+          "speaker": "SPEAKER_02",
+          "score": 0.991
+        },
+        {
+          "text": "studies",
+          "start": 49.201,
+          "end": 49.601,
+          "speaker": "SPEAKER_02",
+          "score": 0.853
+        },
+        {
+          "text": "say?",
+          "start": 49.681,
+          "end": 49.982,
+          "speaker": "SPEAKER_02",
+          "score": 0.914
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "fear",
+      "emotion_score": 0.9810814261436462
+    },
+    {
+      "id": 21,
+      "start": 50.542,
+      "end": 55.547,
+      "speaker": "SPEAKER_00",
+      "text": "The studies the Council sites show traffic falling by about a fifth, but the effect",
+      "original_text": "The studies the Council sites show traffic falling by about a fifth, but the effect",
+      "words": [
+        {
+          "text": "The",
+          "start": 50.542,
+          "end": 50.642,
+          "speaker": "SPEAKER_00",
+          "score": 0.997
+        },
+        {
+          "text": "studies",
+          "start": 50.702,
+          "end": 51.123,
+          "speaker": "SPEAKER_00",
+          "score": 0.717
+        },
+        {
+          "text": "the",
+          "start": 51.183,
+          "end": 51.263,
+          "speaker": "SPEAKER_00",
+          "score": 0.845
+        },
+        {
+          "text": "Council",
+          "start": 51.303,
+          "end": 51.763,
+          "speaker": "SPEAKER_00",
+          "score": 0.882
+        },
+        {
+          "text": "sites",
+          "start": 51.843,
+          "end": 52.144,
+          "speaker": "SPEAKER_00",
+          "score": 0.756
+        },
+        {
+          "text": "show",
+          "start": 52.244,
+          "end": 52.504,
+          "speaker": "SPEAKER_00",
+          "score": 0.931
+        },
+        {
+          "text": "traffic",
+          "start": 52.564,
+          "end": 52.984,
+          "speaker": "SPEAKER_00",
+          "score": 0.877
+        },
+        {
+          "text": "falling",
+          "start": 53.084,
+          "end": 53.465,
+          "speaker": "SPEAKER_00",
+          "score": 0.902
+        },
+        {
+          "text": "by",
+          "start": 53.505,
+          "end": 53.665,
+          "speaker": "SPEAKER_00",
+          "score": 0.928
+        },
+        {
+          "text": "about",
+          "start": 53.725,
+          "end": 54.025,
+          "speaker": "SPEAKER_00",
+          "score": 0.926
+        },
+        {
+          "text": "a",
+          "start": 54.065,
+          "end": 54.085,
+          "speaker": "SPEAKER_00",
+          "score": 0.995
+        },
+        {
+          "text": "fifth,",
+          "start": 54.145,
+          "end": 54.446,
+          "speaker": "SPEAKER_00",
+          "score": 0.919
+        },
+        {
+          "text": "but",
+          "start": 54.766,
+          "end": 54.906,
+          "speaker": "SPEAKER_00",
+          "score": 0.873
+        },
+        {
+          "text": "the",
+          "start": 54.946,
+          "end": 55.066,
+          "speaker": "SPEAKER_00",
+          "score": 0.85
+        },
+        {
+          "text": "effect",
+          "start": 55.186,
+          "end": 55.547,
+          "speaker": "SPEAKER_00",
+          "score": 0.924
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8910421133041382
+    },
+    {
+      "id": 22,
+      "start": 55.647,
+      "end": 56.888,
+      "speaker": "SPEAKER_00",
+      "text": "on shops is mixed.",
+      "original_text": "on shops is mixed.",
+      "words": [
+        {
+          "text": "on",
+          "start": 55.647,
+          "end": 55.767,
+          "speaker": "SPEAKER_00",
+          "score": 0.995
+        },
+        {
+          "text": "shops",
+          "start": 55.867,
+          "end": 56.167,
+          "speaker": "SPEAKER_00",
+          "score": 0.871
+        },
+        {
+          "text": "is",
+          "start": 56.367,
+          "end": 56.447,
+          "speaker": "SPEAKER_00",
+          "score": 0.742
+        },
+        {
+          "text": "mixed.",
+          "start": 56.528,
+          "end": 56.888,
+          "speaker": "SPEAKER_00",
+          "score": 0.902
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8910421133041382
+    },
+    {
+      "id": 23,
+      "start": 57.523,
+      "end": 60.285,
+      "speaker": "SPEAKER_03",
+      "text": "Mixed isn't good enough when it's your livelihood on the line.",
+      "original_text": "Mixed isn't good enough when it's your livelihood on the line.",
+      "words": [
+        {
+          "text": "Mixed",
+          "start": 57.523,
+          "end": 57.763,
+          "speaker": "SPEAKER_03",
+          "score": 0.899
+        },
+        {
+          "text": "isn't",
+          "start": 57.823,
+          "end": 57.963,
+          "speaker": "SPEAKER_03",
+          "score": 0.998
+        },
+        {
+          "text": "good",
+          "start": 58.003,
+          "end": 58.143,
+          "speaker": "SPEAKER_03",
+          "score": 0.991
+        },
+        {
+          "text": "enough",
+          "start": 58.184,
+          "end": 58.424,
+          "speaker": "SPEAKER_03",
+          "score": 0.824
+        },
+        {
+          "text": "when",
+          "start": 58.724,
+          "end": 58.844,
+          "speaker": "SPEAKER_03",
+          "score": 0.877
+        },
+        {
+          "text": "it's",
+          "start": 58.884,
+          "end": 59.004,
+          "speaker": "SPEAKER_03",
+          "score": 0.924
+        },
+        {
+          "text": "your",
+          "start": 59.024,
+          "end": 59.164,
+          "speaker": "SPEAKER_03",
+          "score": 0.946
+        },
+        {
+          "text": "livelihood",
+          "start": 59.204,
+          "end": 59.705,
+          "speaker": "SPEAKER_03",
+          "score": 0.901
+        },
+        {
+          "text": "on",
+          "start": 59.785,
+          "end": 59.885,
+          "speaker": "SPEAKER_03",
+          "score": 0.823
+        },
+        {
+          "text": "the",
+          "start": 59.905,
+          "end": 59.985,
+          "speaker": "SPEAKER_03",
+          "score": 0.994
+        },
+        {
+          "text": "line.",
+          "start": 60.025,
+          "end": 60.285,
+          "speaker": "SPEAKER_03",
+          "score": 0.99
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 24,
+      "start": 60.845,
+      "end": 61.306,
+      "speaker": "SPEAKER_01",
+      "text": "I hear you.",
+      "original_text": "I hear you.",
+      "words": [
+        {
+          "text": "I",
+          "start": 60.845,
+          "end": 60.905,
+          "speaker": "SPEAKER_01",
+          "score": 0.955
+        },
+        {
+          "text": "hear",
+          "start": 60.945,
+          "end": 61.126,
+          "speaker": "SPEAKER_01",
+          "score": 0.818
+        },
+        {
+          "text": "you.",
+          "start": 61.166,
+          "end": 61.306,
+          "speaker": "SPEAKER_01",
+          "score": 0.764
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.737805187702179
+    },
+    {
+      "id": 25,
+      "start": 61.346,
+      "end": 64.508,
+      "speaker": "SPEAKER_01",
+      "text": "That's why the plan includes a discount for delivery vans in the first year.",
+      "original_text": "That's why the plan includes a discount for delivery vans in the first year.",
+      "words": [
+        {
+          "text": "That's",
+          "start": 61.346,
+          "end": 61.546,
+          "speaker": "SPEAKER_01",
+          "score": 0.848
+        },
+        {
+          "text": "why",
+          "start": 61.566,
+          "end": 61.666,
+          "speaker": "SPEAKER_01",
+          "score": 0.992
+        },
+        {
+          "text": "the",
+          "start": 61.706,
+          "end": 61.766,
+          "speaker": "SPEAKER_01",
+          "score": 0.999
+        },
+        {
+          "text": "plan",
+          "start": 61.806,
+          "end": 62.046,
+          "speaker": "SPEAKER_01",
+          "score": 0.922
+        },
+        {
+          "text": "includes",
+          "start": 62.106,
+          "end": 62.466,
+          "speaker": "SPEAKER_01",
+          "score": 0.862
+        },
+        {
+          "text": "a",
+          "start": 62.506,
+          "end": 62.546,
+          "speaker": "SPEAKER_01",
+          "score": 0.5
+        },
+        {
+          "text": "discount",
+          "start": 62.586,
+          "end": 62.927,
+          "speaker": "SPEAKER_01",
+          "score": 0.845
+        },
+        {
+          "text": "for",
+          "start": 62.947,
+          "end": 63.087,
+          "speaker": "SPEAKER_01",
+          "score": 0.907
+        },
+        {
+          "text": "delivery",
+          "start": 63.107,
+          "end": 63.487,
+          "speaker": "SPEAKER_01",
+          "score": 0.79
+        },
+        {
+          "text": "vans",
+          "start": 63.527,
+          "end": 63.827,
+          "speaker": "SPEAKER_01",
+          "score": 0.824
+        },
+        {
+          "text": "in",
+          "start": 63.867,
+          "end": 63.927,
+          "speaker": "SPEAKER_01",
+          "score": 0.751
+        },
+        {
+          "text": "the",
+          "start": 63.947,
+          "end": 64.007,
+          "speaker": "SPEAKER_01",
+          "score": 0.998
+        },
+        {
+          "text": "first",
+          "start": 64.047,
+          "end": 64.268,
+          "speaker": "SPEAKER_01",
+          "score": 0.828
+        },
+        {
+          "text": "year.",
+          "start": 64.308,
+          "end": 64.508,
+          "speaker": "SPEAKER_01",
+          "score": 0.869
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.737805187702179
+    },
+    {
+      "id": 26,
+      "start": 65.268,
+      "end": 65.569,
+      "speaker": "SPEAKER_03",
+      "text": "Really?",
+      "original_text": "Really?",
+      "words": [
+        {
+          "text": "Really?",
+          "start": 65.268,
+          "end": 65.569,
+          "speaker": "SPEAKER_03",
+          "score": 0.856
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "surprise",
+      "emotion_score": 0.9695847630500793
+    },
+    {
+      "id": 27,
+      "start": 66.109,
+      "end": 66.789,
+      "speaker": "SPEAKER_02",
+      "text": "I didn't know that.",
+      "original_text": "I didn't know that.",
+      "words": [
+        {
+          "text": "I",
+          "start": 66.109,
+          "end": 66.149,
+          "speaker": "SPEAKER_02",
+          "score": 1.0
+        },
+        {
+          "text": "didn't",
+          "start": 66.189,
+          "end": 66.369,
+          "speaker": "SPEAKER_02",
+          "score": 0.92
+        },
+        {
+          "text": "know",
+          "start": 66.409,
+          "end": 66.549,
+          "speaker": "SPEAKER_02",
+          "score": 0.629
+        },
+        {
+          "text": "that.",
+          "start": 66.589,
+          "end": 66.789,
+          "speaker": "SPEAKER_02",
+          "score": 0.976
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 28,
+      "start": 67.45,
+      "end": 68.45,
+      "speaker": "SPEAKER_02",
+      "text": "That actually helps.",
+      "original_text": "That actually helps.",
+      "words": [
+        {
+          "text": "That",
+          "start": 67.45,
+          "end": 67.63,
+          "speaker": "SPEAKER_02",
+          "score": 0.911
+        },
+        {
+          "text": "actually",
+          "start": 67.77,
+          "end": 68.11,
+          "speaker": "SPEAKER_02",
+          "score": 0.947
+        },
+        {
+          "text": "helps.",
+          "start": 68.17,
+          "end": 68.45,
+          "speaker": "SPEAKER_02",
+          "score": 0.892
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 29,
+      "start": 69.331,
+      "end": 70.892,
+      "speaker": "SPEAKER_02",
+      "text": "Let's talk about fairness.",
+      "original_text": "Let's talk about fairness.",
+      "words": [
+        {
+          "text": "Let's",
+          "start": 69.331,
+          "end": 69.611,
+          "speaker": "SPEAKER_02",
+          "score": 0.776
+        },
+        {
+          "text": "talk",
+          "start": 69.671,
+          "end": 69.951,
+          "speaker": "SPEAKER_02",
+          "score": 0.813
+        },
+        {
+          "text": "about",
+          "start": 70.072,
+          "end": 70.312,
+          "speaker": "SPEAKER_02",
+          "score": 0.992
+        },
+        {
+          "text": "fairness.",
+          "start": 70.412,
+          "end": 70.892,
+          "speaker": "SPEAKER_02",
+          "score": 0.928
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 30,
+      "start": 71.232,
+      "end": 72.313,
+      "speaker": "SPEAKER_02",
+      "text": "Who pays the most?",
+      "original_text": "Who pays the most?",
+      "words": [
+        {
+          "text": "Who",
+          "start": 71.232,
+          "end": 71.392,
+          "speaker": "SPEAKER_02",
+          "score": 0.615
+        },
+        {
+          "text": "pays",
+          "start": 71.432,
+          "end": 71.793,
+          "speaker": "SPEAKER_02",
+          "score": 0.84
+        },
+        {
+          "text": "the",
+          "start": 71.873,
+          "end": 71.953,
+          "speaker": "SPEAKER_02",
+          "score": 0.994
+        },
+        {
+          "text": "most?",
+          "start": 71.993,
+          "end": 72.313,
+          "speaker": "SPEAKER_02",
+          "score": 0.937
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 31,
+      "start": 72.913,
+      "end": 76.276,
+      "speaker": "SPEAKER_00",
+      "text": "Commuters from the outer suburbs with no train line.",
+      "original_text": "Commuters from the outer suburbs with no train line.",
+      "words": [
+        {
+          "text": "Commuters",
+          "start": 72.913,
+          "end": 73.494,
+          "speaker": "SPEAKER_00",
+          "score": 0.837
+        },
+        {
+          "text": "from",
+          "start": 73.574,
+          "end": 73.774,
+          "speaker": "SPEAKER_00",
+          "score": 0.907
+        },
+        {
+          "text": "the",
+          "start": 73.814,
+          "end": 73.954,
+          "speaker": "SPEAKER_00",
+          "score": 0.707
+        },
+        {
+          "text": "outer",
+          "start": 74.134,
+          "end": 74.435,
+          "speaker": "SPEAKER_00",
+          "score": 0.847
+        },
+        {
+          "text": "suburbs",
+          "start": 74.475,
+          "end": 74.915,
+          "speaker": "SPEAKER_00",
+          "score": 0.836
+        },
+        {
+          "text": "with",
+          "start": 74.975,
+          "end": 75.155,
+          "speaker": "SPEAKER_00",
+          "score": 0.878
+        },
+        {
+          "text": "no",
+          "start": 75.215,
+          "end": 75.415,
+          "speaker": "SPEAKER_00",
+          "score": 0.89
+        },
+        {
+          "text": "train",
+          "start": 75.495,
+          "end": 75.875,
+          "speaker": "SPEAKER_00",
+          "score": 0.827
+        },
+        {
+          "text": "line.",
+          "start": 75.936,
+          "end": 76.276,
+          "speaker": "SPEAKER_00",
+          "score": 0.868
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8647323846817017
+    },
+    {
+      "id": 32,
+      "start": 76.476,
+      "end": 78.277,
+      "speaker": "SPEAKER_00",
+      "text": "For them, it's a genuine burden.",
+      "original_text": "For them, it's a genuine burden.",
+      "words": [
+        {
+          "text": "For",
+          "start": 76.476,
+          "end": 76.636,
+          "speaker": "SPEAKER_00",
+          "score": 0.94
+        },
+        {
+          "text": "them,",
+          "start": 76.676,
+          "end": 76.876,
+          "speaker": "SPEAKER_00",
+          "score": 0.967
+        },
+        {
+          "text": "it's",
+          "start": 77.136,
+          "end": 77.296,
+          "speaker": "SPEAKER_00",
+          "score": 0.731
+        },
+        {
+          "text": "a",
+          "start": 77.357,
+          "end": 77.377,
+          "speaker": "SPEAKER_00",
+          "score": 0.992
+        },
+        {
+          "text": "genuine",
+          "start": 77.437,
+          "end": 77.957,
+          "speaker": "SPEAKER_00",
+          "score": 0.801
+        },
+        {
+          "text": "burden.",
+          "start": 78.017,
+          "end": 78.277,
+          "speaker": "SPEAKER_00",
+          "score": 0.392
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8647323846817017
+    },
+    {
+      "id": 33,
+      "start": 78.337,
+      "end": 78.898,
+      "speaker": "SPEAKER_01",
+      "text": "Exactly.",
+      "original_text": "Exactly.",
+      "words": [
+        {
+          "text": "Exactly.",
+          "start": 78.337,
+          "end": 78.898,
+          "speaker": "SPEAKER_01",
+          "score": 0.898
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.9469998478889465
+    },
+    {
+      "id": 34,
+      "start": 79.358,
+      "end": 83.16,
+      "speaker": "SPEAKER_01",
+      "text": "So the council added exemptions for low income households and people with",
+      "original_text": "So the council added exemptions for low income households and people with",
+      "words": [
+        {
+          "text": "So",
+          "start": 79.358,
+          "end": 79.498,
+          "speaker": "SPEAKER_01",
+          "score": 0.777
+        },
+        {
+          "text": "the",
+          "start": 79.518,
+          "end": 79.598,
+          "speaker": "SPEAKER_01",
+          "score": 0.921
+        },
+        {
+          "text": "council",
+          "start": 79.638,
+          "end": 79.998,
+          "speaker": "SPEAKER_01",
+          "score": 0.77
+        },
+        {
+          "text": "added",
+          "start": 80.078,
+          "end": 80.278,
+          "speaker": "SPEAKER_01",
+          "score": 0.919
+        },
+        {
+          "text": "exemptions",
+          "start": 80.339,
+          "end": 80.879,
+          "speaker": "SPEAKER_01",
+          "score": 0.895
+        },
+        {
+          "text": "for",
+          "start": 80.939,
+          "end": 81.079,
+          "speaker": "SPEAKER_01",
+          "score": 0.787
+        },
+        {
+          "text": "low",
+          "start": 81.139,
+          "end": 81.359,
+          "speaker": "SPEAKER_01",
+          "score": 0.951
+        },
+        {
+          "text": "income",
+          "start": 81.459,
+          "end": 81.84,
+          "speaker": "SPEAKER_01",
+          "score": 0.908
+        },
+        {
+          "text": "households",
+          "start": 81.9,
+          "end": 82.5,
+          "speaker": "SPEAKER_01",
+          "score": 0.878
+        },
+        {
+          "text": "and",
+          "start": 82.6,
+          "end": 82.7,
+          "speaker": "SPEAKER_01",
+          "score": 0.759
+        },
+        {
+          "text": "people",
+          "start": 82.74,
+          "end": 83.02,
+          "speaker": "SPEAKER_01",
+          "score": 0.906
+        },
+        {
+          "text": "with",
+          "start": 83.06,
+          "end": 83.16,
+          "speaker": "SPEAKER_01",
+          "score": 0.888
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.9469998478889465
+    },
+    {
+      "id": 35,
+      "start": 83.2,
+      "end": 83.841,
+      "speaker": "SPEAKER_01",
+      "text": "disabilities.",
+      "original_text": "disabilities.",
+      "words": [
+        {
+          "text": "disabilities.",
+          "start": 83.2,
+          "end": 83.841,
+          "speaker": "SPEAKER_01",
+          "score": 0.867
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.9469998478889465
+    },
+    {
+      "id": 36,
+      "start": 84.418,
+      "end": 85.979,
+      "speaker": "SPEAKER_03",
+      "text": "It's sad that we only think about",
+      "original_text": "It's sad that we only think about",
+      "words": [
+        {
+          "text": "It's",
+          "start": 84.418,
+          "end": 84.518,
+          "speaker": "SPEAKER_03",
+          "score": 0.702
+        },
+        {
+          "text": "sad",
+          "start": 84.558,
+          "end": 84.858,
+          "speaker": "SPEAKER_03",
+          "score": 0.713
+        },
+        {
+          "text": "that",
+          "start": 84.918,
+          "end": 85.038,
+          "speaker": "SPEAKER_03",
+          "score": 0.793
+        },
+        {
+          "text": "we",
+          "start": 85.058,
+          "end": 85.178,
+          "speaker": "SPEAKER_03",
+          "score": 0.988
+        },
+        {
+          "text": "only",
+          "start": 85.258,
+          "end": 85.459,
+          "speaker": "SPEAKER_03",
+          "score": 0.799
+        },
+        {
+          "text": "think",
+          "start": 85.519,
+          "end": 85.719,
+          "speaker": "SPEAKER_03",
+          "score": 0.843
+        },
+        {
+          "text": "about",
+          "start": 85.759,
+          "end": 85.979,
+          "speaker": "SPEAKER_03",
+          "score": 0.645
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "sadness",
+      "emotion_score": 0.9608712792396545
+    },
+    {
+      "id": 37,
+      "start": 86.059,
+      "end": 87.42,
+      "speaker": "SPEAKER_02",
+      "text": "fairness after the backlash.",
+      "original_text": "fairness after the backlash.",
+      "words": [
+        {
+          "text": "fairness",
+          "start": 86.059,
+          "end": 86.419,
+          "speaker": "SPEAKER_02",
+          "score": 0.824
+        },
+        {
+          "text": "after",
+          "start": 86.539,
+          "end": 86.759,
+          "speaker": "SPEAKER_02",
+          "score": 0.899
+        },
+        {
+          "text": "the",
+          "start": 86.779,
+          "end": 86.859,
+          "speaker": "SPEAKER_02",
+          "score": 0.833
+        },
+        {
+          "text": "backlash.",
+          "start": 86.879,
+          "end": 87.42,
+          "speaker": "SPEAKER_02",
+          "score": 0.833
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 38,
+      "start": 88.26,
+      "end": 89.581,
+      "speaker": "SPEAKER_02",
+      "text": "Quick round to finish.",
+      "original_text": "Quick round to finish.",
+      "words": [
+        {
+          "text": "Quick",
+          "start": 88.26,
+          "end": 88.48,
+          "speaker": "SPEAKER_02",
+          "score": 0.95
+        },
+        {
+          "text": "round",
+          "start": 88.56,
+          "end": 88.92,
+          "speaker": "SPEAKER_02",
+          "score": 0.82
+        },
+        {
+          "text": "to",
+          "start": 89.02,
+          "end": 89.14,
+          "speaker": "SPEAKER_02",
+          "score": 0.644
+        },
+        {
+          "text": "finish.",
+          "start": 89.18,
+          "end": 89.581,
+          "speaker": "SPEAKER_02",
+          "score": 0.822
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 39,
+      "start": 89.981,
+      "end": 91.802,
+      "speaker": "SPEAKER_02",
+      "text": "Would you vote yes, Marcus?",
+      "original_text": "Would you vote yes, Marcus?",
+      "words": [
+        {
+          "text": "Would",
+          "start": 89.981,
+          "end": 90.121,
+          "speaker": "SPEAKER_02",
+          "score": 0.937
+        },
+        {
+          "text": "you",
+          "start": 90.161,
+          "end": 90.261,
+          "speaker": "SPEAKER_02",
+          "score": 0.987
+        },
+        {
+          "text": "vote",
+          "start": 90.321,
+          "end": 90.561,
+          "speaker": "SPEAKER_02",
+          "score": 0.752
+        },
+        {
+          "text": "yes,",
+          "start": 90.601,
+          "end": 90.941,
+          "speaker": "SPEAKER_02",
+          "score": 0.877
+        },
+        {
+          "text": "Marcus?",
+          "start": 91.341,
+          "end": 91.802,
+          "speaker": "SPEAKER_02",
+          "score": 0.832
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 40,
+      "start": 92.342,
+      "end": 95.003,
+      "speaker": "SPEAKER_01",
+      "text": "Yes, with an independent review after a couple of years.",
+      "original_text": "Yes, with an independent review after a couple of years.",
+      "words": [
+        {
+          "text": "Yes,",
+          "start": 92.342,
+          "end": 92.642,
+          "speaker": "SPEAKER_01",
+          "score": 0.853
+        },
+        {
+          "text": "with",
+          "start": 92.842,
+          "end": 92.982,
+          "speaker": "SPEAKER_01",
+          "score": 0.973
+        },
+        {
+          "text": "an",
+          "start": 93.022,
+          "end": 93.082,
+          "speaker": "SPEAKER_01",
+          "score": 0.748
+        },
+        {
+          "text": "independent",
+          "start": 93.122,
+          "end": 93.563,
+          "speaker": "SPEAKER_01",
+          "score": 0.961
+        },
+        {
+          "text": "review",
+          "start": 93.603,
+          "end": 93.863,
+          "speaker": "SPEAKER_01",
+          "score": 0.926
+        },
+        {
+          "text": "after",
+          "start": 93.963,
+          "end": 94.203,
+          "speaker": "SPEAKER_01",
+          "score": 0.784
+        },
+        {
+          "text": "a",
+          "start": 94.243,
+          "end": 94.283,
+          "speaker": "SPEAKER_01",
+          "score": 0.501
+        },
+        {
+          "text": "couple",
+          "start": 94.323,
+          "end": 94.603,
+          "speaker": "SPEAKER_01",
+          "score": 0.886
+        },
+        {
+          "text": "of",
+          "start": 94.623,
+          "end": 94.683,
+          "speaker": "SPEAKER_01",
+          "score": 0.751
+        },
+        {
+          "text": "years.",
+          "start": 94.723,
+          "end": 95.003,
+          "speaker": "SPEAKER_01",
+          "score": 0.877
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.8311755657196045
+    },
+    {
+      "id": 41,
+      "start": 95.543,
+      "end": 95.884,
+      "speaker": "SPEAKER_03",
+      "text": "Maybe.",
+      "original_text": "Maybe.",
+      "words": [
+        {
+          "text": "Maybe.",
+          "start": 95.543,
+          "end": 95.884,
+          "speaker": "SPEAKER_03",
+          "score": 0.943
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.9444759488105774
+    },
+    {
+      "id": 42,
+      "start": 96.204,
+      "end": 98.385,
+      "speaker": "SPEAKER_03",
+      "text": "Show me the delivery rules in writing first.",
+      "original_text": "Show me the delivery rules in writing first.",
+      "words": [
+        {
+          "text": "Show",
+          "start": 96.204,
+          "end": 96.404,
+          "speaker": "SPEAKER_03",
+          "score": 0.856
+        },
+        {
+          "text": "me",
+          "start": 96.424,
+          "end": 96.524,
+          "speaker": "SPEAKER_03",
+          "score": 0.843
+        },
+        {
+          "text": "the",
+          "start": 96.544,
+          "end": 96.604,
+          "speaker": "SPEAKER_03",
+          "score": 0.96
+        },
+        {
+          "text": "delivery",
+          "start": 96.644,
+          "end": 97.024,
+          "speaker": "SPEAKER_03",
+          "score": 0.93
+        },
+        {
+          "text": "rules",
+          "start": 97.084,
+          "end": 97.384,
+          "speaker": "SPEAKER_03",
+          "score": 0.85
+        },
+        {
+          "text": "in",
+          "start": 97.444,
+          "end": 97.524,
+          "speaker": "SPEAKER_03",
+          "score": 0.849
+        },
+        {
+          "text": "writing",
+          "start": 97.544,
+          "end": 97.925,
+          "speaker": "SPEAKER_03",
+          "score": 0.832
+        },
+        {
+          "text": "first.",
+          "start": 97.985,
+          "end": 98.385,
+          "speaker": "SPEAKER_03",
+          "score": 0.879
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.9444759488105774
+    },
+    {
+      "id": 43,
+      "start": 98.985,
+      "end": 102.347,
+      "speaker": "SPEAKER_00",
+      "text": "Yes, free buses would change this city for the better.",
+      "original_text": "Yes, free buses would change this city for the better.",
+      "words": [
+        {
+          "text": "Yes,",
+          "start": 98.985,
+          "end": 99.345,
+          "speaker": "SPEAKER_00",
+          "score": 0.862
+        },
+        {
+          "text": "free",
+          "start": 99.666,
+          "end": 99.926,
+          "speaker": "SPEAKER_00",
+          "score": 0.924
+        },
+        {
+          "text": "buses",
+          "start": 99.986,
+          "end": 100.406,
+          "speaker": "SPEAKER_00",
+          "score": 0.808
+        },
+        {
+          "text": "would",
+          "start": 100.466,
+          "end": 100.646,
+          "speaker": "SPEAKER_00",
+          "score": 0.95
+        },
+        {
+          "text": "change",
+          "start": 100.746,
+          "end": 101.106,
+          "speaker": "SPEAKER_00",
+          "score": 0.878
+        },
+        {
+          "text": "this",
+          "start": 101.166,
+          "end": 101.306,
+          "speaker": "SPEAKER_00",
+          "score": 0.561
+        },
+        {
+          "text": "city",
+          "start": 101.346,
+          "end": 101.646,
+          "speaker": "SPEAKER_00",
+          "score": 0.894
+        },
+        {
+          "text": "for",
+          "start": 101.687,
+          "end": 101.827,
+          "speaker": "SPEAKER_00",
+          "score": 0.677
+        },
+        {
+          "text": "the",
+          "start": 101.847,
+          "end": 101.947,
+          "speaker": "SPEAKER_00",
+          "score": 0.748
+        },
+        {
+          "text": "better.",
+          "start": 101.987,
+          "end": 102.347,
+          "speaker": "SPEAKER_00",
+          "score": 0.838
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.925906240940094
+    },
+    {
+      "id": 44,
+      "start": 103.007,
+      "end": 103.808,
+      "speaker": "SPEAKER_02",
+      "text": "Thank you all.",
+      "original_text": "Thank you all.",
+      "words": [
+        {
+          "text": "Thank",
+          "start": 103.007,
+          "end": 103.247,
+          "speaker": "SPEAKER_02",
+          "score": 0.904
+        },
+        {
+          "text": "you",
+          "start": 103.287,
+          "end": 103.467,
+          "speaker": "SPEAKER_02",
+          "score": 0.747
+        },
+        {
+          "text": "all.",
+          "start": 103.647,
+          "end": 103.808,
+          "speaker": "SPEAKER_02",
+          "score": 0.822
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.903007984161377
+    },
+    {
+      "id": 45,
+      "start": 104.108,
+      "end": 105.688,
+      "speaker": "SPEAKER_02",
+      "text": "That's policy round table.",
+      "original_text": "That's policy round table.",
+      "words": [
+        {
+          "text": "That's",
+          "start": 104.108,
+          "end": 104.388,
+          "speaker": "SPEAKER_02",
+          "score": 0.882
+        },
+        {
+          "text": "policy",
+          "start": 104.488,
+          "end": 104.968,
+          "speaker": "SPEAKER_02",
+          "score": 0.884
+        },
+        {
+          "text": "round",
+          "start": 105.028,
+          "end": 105.288,
+          "speaker": "SPEAKER_02",
+          "score": 0.804
+        },
+        {
+          "text": "table.",
+          "start": 105.348,
+          "end": 105.688,
+          "speaker": "SPEAKER_02",
+          "score": 0.783
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.903007984161377
+    },
+    {
+      "id": 46,
+      "start": 105.949,
+      "end": 108.63,
+      "speaker": "SPEAKER_02",
+      "text": "Stay curious and we'll see you next week.",
+      "original_text": "Stay curious and we'll see you next week.",
+      "words": [
+        {
+          "text": "Stay",
+          "start": 105.949,
+          "end": 106.209,
+          "speaker": "SPEAKER_02",
+          "score": 0.776
+        },
+        {
+          "text": "curious",
+          "start": 106.269,
+          "end": 106.809,
+          "speaker": "SPEAKER_02",
+          "score": 0.826
+        },
+        {
+          "text": "and",
+          "start": 107.009,
+          "end": 107.109,
+          "speaker": "SPEAKER_02",
+          "score": 0.846
+        },
+        {
+          "text": "we'll",
+          "start": 107.149,
+          "end": 107.449,
+          "speaker": "SPEAKER_02",
+          "score": 0.85
+        },
+        {
+          "text": "see",
+          "start": 107.509,
+          "end": 107.729,
+          "speaker": "SPEAKER_02",
+          "score": 0.806
+        },
+        {
+          "text": "you",
+          "start": 107.769,
+          "end": 107.89,
+          "speaker": "SPEAKER_02",
+          "score": 0.997
+        },
+        {
+          "text": "next",
+          "start": 107.95,
+          "end": 108.23,
+          "speaker": "SPEAKER_02",
+          "score": 0.836
+        },
+        {
+          "text": "week.",
+          "start": 108.33,
+          "end": 108.63,
+          "speaker": "SPEAKER_02",
+          "score": 0.915
+        }
+      ],
+      "alignment_valid": true,
+      "emotion": "neutral",
+      "emotion_score": 0.903007984161377
+    }
+  ],
+  "language": "en",
+  "speakers": {
+    "SPEAKER_02": "SPEAKER_02",
+    "SPEAKER_01": "SPEAKER_01",
+    "SPEAKER_03": "SPEAKER_03",
+    "SPEAKER_00": "SPEAKER_00"
+  },
+  "metadata": {
+    "duration": 109.784,
+    "mode": "real",
+    "asr_model": "base",
+    "diarization_model": "pyannote/speaker-diarization-community-1",
+    "word_timings": "Forced alignment; missing word times remain null.",
+    "emotion_status": "Text inference per speaker turn; threshold 0.60. Not vocal emotion."
+  },
+  "schema_version": 1
+}

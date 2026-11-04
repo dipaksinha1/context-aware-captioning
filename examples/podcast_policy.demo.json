@@ -1,0 +1,30 @@
+{
+  "media": "examples/podcast_policy.mp4",
+  "reference": "examples/podcast_policy_reference.json",
+  "output": "examples/podcast_policy_output.json",
+  "video": "podcast_demo.mp4",
+  "speedup": 10,
+  "speakers": 4,
+  "describe": "110 s podcast, 4 synthetic voices",
+  "edit": {
+    "from": "The Council estimates $40 million a year at $8 per corporate day.",
+    "to": "The Council estimates $40 million a year, at $8 per car per day.",
+    "label": "“$8 per corporate day” → “$8 per car per day”"
+  },
+  "search": "delivery",
+  "playbackNotes": [
+    {"at": 40.0, "text": "Elena: “Honestly, I'm worried.” → text emotion cue 😨 fear"},
+    {"at": 44.9, "text": "Crosstalk: Dana's “Right.” overlaps Elena; the end of Elena's sentence is attributed to Dana"},
+    {"at": 50.5, "text": "Each speaker keeps one label and color throughout the conversation"},
+    {"at": 65.2, "text": "“Really?” → 😮 surprise; the next line is wrongly given to Dana, a diarization error to fix in review"},
+    {"at": 77.9, "text": "Crosstalk: Marcus's “Exactly.” over Tom is attributed correctly"},
+    {"at": 84.3, "text": "😢 sadness, and a speaker switch mid-sentence (Elena → Dana)"},
+    {"at": 92.0, "text": "Word-by-word highlighting stays in sync across all four voices"}
+  ],
+  "notes": [
+    "Misheard names: “Riverton's” → “Everton's”, “Elena” → “Ilina”; “car per day” → “corporate day”.",
+    "Crosstalk: “Exactly.” attributed correctly; under Dana's “Right.” the end of Elena's line went to Dana.",
+    "Auto-detecting the speaker count found all 4 speakers and gave the same scores."
+  ],
+  "summary": "four voices separated well; names and crosstalk still need human review"
+}

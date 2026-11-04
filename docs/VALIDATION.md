@@ -60,11 +60,28 @@ Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available
   78 of 103 timed words were ever highlighted and highlights lagged word starts by a median 116 ms
   (max 250 ms). Rendering on animation frames while playing highlighted 103 of 103, median lag 8 ms
   (max 17 ms).
-- Demo video `docs/demo/app_demo.mp4` (2:01, 1280×800, recorded with `scripts/record_app_demo.js`):
-  real processing in the UI took 39 s with warm caches (193 s in a take right after a container restart,
-  which was discarded). Audio is aligned by detecting highlight changes in the recorded frames; in the
-  final file they fall a median 67 ms after word starts in the audio (p10 −47 ms, p90 124 ms over
-  109 changes). The script verifies the caption correction lands on the intended row.
+- Four-voice podcast `examples/podcast_policy.mp4` (110 s, Piper voices amy/ryan/alba/alan, animated
+  illustrated presenters, two overlapping lines), WhisperX `base`, CPU, emotion on, about 100 s to process:
+
+  | Speaker count | WER | DER | Missed / confusion | Word speaker accuracy |
+  | --- | --- | --- | --- | --- |
+  | Fixed at 4 | 4.9% | 10.2% | 5.94 s / 2.76 s of 85.4 s | 95.2% |
+  | Auto-detect | 4.9% | 10.2% | same (4 speakers found) | 95.2% |
+
+  Word errors are mostly names and compounds: "Riverton's" → "Everton's", "Elena" → "Ilina",
+  "car per" → "corporate", "Roundtable" → "Round Table". Crosstalk: Marcus's "Exactly." over Tom was
+  attributed correctly; under Dana's "Right." the last words of Elena's sentence went to Dana. Two other
+  Elena lines were given to Dana. Emotion cues: 28 neutral, 6 fear, 1 surprise, 1 sadness, 10 below threshold.
+- Demo videos (1280×800, recorded with `scripts/record_app_demo.js --config examples/<name>.demo.json`;
+  audio aligned by detecting highlight changes in the recorded frames; the script verifies the caption
+  correction lands on the intended row and that the app's output matches the stored model output):
+
+  | Video | Length | Processing in UI | Highlight vs. audio word start (median, p10, p90) |
+  | --- | --- | --- | --- |
+  | `docs/demo/podcast_demo.mp4` | 3:21 | 96 s (shown 10×) | 22 ms, −14 ms, 57 ms over 284 changes |
+  | `docs/demo/app_demo.mp4` | 2:03 | 37 s (shown 8×) | 31 ms, −36 ms, 72 ms over 119 changes |
+
+  A take right after a container restart took 193 s to process (cold caches) and was discarded.
 - Emotion emoji: unit tests cover SRT/VTT output and unknown labels; in Chromium with Noto Color Emoji,
   the player label ("Raj · 😄 joy") and transcript lines rendered with no JavaScript errors.
 

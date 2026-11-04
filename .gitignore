@@ -20,4 +20,6 @@ models/
 # Bundled synthetic samples only
 !examples/demo.wav
 !examples/test_conversation.mp4
+!examples/podcast_policy.mp4
 !docs/demo/app_demo.mp4
+!docs/demo/podcast_demo.mp4

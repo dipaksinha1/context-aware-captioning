@@ -8,9 +8,9 @@ accuracy, real-model runtime, or accessibility conformance. No measured model re
 
 ## Synthetic pipeline check
 
-Before recording people, process `examples/test_conversation.mp4` and score it against
-`examples/test_conversation_reference.json` (see README). It exercises three speakers, quick replies,
-a returning speaker, numbers, and proper nouns. Results from one run are in `VALIDATION.md`.
+Before recording people, process `examples/test_conversation.mp4` (three speakers, quick replies, a returning
+speaker, numbers, proper nouns) and `examples/podcast_policy.mp4` (four speakers, longer turns, two moments of
+crosstalk) and score them against their `_reference.json` files (see README). Results are in `VALIDATION.md`.
 
 ## First real-model smoke test
 

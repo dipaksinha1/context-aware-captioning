@@ -1,0 +1,15 @@
+{
+  "media": "examples/test_conversation.mp4",
+  "reference": "examples/test_conversation_reference.json",
+  "output": "examples/test_conversation_output.json",
+  "video": "app_demo.mp4",
+  "speakers": 3,
+  "describe": "41 s, 3 synthetic voices",
+  "edit": {"from": "Dude,", "to": "Good.", "label": "“Dude,” → “Good.”"},
+  "search": "Toronto",
+  "notes": [
+    "Main errors: quick replies attached to the previous speaker; “Good.” heard as “Dude,”.",
+    "With speaker count on auto-detect, DER rose to 38.1% (two similar voices merged)."
+  ],
+  "summary": "transcription is strong; speaker turns need review and correction"
+}

@@ -9,6 +9,21 @@ pyannote speaker diarization, and optional transcript-based emotion cues in an e
 
 ## Demo
 
+### Four-person policy podcast
+
+[![Podcast demo: four illustrated presenters, the active speaker highlighted, with synchronized captions and emotion cues](docs/demo/podcast_playback.png)](docs/demo/podcast_demo.mp4)
+
+**[Watch the 3½-minute podcast demo (MP4, with sound)](docs/demo/podcast_demo.mp4).** Four presenters (Dana,
+Marcus, Elena, Tom) debate a fictional city's plan to charge drivers entering downtown and fund free buses.
+The 110-second video shows four illustrated presenters whose mouths follow their own voices, with two moments
+of crosstalk. Real WhisperX, alignment, pyannote, and emotion models process it on CPU (shown 10× faster),
+then the demo names the voices, corrects "$8 per corporate day" to "$8 per car per day", plays it back with
+emoji emotion cues, and scores it against the script: **4.9% word error rate, 10.2% diarization error rate,
+95.2% of words given the right speaker**. Auto-detecting the speaker count found all four. Misheard names
+("Everton's", "Ilina") and speech under crosstalk still need human review.
+
+### Three-voice meeting
+
 [![End-to-end demo: synchronized speaker captions with word highlighting](docs/demo/playback.png)](docs/demo/app_demo.mp4)
 
 **[Watch the 2-minute end-to-end demo (MP4, with sound)](docs/demo/app_demo.mp4).** A 41-second, three-voice
@@ -17,7 +32,8 @@ emotion on CPU (processing shown 8× faster). It then shows naming the voices, c
 synchronized playback, seeking and search, exports, and the scores against the script: **2.9% word error rate,
 25.7% diarization error rate, 73.3% of words given the right speaker**. The voices are synthetic, so these numbers
 check the pipeline rather than accuracy on real conversation (see [docs/VALIDATION.md](docs/VALIDATION.md)).
-Re-record it with `node scripts/record_app_demo.js` while the app runs with model access.
+Re-record either demo with `node scripts/record_app_demo.js --config examples/<name>.demo.json` while the app
+runs with model access. All voices are synthetic and all people are illustrated; no real person is depicted.
 
 ## What you can do
 
@@ -108,23 +124,26 @@ context-caption --project examples/demo_project.json --output outputs/demo
 
 This produces `captions.srt`, `captions.vtt`, and `captions.json`. Outputs are ignored by Git.
 
-## Synthetic three-speaker test video
+## Synthetic test recordings
 
-`examples/test_conversation.mp4` (41 s) is a scripted conversation between three synthetic voices
-(Piper neural TTS: Maya, Raj, Alba) with quick replies, a returning speaker, numbers, and proper nouns.
-`examples/test_conversation_reference.json` holds the script with utterance times, and
-`examples/test_conversation_output.json` is unedited real-model output (WhisperX `base`, CPU, 3 speakers,
-emotion on). Open the output in **Open saved project** and attach the MP4 to review it without models, or
-process the MP4 yourself and score the result:
+| Recording | Content |
+| --- | --- |
+| `examples/test_conversation.mp4` | 41 s, three voices (Maya, Raj, Alba): quick replies, a returning speaker, numbers, proper nouns; waveform video |
+| `examples/podcast_policy.mp4` | 110 s, four voices (Dana, Marcus, Elena, Tom) debating a fictional congestion charge, with two moments of crosstalk; animated video of four illustrated presenters whose mouths follow their own voices and whose tiles light up while they speak |
+
+Each has `<name>_reference.json` (the script with utterance times) and `<name>_output.json` (unedited
+real-model output: WhisperX `base`, CPU, known speaker count, emotion on). Open an output in **Open saved
+project** and attach its MP4 to review it without models, or process the MP4 yourself and score the result:
 
 ```bash
-context-caption --input examples/test_conversation.mp4 --model base --min-speakers 3 --max-speakers 3 --output outputs/test
-context-caption-eval --reference examples/test_conversation_reference.json --hypothesis outputs/test/captions.json
+context-caption --input examples/podcast_policy.mp4 --model base --min-speakers 4 --max-speakers 4 --output outputs/podcast
+context-caption-eval --reference examples/podcast_policy_reference.json --hypothesis outputs/podcast/captions.json
 ```
 
-Regenerate the media with `pip install piper-tts` and `python scripts/make_test_recording.py`; Piper output
-varies slightly per run, so regenerate the reference with it. Synthetic voices are cleaner than real
-conversation: scores from this file check the pipeline and do not claim accuracy on real speech.
+Regenerate the media with `pip install piper-tts` and `python scripts/make_test_recording.py --script podcast`
+(or `--script conversation`). Piper output varies slightly per run, so the reference is regenerated with it.
+Synthetic voices are cleaner than real conversation: these scores check the pipeline and do not claim
+accuracy on real speech.
 
 ## Project structure
 
@@ -139,9 +158,10 @@ src/context_caption/
   exporters.py                 SRT, VTT, and JSON exports
   cli.py                       Local processing and project re-export CLI
   evaluate.py                  WER/DER/timestamp scoring against a reference project
-scripts/make_test_recording.py  Synthetic three-speaker test video and reference
+scripts/make_test_recording.py  Synthetic test recordings (three-voice meeting, four-voice podcast) and references
+scripts/podcast_scene.py        Animated four-presenter studio video for the podcast recording
 scripts/record_app_demo.js      Records the narrated end-to-end demo (Playwright + FFmpeg)
-examples/                      Synthetic demo project/audio and three-speaker test video
+examples/                      Synthetic demo project, test recordings, references, outputs, demo configs
 tests/                         Core, media, pipeline, evaluation, and Streamlit tests
 docs/                          Architecture, evaluation, validation, GitHub setup, and demo video
 .github/workflows/ci.yml        Automated lint and tests

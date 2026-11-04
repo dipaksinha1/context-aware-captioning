@@ -1,10 +1,13 @@
-// Record an end-to-end walkthrough of the app on the synthetic three-speaker test video.
+// Record an end-to-end walkthrough of the app on a synthetic test recording.
 //
 // Requires: the app running with the ML extra and model access, e.g.
 //   HF_TOKEN=... streamlit run app.py --server.port 8599 --server.fileWatcherType none
 // plus Node.js Playwright with Chromium, FFmpeg, and `context-caption-eval` on PATH (or CAPTION_EVAL).
-//   node scripts/record_app_demo.js [--url http://localhost:8599] [--out outputs/demo]
-// Produces <out>/app_demo.mp4: browser recording, processing segment sped up, with the conversation
+//   node scripts/record_app_demo.js [--config examples/test_conversation.demo.json]
+//                                   [--url http://localhost:8599] [--out outputs/demo]
+// The config names the media, its reference, the unedited model output for the same settings (used
+// for scores, speaker names, and finding the caption to correct), and the narration details.
+// Produces <out>/<config.video>: browser recording, processing segment sped up, with the recording's
 // audio muxed in during synchronized playback (browser recordings carry no sound).
 const { chromium } = require('playwright');
 const { execFileSync } = require('child_process');
@@ -17,10 +20,13 @@ const arg = (name, fallback) => {
 };
 const REPO = path.resolve(__dirname, '..');
 const URL = arg('--url', 'http://localhost:8599');
+const CONFIG = JSON.parse(fs.readFileSync(path.resolve(REPO,
+  arg('--config', 'examples/test_conversation.demo.json')), 'utf8'));
 const OUT = path.resolve(arg('--out', path.join(REPO, 'outputs/demo')));
-const MEDIA = path.join(REPO, 'examples/test_conversation.mp4');
-const REFERENCE = path.join(REPO, 'examples/test_conversation_reference.json');
-const SPEEDUP = 8;
+const MEDIA = path.join(REPO, CONFIG.media);
+const REFERENCE = path.join(REPO, CONFIG.reference);
+const MODEL_OUTPUT = path.join(REPO, CONFIG.output);
+const SPEEDUP = CONFIG.speedup || 8;
 const W = 1280, H = 800;
 
 const banner = (page, text) => page.evaluate(t => {
@@ -52,13 +58,25 @@ async function typeInto(page, locator, text) {
   await page.keyboard.press('Control+A');
   await page.keyboard.type(text, { delay: 70 });
 }
-async function scrollTo(locator) {
+async function scrollTo(locator, clearance = 0) {
   await locator.evaluate(el => el.scrollIntoView({ block: 'start', behavior: 'smooth' }));
+  if (!clearance) return;
+  // Keep the element clear of Streamlit's fixed header by scrolling its container back a little.
+  await locator.page().waitForTimeout(900);
+  await locator.evaluate((el, by) => {
+    let box = el.parentElement;
+    const scrolls = n => ['auto', 'scroll'].includes(getComputedStyle(n).overflowY) && n.scrollHeight > n.clientHeight;
+    while (box && !scrolls(box)) box = box.parentElement;
+    (box || document.scrollingElement).scrollBy({ top: -by, behavior: 'smooth' });
+  }, clearance);
 }
 
 (async () => {
   fs.mkdirSync(path.join(OUT, 'raw'), { recursive: true });
   const evalBin = process.env.CAPTION_EVAL || 'context-caption-eval';
+  // Scores and the label -> name mapping come from the unedited model output for the same settings.
+  const score = JSON.parse(execFileSync(evalBin, ['--reference', REFERENCE, '--hypothesis', MODEL_OUTPUT, '--json']));
+  const rows = JSON.parse(fs.readFileSync(MODEL_OUTPUT, 'utf8')).captions;
   const browser = await chromium.launch();
   const context = await browser.newContext({
     viewport: { width: W, height: H },
@@ -90,20 +108,23 @@ async function scrollTo(locator) {
   await page.waitForTimeout(3500);
 
   // 1. Settings.
-  await banner(page, '1 · Settings: WhisperX base on CPU, 3 known speakers, optional text emotion');
+  await banner(page, `1 · Settings: WhisperX base on CPU, ${CONFIG.speakers} known speakers, optional text emotion`);
   const sidebar = page.locator('[data-testid="stSidebar"]');
   const count = sidebar.getByLabel('Known speaker count (0 = detect)');
-  await typeInto(page, count, '3'); await count.press('Enter');
+  await typeInto(page, count, String(CONFIG.speakers)); await count.press('Enter');
   await page.waitForTimeout(800);
   await click(page, sidebar.getByText('Estimate English text emotion'));
   await page.waitForTimeout(1500);
 
   // 2. Upload and consent.
-  await banner(page, '2 · Upload a recording (41 s, three synthetic voices) and confirm consent');
+  await banner(page, `2 · Upload a recording (${CONFIG.describe}) and confirm consent`);
   for (let attempt = 0; ; attempt++) {
     await page.locator('[data-testid="stFileUploaderDropzoneInput"]').first().setInputFiles(MEDIA);
     try {
-      await page.locator('[data-testid="stFileUploaderDropzone"]').first().getByText('1.8MB').waitFor({ timeout: 10000 });
+      await page.waitForFunction(() => {
+        const zone = document.querySelector('[data-testid="stFileUploaderDropzone"]');
+        return zone && !zone.innerText.includes('per file');
+      }, null, { timeout: 10000 });
       break;
     } catch (e) { if (attempt >= 3) throw e; }
   }
@@ -125,6 +146,9 @@ async function scrollTo(locator) {
   await page.locator('[data-testid="stMetric"]').first().waitFor({ timeout: 600000 });
   events.procEnd = at();
   const metrics = await page.locator('[data-testid="stMetricValue"]').allInnerTexts();
+  if (Number(metrics[0]) !== rows.length) {
+    throw new Error(`App produced ${metrics[0]} cues but ${CONFIG.output} has ${rows.length}; regenerate it`);
+  }
   await banner(page, `Done: ${metrics[0]} caption cues, ${metrics[1]} speaker labels, language ${metrics[2]}`);
   await page.waitForTimeout(3000);
 
@@ -132,7 +156,7 @@ async function scrollTo(locator) {
   await click(page, page.getByRole('tab', { name: 'Review & edit' }));
   await banner(page, '4 · Name the voices (diarization gives anonymous labels)');
   await page.waitForTimeout(1000);
-  for (const [k, v] of Object.entries({ SPEAKER_02: 'Maya', SPEAKER_00: 'Raj', SPEAKER_01: 'Alba' })) {
+  for (const [k, v] of Object.entries(score.speakers.mapping).sort()) {
     await typeInto(page, page.getByLabel(k, { exact: true }), v);
     await page.waitForTimeout(300);
   }
@@ -141,12 +165,12 @@ async function scrollTo(locator) {
   await page.waitForTimeout(1500);
 
   // 5. Fix the transcription error.
-  await banner(page, '5 · Correct a transcription error: “Dude,” → “Good.” (original text is kept in the project)');
+  await banner(page, `5 · Correct a transcription error: ${CONFIG.edit.label} (original text is kept in the project)`);
   const grid = page.locator('[data-testid="stDataFrame"]').first();
   await scrollTo(grid);
   await page.waitForTimeout(2000);
-  const rows = JSON.parse(fs.readFileSync(path.join(REPO, 'examples/test_conversation_output.json'))).captions;
-  const idx = rows.findIndex(c => c.text === 'Dude,');
+  const idx = rows.findIndex(c => c.text === CONFIG.edit.from);
+  if (idx < 0) throw new Error(`No caption reads "${CONFIG.edit.from}"`);
   // The canvas grid mirrors each cell in a hidden element (glide-cell-<col>-<row>) that takes focus;
   // move one row at a time and confirm focus arrived, since key presses can be dropped during redraws.
   const focused = () => page.evaluate(() => document.activeElement && document.activeElement.id);
@@ -168,15 +192,15 @@ async function scrollTo(locator) {
   await page.keyboard.press('Enter');
   const editor = page.locator('textarea.gdg-input');
   await editor.waitFor({ timeout: 5000 });
-  if ((await editor.inputValue()) !== 'Dude,') throw new Error(`Editor opened on "${await editor.inputValue()}"`);
+  if ((await editor.inputValue()) !== CONFIG.edit.from) throw new Error(`Editor opened on "${await editor.inputValue()}"`);
   await page.keyboard.press('Control+A');
-  await page.keyboard.type('Good.', { delay: 90 });
+  await page.keyboard.type(CONFIG.edit.to, { delay: CONFIG.edit.to.length > 20 ? 35 : 90 });
   await page.keyboard.press('Enter');
   await page.waitForTimeout(2500);
   await click(page, page.getByRole('button', { name: 'Save caption edits' }));
   await page.waitForTimeout(3000);
   const savedTexts = await page.locator('[data-testid="stText"]').allInnerTexts();
-  if (savedTexts[idx] !== 'Good.' || savedTexts.includes('Dude,') || !savedTexts.includes('Thanks for joining the Accessibility Review.')) {
+  if (savedTexts.length !== rows.length || savedTexts.some((t, i) => t !== (i === idx ? CONFIG.edit.to : rows[i].text))) {
     throw new Error('Caption edit did not land on the intended row: ' + savedTexts.join(' | '));
   }
 
@@ -187,7 +211,7 @@ async function scrollTo(locator) {
   await click(page, page.getByText('Show available emotion cues'));
   await page.waitForTimeout(2000);
   const iframe = page.locator('iframe').first();
-  await scrollTo(iframe);
+  await scrollTo(iframe, 64);
   await page.waitForTimeout(1500);
   await banner(page, '6 · Synchronized playback: named, colored speakers with word-by-word highlighting (sound on)');
   const media = page.frameLocator('iframe').first().locator('#media');
@@ -199,8 +223,14 @@ async function scrollTo(locator) {
   const sample = await media.evaluate(m => m.currentTime);
   events.playZero = at() - sample;  // recording time at media position 0
   const mediaDuration = await media.evaluate(m => m.duration);
-  await page.waitForTimeout(8000);
-  await banner(page, 'Text emotion cues are optional, uncertain estimates; transcript and speakers come first');
+  const notes = [{ at: 9, text: 'Text emotion cues are optional, uncertain estimates; transcript and speakers come first' },
+    ...(CONFIG.playbackNotes || [])].sort((x, y) => x.at - y.at);
+  for (const note of notes) {   // narration keyed to media time
+    await media.evaluate((m, at) => new Promise(r => {
+      const check = () => (m.currentTime >= at || m.ended) ? r() : setTimeout(check, 50); check();
+    }), note.at);
+    await banner(page, note.text);
+  }
   await media.evaluate(m => new Promise(r => m.ended ? r() : m.addEventListener('ended', r)));
   events.playEnd = at();
   await page.waitForTimeout(800);
@@ -208,7 +238,8 @@ async function scrollTo(locator) {
   // 7. Seek and search.
   await banner(page, '7 · Jump to any caption, or search the transcript');
   const seek = page.frameLocator('iframe').first().locator('#seek button');
-  for (const n of [7, 14]) {
+  const seekCount = await seek.count();
+  for (const n of [Math.floor(seekCount / 3), Math.floor(2 * seekCount / 3)]) {
     const b = seek.nth(n);
     const bb = await b.boundingBox();
     await page.mouse.move(bb.x + bb.width / 2, bb.y + bb.height / 2, { steps: 18 });
@@ -216,7 +247,7 @@ async function scrollTo(locator) {
     await page.waitForTimeout(1500);
   }
   const search = page.getByLabel('Search transcript');
-  await typeInto(page, search, 'Toronto'); await search.press('Enter');
+  await typeInto(page, search, CONFIG.search); await search.press('Enter');
   await page.waitForTimeout(1200);
   await scrollTo(search);
   await page.waitForTimeout(2500);
@@ -243,8 +274,6 @@ async function scrollTo(locator) {
 
   // 9. Results: exported SRT, then scores from context-caption-eval on the unedited model output.
   const srt = fs.readFileSync(srtPath, 'utf8').trim().split(/\n\n/).slice(0, 6).join('\n\n');
-  const score = JSON.parse(execFileSync(evalBin, ['--reference', REFERENCE, '--hypothesis',
-    path.join(REPO, 'examples/test_conversation_output.json'), '--json']));
   const pct = v => (v * 100).toFixed(1) + '%';
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
   const map = Object.entries(score.speakers.mapping).map(([h, r]) => `${h} → ${r}`).join(', ');
@@ -253,21 +282,20 @@ async function scrollTo(locator) {
    <div><div style="font-size:13px;letter-spacing:.12em;color:#64748b">EXPORTED SUBTITLES (SRT)</div>
     <pre style="background:#0f172a;color:#e2e8f0;padding:20px;border-radius:12px;font-size:14px;line-height:1.45;white-space:pre-wrap;margin-top:10px">${esc(srt)}</pre></div>
    <div><div style="font-size:13px;letter-spacing:.12em;color:#64748b">RESULTS VS. THE SCRIPT · context-caption-eval</div>
-    <h1 style="font-size:30px;margin:10px 0 18px">41 s, 3 synthetic voices, WhisperX base on CPU</h1>
+    <h1 style="font-size:30px;margin:10px 0 18px">${esc(CONFIG.describe)}, WhisperX base on CPU</h1>
     <table style="border-collapse:collapse;width:100%;font-size:18px">
      ${[['Word error rate', pct(score.words.wer), `${score.words.substitutions} sub, ${score.words.deletions} del, ${score.words.insertions} ins / ${score.words.reference_words} words`],
-        ['Diarization error rate', pct(score.speakers.der), `collar ${score.speakers.collar} s, 3 speakers given`],
+        ['Diarization error rate', pct(score.speakers.der), `collar ${score.speakers.collar} s, ${CONFIG.speakers} speakers given`],
         ['Words with correct speaker', pct(score.speakers.word_speaker_accuracy), `${score.speakers.matched_words} matched words`],
         ['Processing time', `${(events.procEnd - events.procStart).toFixed(0)} s`, `${mediaDuration.toFixed(0)} s of audio, 4 vCPU`]]
        .map(([k, v, d]) => `<tr style="border-bottom:1px solid #e2e8f0"><td style="padding:14px 0">${k}<div style="font-size:13px;color:#64748b">${d}</div></td><td style="text-align:right;font-weight:700;font-size:28px;color:#0f766e">${v}</td></tr>`).join('')}
     </table>
     <p style="font-size:15px;color:#334155;line-height:1.5;margin-top:18px">Speaker mapping: ${esc(map)}.<br>
-     Main errors: quick replies attached to the previous speaker; “Good.” heard as “Dude,”.
-     With speaker count on auto-detect, DER rose to 38.1% (two similar voices merged).<br>
+     ${CONFIG.notes.map(esc).join('<br>')}<br>
      Synthetic speech: a pipeline check, not an accuracy claim for real conversation.</p></div>
   </div></body></html>`);
   await page.mouse.move(W - 40, H - 40);
-  await banner(page, '9 · Results: transcription is strong; speaker turns need review and correction');
+  await banner(page, `9 · Results: ${CONFIG.summary}`);
   await page.waitForTimeout(9000);
   events.end = at();
 
@@ -276,14 +304,14 @@ async function scrollTo(locator) {
   await browser.close();
   const raw = await video.path();
   const shown = JSON.parse(fs.readFileSync(path.join(OUT, 'caption-project.json'), 'utf8'));
-  events.sync = calibrate(raw, events.captionBox, events.playZero, shown);
+  events.sync = calibrate(raw, events.captionBox, events.playZero, shown, mediaDuration);
   fs.writeFileSync(path.join(OUT, 'events.json'), JSON.stringify({ ...events, metrics, score }, null, 2));
 
   // Post-process: speed up processing, mux conversation audio at playback, encode H.264/AAC.
   const a = events.procStart + 2, b = events.procEnd - 1;
   const saved = (b - a) * (1 - 1 / SPEEDUP);
   const delayMs = Math.max(0, Math.round((events.sync.playZero - saved) * 1000));
-  const out = path.join(OUT, 'app_demo.mp4');
+  const out = path.join(OUT, CONFIG.video || 'app_demo.mp4');
   execFileSync('ffmpeg', ['-v', 'error', '-y', '-i', raw, '-i', MEDIA, '-filter_complex',
     `[0:v]trim=0:${a},setpts=PTS-STARTPTS[v1];[0:v]trim=${a}:${b},setpts=(PTS-STARTPTS)/${SPEEDUP}[v2];` +
     `[0:v]trim=start=${b},setpts=PTS-STARTPTS[v3];[v1][v2][v3]concat=n=3:v=1:a=0,fps=25,format=yuv420p[v];` +
@@ -296,13 +324,13 @@ async function scrollTo(locator) {
 // Browser recordings have no audio and their clock is offset from Node's. Find the recording time
 // of media position 0 from the frames: detect when the yellow word highlight moves, then pick the
 // offset that best lines those moments up with the word start times shown in the player.
-function calibrate(raw, box, approx, project) {
+function calibrate(raw, box, approx, project, duration) {
   const fps = 25;
   const even = v => Math.max(2, Math.round(v) & ~1);
   const [x, y, w, h] = [Math.round(box.x), Math.round(box.y), even(box.width), even(box.height)];
   const [ow, oh] = [even(w / 2), even(h / 2)];
   const start = Math.max(0, approx - 2);
-  const buf = execFileSync('ffmpeg', ['-v', 'error', '-ss', String(start), '-i', raw, '-t', '48', '-vf',
+  const buf = execFileSync('ffmpeg', ['-v', 'error', '-ss', String(start), '-i', raw, '-t', String(duration + 7), '-vf',
     `fps=${fps},crop=${w}:${h}:${x}:${y},scale=${ow}:${oh}`, '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'],
   { maxBuffer: 1 << 30 });
   const size = ow * oh * 3;
