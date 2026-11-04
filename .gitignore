@@ -17,5 +17,6 @@ models/
 *.mkv
 .DS_Store
 
-# Bundled synthetic sample only
+# Bundled synthetic samples only
 !examples/demo.wav
+!examples/test_conversation.mp4
