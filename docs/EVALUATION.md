@@ -6,6 +6,12 @@ Local checks cover deterministic logic, real FFmpeg conversion, stubbed ML orche
 Streamlit sample workflow. They do not establish ASR word error rate, diarization error rate, emotion
 accuracy, real-model runtime, or accessibility conformance. No measured model results are reported.
 
+## Synthetic pipeline check
+
+Before recording people, process `examples/test_conversation.mp4` and score it against
+`examples/test_conversation_reference.json` (see README). It exercises three speakers, quick replies,
+a returning speaker, numbers, and proper nouns. Results from one run are in `VALIDATION.md`.
+
 ## First real-model smoke test
 
 1. Install the ML extra, FFmpeg, and accept the gated model conditions as described in the README.

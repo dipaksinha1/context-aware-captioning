@@ -103,9 +103,9 @@ def main(argv=None):
     video = args.output / "test_conversation.mp4"
     subprocess.run([
         "ffmpeg", "-v", "error", "-y", "-i", str(wav), "-filter_complex",
-        "[0:a]showwaves=s=640x360:mode=cline:colors=0x0F766E,format=yuv420p[v]",
-        "-map", "[v]", "-map", "0:a", "-c:v", "libx264", "-preset", "veryfast",
-        "-c:a", "aac", "-b:a", "128k", "-shortest", str(video),
+        "[0:a]showwaves=s=640x360:mode=cline:rate=15:colors=0x0F766E,format=yuv420p[v]",
+        "-map", "[v]", "-map", "0:a", "-c:v", "libx264", "-preset", "veryfast", "-crf", "32",
+        "-c:a", "aac", "-b:a", "64k", "-shortest", str(video),
     ], check=True)
     duration = len(samples) / (2 * RATE)
     reference = Project(captions, speakers={k: k for k in VOICES}, metadata={

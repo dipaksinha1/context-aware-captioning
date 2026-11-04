@@ -62,7 +62,8 @@ synthetic demonstration WAV is explicitly allowed.
 
 ## Next milestones
 
-- Run and record the real-model smoke test.
+- Real-model run on the synthetic test video is recorded in `VALIDATION.md`; repeat it on a consented
+  recording of real people.
 - Annotate consented reference recordings and score them with `context-caption-eval`
   (see `EVALUATION.md`).
 - Conduct the HCI review tasks in `EVALUATION.md`.

@@ -1,0 +1,166 @@
+{
+  "captions": [
+    {
+      "id": 1,
+      "start": 0.5,
+      "end": 4.083,
+      "speaker": "Maya",
+      "text": "Good morning everyone, thanks for joining the accessibility review.",
+      "original_text": "Good morning everyone, thanks for joining the accessibility review.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 2,
+      "start": 4.783,
+      "end": 7.639,
+      "speaker": "Raj",
+      "text": "Happy to be here. I tested the caption editor on Monday.",
+      "original_text": "Happy to be here. I tested the caption editor on Monday.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 3,
+      "start": 8.239,
+      "end": 9.775,
+      "speaker": "Maya",
+      "text": "Great. What did you find?",
+      "original_text": "Great. What did you find?",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 4,
+      "start": 10.275,
+      "end": 14.466,
+      "speaker": "Raj",
+      "text": "Speaker labels stayed consistent, but long sentences were split too early.",
+      "original_text": "Speaker labels stayed consistent, but long sentences were split too early.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 5,
+      "start": 15.266,
+      "end": 19.077,
+      "speaker": "Alba",
+      "text": "I noticed that as well, especially in the lecture recording from Toronto.",
+      "original_text": "I noticed that as well, especially in the lecture recording from Toronto.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 6,
+      "start": 19.677,
+      "end": 20.85,
+      "speaker": "Maya",
+      "text": "Was the timing accurate?",
+      "original_text": "Was the timing accurate?",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 7,
+      "start": 21.15,
+      "end": 24.606,
+      "speaker": "Alba",
+      "text": "Mostly. Each caption appeared within a fraction of a second.",
+      "original_text": "Mostly. Each caption appeared within a fraction of a second.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 8,
+      "start": 25.306,
+      "end": 25.48,
+      "speaker": "Raj",
+      "text": "Yes.",
+      "original_text": "Yes.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 9,
+      "start": 25.78,
+      "end": 29.187,
+      "speaker": "Maya",
+      "text": "Good. The budget for the next study is about 300 dollars.",
+      "original_text": "Good. The budget for the next study is about 300 dollars.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 10,
+      "start": 29.787,
+      "end": 33.181,
+      "speaker": "Alba",
+      "text": "That should cover twelve participants if sessions stay under one hour.",
+      "original_text": "That should cover twelve participants if sessions stay under one hour.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 11,
+      "start": 33.881,
+      "end": 36.273,
+      "speaker": "Raj",
+      "text": "I can schedule them for the second week of March.",
+      "original_text": "I can schedule them for the second week of March.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    },
+    {
+      "id": 12,
+      "start": 36.773,
+      "end": 39.951,
+      "speaker": "Maya",
+      "text": "Perfect. Let's meet again on Friday and compare notes.",
+      "original_text": "Perfect. Let's meet again on Friday and compare notes.",
+      "words": [],
+      "alignment_valid": true,
+      "emotion": null,
+      "emotion_score": null
+    }
+  ],
+  "language": "en",
+  "speakers": {
+    "Maya": "Maya",
+    "Raj": "Raj",
+    "Alba": "Alba"
+  },
+  "metadata": {
+    "mode": "reference",
+    "duration": 40.95133786848073,
+    "noise": 0.0,
+    "note": "Scripted Piper TTS conversation; utterance-level reference without word times.",
+    "voices": {
+      "Maya": "en_US-lessac-medium",
+      "Raj": "en_US-ryan-medium",
+      "Alba": "en_GB-alba-medium"
+    }
+  },
+  "schema_version": 1
+}

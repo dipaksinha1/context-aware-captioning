@@ -94,7 +94,9 @@ def process(source: Path, settings: Settings, progress=lambda value, label: None
             settings.model, settings.device,
             compute_type="int8" if settings.device == "cpu" else "float16",
             language=settings.language,
-            vad_method="silero",
+            # pyannote VAD weights ship inside the WhisperX wheel. Silero is fetched from GitHub
+            # through torch.hub at run time, which fails offline or behind restrictive proxies.
+            vad_method="pyannote",
         )
         result = model.transcribe(audio, batch_size=settings.batch_size)
         language = result.get("language") or settings.language or "en"

@@ -5,11 +5,11 @@ The prototype follows the seven-step workflow in the supplied COSC-5926 proposal
 | Proposal step | Implementation | Review evidence |
 | --- | --- | --- |
 | Upload/preprocessing | `media.normalize_audio` converts to 16 kHz mono PCM; bounded file size/duration | FFmpeg integration tests |
-| Speech transcription | `pipeline.process` loads WhisperX and transcribes in batches | Adapter contract test; real-model smoke test pending |
-| Speaker diarization | WhisperX `DiarizationPipeline` wraps pyannote community-1 | Adapter test; real-model quality pending |
+| Speech transcription | `pipeline.process` loads WhisperX and transcribes in batches | Adapter contract test; real-model run on the synthetic test video (VALIDATION.md) |
+| Speaker diarization | WhisperX `DiarizationPipeline` wraps pyannote community-1 | Adapter test; synthetic-video DER recorded; real-conversation quality pending |
 | Word/speaker alignment | Forced alignment followed by `assign_word_speakers`; cues split by word speaker | Core speaker-turn and untimed-word tests |
-| Optional emotion | English DistilRoBERTa classifier run per speaker turn (consecutive same-speaker cues); separate cue metadata; confidence threshold | Optional branch adapter test; quality pending |
-| Synchronized display | Streamlit and an embedded HTML player using the same media clock for cues and words | UI flow test; interactive browser verification pending |
+| Optional emotion | English DistilRoBERTa classifier run per speaker turn (consecutive same-speaker cues); separate cue metadata; confidence threshold | Optional branch adapter test; ran on real output; quality pending |
+| Synchronized display | Streamlit and an embedded HTML player using the same media clock for cues and words | UI flow test; browser end-to-end on real-model output |
 | Subtitle export | Speaker-prefixed SRT, styled VTT, and JSON for reopening | Serialization, escaping, and CLI export tests |
 
 ## Data flow
@@ -35,6 +35,10 @@ disabled after text/time edits; the old alignment remains an inspectable record.
 
 **Emotion:** a text classifier is an approximation of sentiment expressed in words. It cannot reliably
 infer sarcasm, intonation, or feelings. It is English-only and optional; its failure does not discard captions.
+
+**Voice activity detection:** WhisperX runs pyannote VAD, whose weights ship in the WhisperX wheel.
+Silero VAD is downloaded from GitHub through `torch.hub` at run time, which fails offline or behind
+restrictive proxies.
 
 **Resource use:** ASR and alignment models are released before the next heavy stage. CPU defaults to int8,
 CUDA to float16. Models are loaded per run rather than globally cached with a user's access token.

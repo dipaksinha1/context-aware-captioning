@@ -70,6 +70,11 @@ For NVIDIA GPUs, install a PyTorch/CUDA runtime supported by your WhisperX insta
 CUDA. Use the official [WhisperX setup guide](https://github.com/m-bain/whisperX#setup-) for platform details.
 Start with `tiny` and batch size `1` if memory is limited. Allow 10–20 GB for dependencies and model caches.
 
+Behind an HTTP proxy, NLTK (used by word alignment) refuses to download its sentence splitter. Fetch it once
+with `python -m nltk.downloader punkt_tab` after setting `NLTK_ALLOW_PROXIED_URLOPEN=1`, or unzip
+`punkt_tab.zip` from the nltk_data repository into `~/nltk_data/tokenizers/`. Voice activity detection
+uses the pyannote model bundled with WhisperX, so it needs no download.
+
 ## Command line
 
 After installing the ML extra and setting `HF_TOKEN`:
@@ -89,6 +94,24 @@ context-caption --project examples/demo_project.json --output outputs/demo
 
 This produces `captions.srt`, `captions.vtt`, and `captions.json`. Outputs are ignored by Git.
 
+## Synthetic three-speaker test video
+
+`examples/test_conversation.mp4` (41 s) is a scripted conversation between three synthetic voices
+(Piper neural TTS: Maya, Raj, Alba) with quick replies, a returning speaker, numbers, and proper nouns.
+`examples/test_conversation_reference.json` holds the script with utterance times, and
+`examples/test_conversation_output.json` is unedited real-model output (WhisperX `base`, CPU, 3 speakers,
+emotion on). Open the output in **Open saved project** and attach the MP4 to review it without models, or
+process the MP4 yourself and score the result:
+
+```bash
+context-caption --input examples/test_conversation.mp4 --model base --min-speakers 3 --max-speakers 3 --output outputs/test
+context-caption-eval --reference examples/test_conversation_reference.json --hypothesis outputs/test/captions.json
+```
+
+Regenerate the media with `pip install piper-tts` and `python scripts/make_test_recording.py`; Piper output
+varies slightly per run, so regenerate the reference with it. Synthetic voices are cleaner than real
+conversation: scores from this file check the pipeline and do not claim accuracy on real speech.
+
 ## Project structure
 
 ```text
@@ -102,7 +125,8 @@ src/context_caption/
   exporters.py                 SRT, VTT, and JSON exports
   cli.py                       Local processing and project re-export CLI
   evaluate.py                  WER/DER/timestamp scoring against a reference project
-examples/                      Synthetic demonstration project and audio
+scripts/make_test_recording.py  Synthetic three-speaker test video and reference
+examples/                      Synthetic demo project/audio and three-speaker test video
 tests/                         Core, media, pipeline, evaluation, and Streamlit tests
 docs/                          Architecture, evaluation, and GitHub setup
 .github/workflows/ci.yml        Automated lint and tests
