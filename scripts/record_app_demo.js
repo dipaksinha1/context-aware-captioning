@@ -77,9 +77,11 @@ async function scrollTo(locator, clearance = 0) {
   // Scores and the label -> name mapping come from the unedited model output for the same settings.
   const score = JSON.parse(execFileSync(evalBin, ['--reference', REFERENCE, '--hypothesis', MODEL_OUTPUT, '--json']));
   const rows = JSON.parse(fs.readFileSync(MODEL_OUTPUT, 'utf8')).captions;
-  const browser = await chromium.launch();
+  // Headless Chromium otherwise fullscreens into its default 800x600 window, which records cropped.
+  const browser = await chromium.launch({ args: [`--window-size=${W},${H}`] });
   const context = await browser.newContext({
     viewport: { width: W, height: H },
+    screen: { width: W, height: H },
     recordVideo: { dir: path.join(OUT, 'raw'), size: { width: W, height: H } },
   });
   // Visible cursor in the top-level page (headless recordings have none).
@@ -232,7 +234,11 @@ async function scrollTo(locator, clearance = 0) {
     await media.evaluate((m, at) => new Promise(r => {
       const check = () => (m.currentTime >= at || m.ended) ? r() : setTimeout(check, 50); check();
     }), note.at);
-    await banner(page, note.text);
+    if (note.text) await banner(page, note.text);
+    if (note.action === 'fullscreen') await playerFrame.locator('#fs').click();
+    if (note.action === 'exitFullscreen') {
+      await playerFrame.locator('#stage').evaluate(() => document.fullscreenElement && document.exitFullscreen());
+    }
   }
   await media.evaluate(m => new Promise(r => m.ended ? r() : m.addEventListener('ended', r)));
   events.playEnd = at();

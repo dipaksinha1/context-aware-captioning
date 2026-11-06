@@ -26,12 +26,17 @@
       "text": "Crosstalk: Dana's quiet “Right.” under Elena is attributed to Elena"
     },
     {
-      "at": 51.0,
-      "text": "Each speaker keeps one label and color throughout the conversation"
+      "at": 49.0,
+      "text": "Next: “Fullscreen with captions” keeps the subtitles on the picture (F or double-click)"
     },
     {
-      "at": 58.1,
-      "text": "Elena raises her voice (+7 dB): louder words are drawn larger"
+      "at": 51.0,
+      "action": "fullscreen"
+    },
+    {
+      "at": 62.4,
+      "action": "exitFullscreen",
+      "text": "Each speaker keeps one label and color throughout the conversation"
     },
     {
       "at": 65.8,

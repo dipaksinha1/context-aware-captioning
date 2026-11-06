@@ -11,14 +11,15 @@ pyannote speaker diarization, and optional transcript-based emotion cues in an e
 
 ### Four-person policy podcast
 
-[![Podcast demo: four illustrated presenters, the active speaker highlighted, with synchronized captions whose words are sized by loudness](docs/demo/podcast_playback.png)](docs/demo/podcast_demo.mp4)
+[![Podcast demo: four illustrated presenters with captions drawn on the video, the active speaker highlighted, words sized by loudness](docs/demo/podcast_playback.png)](docs/demo/podcast_demo.mp4)
 
 **[Watch the 3½-minute podcast demo (MP4, with sound)](docs/demo/podcast_demo.mp4).** Four presenters (Dana,
 Marcus, Elena, Tom) debate a fictional city's plan to charge drivers entering downtown and fund free buses.
 The 110-second video shows four illustrated presenters whose mouths follow their own voices, with two moments
 of crosstalk, a raised voice, and a quiet aside. Real WhisperX, alignment, pyannote, and emotion models process
 it on CPU (shown 10× faster), then the demo names the voices, corrects "$8 per corporate day" to "$8 per car per
-day", and plays it back with emoji emotion cues and words sized by loudness. Scores against the script:
+day", and plays it back with the captions drawn on the video (including a stretch in **Fullscreen with
+captions**), emoji emotion cues, and words sized by loudness. Scores against the script:
 **3.9% word error rate, 13.0% diarization error rate, 90.9% of words given the right speaker**; auto-detecting the
 speaker count found all four. Misheard names ("Rivertons'", "Elina"), a quiet backchannel under crosstalk, and
 two short replies given to the wrong speaker still need human review.

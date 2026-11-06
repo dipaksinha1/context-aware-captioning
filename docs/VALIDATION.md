@@ -93,8 +93,12 @@ Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available
 
   | Video | Length | Processing in UI | Highlight vs. audio word start (median, p10, p90) |
   | --- | --- | --- | --- |
-  | `docs/demo/podcast_demo.mp4` | 3:23 | 108 s (shown 10×) | 27 ms, 2 ms, 51 ms over 285 changes |
-  | `docs/demo/app_demo.mp4` | 2:03 | 38 s (shown 8×) | 45 ms, −36 ms, 90 ms over 110 changes |
+  | `docs/demo/podcast_demo.mp4` | 3:25 | 107 s (shown 10×) | 36 ms, 6 ms, 63 ms over 235 changes outside fullscreen |
+  | `docs/demo/app_demo.mp4` | 2:05 | 43 s (shown 8×) | −16 ms, −37 ms, 7 ms over 96 changes |
+
+  Both show the captions drawn on the video; the podcast demo spends 51–62 s of the recording in
+  "Fullscreen with captions". Headless Chromium must be launched with `--window-size` matching the
+  viewport, or a fullscreened element records cropped into its default 800×600 window.
 
   Both were recorded with loudness-sized words; their exported projects carry `level_db` for every timed word.
 
