@@ -41,7 +41,10 @@ runs with model access. All voices are synthetic and all people are illustrated;
 - Upload audio/video; convert it to 16 kHz mono audio using FFmpeg.
 - Transcribe speech and inspect original word timestamps and alignment scores.
 - Split captions on word-level speaker changes, with consistent speaker labels and colors.
-- Play media with synchronized captions, highlighted words, and click-to-seek controls.
+- Play media with captions drawn on the video itself, like broadcast subtitles: the speaker's name in a
+  colored tag, the current word highlighted, and click-to-seek controls. **CC** (or the C key) turns
+  captions off and on; **Fullscreen with captions** (or F, or double-click) takes the picture and its
+  captions fullscreen together. Audio-only files show the captions in a box under the player.
 - Size each word by how loud it was: the pipeline measures every aligned word's RMS level in dBFS, and
   playback draws words above the recording's median level larger (+10 dB is 1.35×) and quieter ones
   smaller, limited to 0.75–1.45× for readability. Hover a word to see its level; turn it off with

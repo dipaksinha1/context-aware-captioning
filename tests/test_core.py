@@ -125,6 +125,19 @@ class CaptionTests(unittest.TestCase):
         self.assertIn('"words": []', markup)
         self.assertIn("\\u003c/script", markup)
 
+    def test_player_overlays_captions_on_video(self):
+        video = player_html(b"abc", "video/mp4", fixture())
+        self.assertIn('id="stage"', video)
+        self.assertIn('class="overlay"', video)
+        self.assertIn('controlsList="nofullscreen"', video)   # our fullscreen keeps the captions
+        self.assertIn('id="fs"', video)
+        self.assertIn('id="cc"', video)
+        audio = player_html(b"abc", "audio/wav", fixture())
+        self.assertNotIn('id="stage"', audio)
+        self.assertIn('class="box"', audio)
+        self.assertIn('id="cc"', audio)
+        self.assertNotIn('id="fs"', audio)
+
     def test_settings_reject_bad_counts(self):
         with self.assertRaises(ValueError):
             Settings(min_speakers=3, max_speakers=2, token="test").validate()

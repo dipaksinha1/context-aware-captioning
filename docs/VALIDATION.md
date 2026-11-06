@@ -75,6 +75,11 @@ Authoring environment: Python 3.12.14, Streamlit 1.66.1, Linux, FFmpeg available
   "Really? …" and "Maybe. …" lines went to Dana, and one of her sentences switches to Dana midway. Emotion
   cues: 30 neutral, 5 fear, 4 surprise, 1 sadness, 3 below threshold. An earlier take of the same script
   without volume changes scored 4.9% WER, 10.2% DER, 95.2% word speaker accuracy.
+- Captions on the video (Chromium, podcast video in the player): the stage matched the picture
+  (604×340); captions stayed inside the picture 62 px above the bottom, hid with no active cue and with
+  CC off; "Fullscreen with captions" made the stage the fullscreen element with captions re-anchored to
+  the letterboxed picture and text scaled up (27.5 px at 860 px wide); F left fullscreen; highlighting
+  continued during playback; no JavaScript errors.
 - Word loudness: unit tests check levels against sine waves of known amplitude (0.5 → −9.0 dBFS,
   0.05 → −29.0 dBFS), silence, untimed words, size scaling and clamping, the player toggle, JSON round trip
   and older projects; the stubbed pipeline test checks a silent word (−90 dBFS floor) and a −12 dBFS tone.

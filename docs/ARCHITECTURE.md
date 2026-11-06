@@ -51,6 +51,14 @@ the effect can be switched off, and levels for older projects are measured when 
 **Resource use:** ASR and alignment models are released before the next heavy stage. CPU defaults to int8,
 CUDA to float16. Models are loaded per run rather than globally cached with a user's access token.
 
+**Captions on the video:** for video media the player wraps the `<video>` in a stage sized to the
+picture and draws the active cues over its lower part (at least 62 px up, clear of the browser's control
+bar), in white on a dark translucent box, with text sized to the picture width. The browser's own
+fullscreen shows only the bare `<video>`, so its button is hidden (`controlsList="nofullscreen"`) and a
+"Fullscreen with captions" button fullscreens the stage instead, re-anchoring captions to the picture if
+the screen letterboxes it. Captions stay in the page rather than being burned into the file, so they
+can be edited, renamed, resized by loudness, and turned off; SRT/VTT exports cover other players.
+
 **Playback:** a single HTML media element drives all active cues, including simultaneous cues. While
 playing, highlighting follows animation frames rather than `timeupdate` (about every 250 ms), so short
 words are not skipped; the caption DOM is rebuilt only when the active cue or word changes. Labels

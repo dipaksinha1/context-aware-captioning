@@ -215,7 +215,10 @@ async function scrollTo(locator, clearance = 0) {
   await page.waitForTimeout(1500);
   await banner(page, '6 · Synchronized playback: named, colored speakers with word-by-word highlighting (sound on)');
   const media = page.frameLocator('iframe').first().locator('#media');
-  events.captionBox = await page.frameLocator('iframe').first().locator('#captions').boundingBox();
+  // Captions are drawn over the video (#stage); audio-only players keep a box below (#captions).
+  const playerFrame = page.frameLocator('iframe').first();
+  const captionArea = (await playerFrame.locator('#stage').count()) ? '#stage' : '#captions';
+  events.captionBox = await playerFrame.locator(captionArea).boundingBox();
   await page.mouse.move(W - 40, 120, { steps: 10 });
   await media.evaluate(m => new Promise(r => m.readyState >= 1 ? r() : m.addEventListener('loadedmetadata', r)));
   await media.evaluate(m => { m.currentTime = 0; m.muted = true; return m.play(); });
@@ -340,8 +343,9 @@ function calibrate(raw, box, approx, project, duration) {
     let sx = 0, sy = 0, n = 0;
     for (let p = 0; p < ow * oh; p++) {
       const i = f * size + p * 3;
-      // Highlight is #fde68a; VP8 shifts colors slightly.
-      if (buf[i] > 225 && buf[i + 1] > 195 && buf[i + 1] < 250 && buf[i + 2] > 85 && buf[i + 2] < 190) {
+      // Highlight is #fde68a; VP8 shifts colors slightly. The bounds exclude skin tones such as
+      // #ffdbac and pale tile backgrounds that appear in the video under the captions.
+      if (buf[i] > 225 && buf[i + 1] > 222 && buf[i + 1] < 250 && buf[i + 2] > 95 && buf[i + 2] < 165) {
         sx += p % ow; sy += Math.floor(p / ow); n++;
       }
     }
