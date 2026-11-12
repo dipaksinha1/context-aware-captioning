@@ -11,7 +11,7 @@ from .schema import Sound
 MODEL = "MIT/ast-finetuned-audioset-10-10-0.4593"
 RATE = 16000
 WINDOW = 2.0  # seconds; the hop is half a window so neighbours overlap by half
-THRESHOLD = 0.3
+THRESHOLD = 0.25  # see docs/VALIDATION.md for the recall / wrong-cue trade-off measured
 SILENCE_RMS = 0.001  # about -60 dBFS; quieter windows are skipped, not classified
 
 # Caption wording -> AudioSet classes that trigger it. Sustained sounds take the present
@@ -23,7 +23,7 @@ VOCABULARY = {
     "crying": ["Crying, sobbing", "Whimper", "Wail, moan"],
     "baby crying": ["Baby cry, infant cry"],
     "screaming": ["Screaming"],
-    "coughing": ["Cough"],
+    "coughing": ["Cough", "Throat clearing"],
     "sneezes": ["Sneeze"],
     "snoring": ["Snoring"],
     "whistling": ["Whistling"],
@@ -60,7 +60,7 @@ VOCABULARY = {
     "water running": ["Stream", "Waterfall", "Water tap, faucet", "Sink (filling or washing)",
                       "Bathtub (filling or washing)"],
     "water splashing": ["Splash, splatter"],
-    "water dripping": ["Drip"],
+    "water dripping": ["Drip", "Plop"],
     "fire crackling": ["Fire", "Crackle"],
     # Home
     "door slams": ["Slam"],
@@ -101,7 +101,7 @@ VOCABULARY = {
     "gunfire": ["Gunshot, gunfire", "Machine gun", "Fusillade"],
     "explosion": ["Explosion"],
     "fireworks popping": ["Fireworks", "Firecracker"],
-    "crash": ["Smash, crash"],
+    "crash": ["Smash, crash", "Breaking"],
     "thud": ["Thump, thud"],
     "hammering": ["Hammer"],
     "drilling": ["Drill", "Jackhammer"],

@@ -106,8 +106,16 @@ Alex: Who's there?
 
 Detection uses the public [Audio Spectrogram Transformer](https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593)
 trained on AudioSet. It needs the ML extra but no token; the first run downloads about 350 MB.
-Only a curated list of about 80 sound types is captioned (`VOCABULARY` in `sounds.py`), each with
+Only a curated list of 80 sound types is captioned (`VOCABULARY` in `sounds.py`), each with
 fixed wording. Speech classes are excluded on purpose.
+
+Expect a first draft, not a finished track. In a small check on recorded clips
+([docs/VALIDATION.md](docs/VALIDATION.md)), about two in three isolated sounds got the expected cue
+and about one clip in six also got a wrong one; distinct sounds such as a dog, a knock, a siren, or
+applause were found under speech, while rain and breaking glass under speech were missed at the
+default setting. The **Sound confidence needed** slider (`--sound-threshold`, default 0.25) trades
+missed sounds against wrong cues. On a four-core CPU, detection took about 0.6 seconds per second
+of audio.
 
 Every sound cue can be edited under **Review & edit → Background sounds**: change the wording or
 times, delete a wrong cue, or add a row for a sound the detector missed, then **Save caption edits**. Type the description
@@ -122,7 +130,8 @@ After installing the ML extra and setting `HF_TOKEN`:
 context-caption --input recording.mp4 --device cpu --model base --min-speakers 2 --max-speakers 2 --output outputs
 ```
 
-Add `--sounds` for bracketed background-sound cues, `--emotions` for English text emotion
+Add `--sounds` for bracketed background-sound cues (`--sound-threshold 0.2` to catch quieter
+sounds), `--emotions` for English text emotion
 estimates, or `--language en` to fix the language.
 The token is read from the environment rather than a CLI argument.
 
@@ -186,7 +195,10 @@ FFmpeg as described above.
   hidden by default. Non-English recordings skip emotion and report that status.
 - Sound cues come from an audio tagger scoring two-second windows, so cue times are approximate
   and quiet, brief, or unusual sounds can be missed or misnamed. The wording is fixed per sound
-  type and does not say who or what made the sound. Detection adds processing time on CPU.
+  type and does not say who or what made the sound. Similar sounds are confused: wind or
+  thunder can be captioned `[explosion]`, a vacuum cleaner `[aircraft overhead]`. Sounds
+  surrounded by exact digital silence, as in some synthetic audio, score poorly. Detection adds
+  about 0.6 s of CPU time per second of audio.
   Captioning guides ask for sounds that matter to the story, not every sound: delete cues that
   do not help. Sound detection is off by default.
 - Speaker colors come from a six-color palette. With more than six speakers, colors repeat; the

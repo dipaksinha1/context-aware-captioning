@@ -144,7 +144,7 @@ class CaptionTests(unittest.TestCase):
             ("dog barking", 2.0, 4.0), ("door slams", 7.0, 8.5), ("thud", 7.0, 8.5)])
         self.assertEqual(sounds[0].score, .9)
         self.assertEqual([s.id for s in sounds], [1, 2, 3])
-        self.assertEqual(build_sounds(frames({"dog barking": .29})), [])
+        self.assertEqual(build_sounds(frames({"dog barking": .24})), [])
         self.assertEqual(build_sounds([]), [])
 
     def test_sound_cue_marks_onset_and_merges_brief_pauses(self):

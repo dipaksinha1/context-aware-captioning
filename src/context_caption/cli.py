@@ -5,6 +5,7 @@ from pathlib import Path
 
 from .exporters import to_json, to_srt, to_vtt
 from .schema import Project
+from .sounds import THRESHOLD
 
 
 def main(argv=None):
@@ -21,6 +22,9 @@ def main(argv=None):
     parser.add_argument("--emotions", action="store_true")
     parser.add_argument("--sounds", action="store_true",
                         help="Detect background sounds and caption them in brackets")
+    parser.add_argument("--sound-threshold", type=float, default=THRESHOLD,
+                        help="Confidence needed for a sound cue (default %(default)s); "
+                             "lower finds quieter sounds but adds more wrong cues")
     args = parser.parse_args(argv)
     try:
         if args.project:
@@ -30,7 +34,8 @@ def main(argv=None):
             project = process(args.input, Settings(
                 model=args.model, device=args.device, language=args.language,
                 min_speakers=args.min_speakers, max_speakers=args.max_speakers,
-                emotions=args.emotions, sounds=args.sounds, token=os.getenv("HF_TOKEN", ""),
+                emotions=args.emotions, sounds=args.sounds,
+                sound_threshold=args.sound_threshold, token=os.getenv("HF_TOKEN", ""),
             ), lambda _, message: print(message))
         args.output.mkdir(parents=True, exist_ok=True)
         for suffix, content in {

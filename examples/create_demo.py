@@ -5,6 +5,7 @@ Two synthesized sound effects (a doorbell and a beep) show how sound cues look b
 from pathlib import Path
 import json
 import math
+import random
 import struct
 import subprocess
 from tempfile import TemporaryDirectory
@@ -77,6 +78,10 @@ def create():
                 at = int((start + 0.5) * rate)
                 mix(frames, at, beeps(rate), 0.12)
                 sounds.append(Sound(2, at / rate, at / rate + 1.2, "beeping", "beeping"))
+    # Faint room tone. Real recordings are never digitally silent, and the sound tagger
+    # misses the doorbell when it is surrounded by exact zeros.
+    hiss = random.Random(7)
+    mix(frames, 0, (hiss.uniform(-1, 1) for _ in range(len(frames) // 2)), 0.002)
     project = Project(captions, speakers={"SPEAKER_00": "Alex", "SPEAKER_01": "Sam"}, metadata={
         "mode": "demo", "duration": len(frames) / (2 * rate),
         "note": "Flite synthetic speech, predefined captions, and illustrative evenly spaced word times. "

@@ -14,7 +14,7 @@ from context_caption.media import MAX_BYTES, SUPPORTED
 from context_caption.pipeline import Settings, process
 from context_caption.player import player_html
 from context_caption.schema import Project
-from context_caption.sounds import apply_sound_edits, format_sound
+from context_caption.sounds import THRESHOLD, apply_sound_edits, format_sound
 
 ROOT = Path(__file__).parent
 st.set_page_config(page_title="Context Caption", page_icon="💬", layout="wide")
@@ -37,6 +37,11 @@ with st.sidebar:
     emotions = st.checkbox("Estimate English text emotion", value=False)
     sounds = st.checkbox("Detect background sounds", value=False,
                          help="Adds bracketed cues such as [dog barking]. Slower on CPU.")
+    sound_threshold = THRESHOLD
+    if sounds:
+        sound_threshold = st.slider(
+            "Sound confidence needed", 0.1, 0.9, THRESHOLD, 0.05,
+            help="Lower finds quieter sounds under speech but adds more wrong cues.")
     token = st.text_input("Hugging Face read token", type="password", value=os.getenv("HF_TOKEN", ""))
     st.caption("Token stays in this session and is excluded from project exports.")
     st.link_button("Accept diarization model access", "https://huggingface.co/pyannote/speaker-diarization-community-1")
@@ -69,7 +74,8 @@ with upload_tab:
             settings = Settings(model=model, device=device, batch_size=batch,
                                 language=language.strip() or None,
                                 min_speakers=int(count) or None, max_speakers=int(count) or None,
-                                emotions=emotions, sounds=sounds, token=token)
+                                emotions=emotions, sounds=sounds,
+                                sound_threshold=sound_threshold, token=token)
             settings.validate()
             bar = st.progress(0, text="Starting")
             with TemporaryDirectory(prefix="caption-upload-") as directory:
