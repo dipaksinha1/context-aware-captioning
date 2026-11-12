@@ -19,6 +19,8 @@ def main(argv=None):
     parser.add_argument("--min-speakers", type=int)
     parser.add_argument("--max-speakers", type=int)
     parser.add_argument("--emotions", action="store_true")
+    parser.add_argument("--sounds", action="store_true",
+                        help="Detect background sounds and caption them in brackets")
     args = parser.parse_args(argv)
     try:
         if args.project:
@@ -28,7 +30,7 @@ def main(argv=None):
             project = process(args.input, Settings(
                 model=args.model, device=args.device, language=args.language,
                 min_speakers=args.min_speakers, max_speakers=args.max_speakers,
-                emotions=args.emotions, token=os.getenv("HF_TOKEN", ""),
+                emotions=args.emotions, sounds=args.sounds, token=os.getenv("HF_TOKEN", ""),
             ), lambda _, message: print(message))
         args.output.mkdir(parents=True, exist_ok=True)
         for suffix, content in {
@@ -36,6 +38,7 @@ def main(argv=None):
             "vtt": to_vtt(project, args.emotions),
         }.items():
             (args.output / f"captions.{suffix}").write_text(content, encoding="utf-8")
-        print(f"Exported {len(project.captions)} captions to {args.output}")
+        print(f"Exported {len(project.captions)} captions and {len(project.sounds)} "
+              f"sound cues to {args.output}")
     except (ValueError, OSError, RuntimeError) as exc:
         parser.exit(1, f"Error: {exc}\n")

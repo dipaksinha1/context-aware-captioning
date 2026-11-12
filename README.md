@@ -5,7 +5,8 @@
 COSC-5926 — Advanced Human-Computer Interaction
 
 A local Streamlit prototype that combines WhisperX transcription and forced word alignment,
-pyannote speaker diarization, and optional transcript-based emotion cues in an editable caption workflow.
+pyannote speaker diarization, optional bracketed background-sound cues such as `[dog barking]`,
+and optional transcript-based emotion cues in an editable caption workflow.
 
 ## What you can do
 
@@ -14,6 +15,9 @@ pyannote speaker diarization, and optional transcript-based emotion cues in an e
 - Split captions on word-level speaker changes, with consistent speaker labels and colors.
 - Play media with synchronized captions, highlighted words, and click-to-seek controls.
 - Rename speakers, edit text/timing/speaker assignments, and search the transcript.
+- Optionally detect non-speech sounds — a door slamming, rain, a dog barking — and caption them
+  in brackets, apart from speech: `[door slams]`, `[rain falling]`, `[dog barking]`.
+- Correct, add, or delete sound cues by hand, with or without the detector.
 - Optionally estimate English text emotion per speaker turn without modifying spoken content.
 - Export speaker-aware SRT, styled VTT, or a JSON project retaining original words and edits.
 - Reopen a JSON project and reattach its original media.
@@ -39,7 +43,9 @@ On Windows, create the environment with `py -3.12 -m venv .venv` and activate it
 
 Open `http://localhost:8501` and select **Load sample project**. The supplied WAV contains
 synthetic voices from FFmpeg's Flite filter. Its captions and word times are predefined for UI testing:
-**they are not results of ASR or diarization**. Regeneration is optional; see `examples/create_demo.py`.
+**they are not results of ASR or diarization**. The sample also contains a synthesized doorbell and a
+synthesized beep with predefined `[doorbell rings]` and `[beeping]` cues, to show how sound cues look beside
+speech; they are not detector output either. Regeneration is optional; see `examples/create_demo.py`.
 
 ## Enable actual transcription and diarization
 
@@ -70,6 +76,44 @@ For NVIDIA GPUs, install a PyTorch/CUDA runtime supported by your WhisperX insta
 CUDA. Use the official [WhisperX setup guide](https://github.com/m-bain/whisperX#setup-) for platform details.
 Start with `tiny` and batch size `1` if memory is limited. Allow 10–20 GB for dependencies and model caches.
 
+## Background sound cues
+
+Tick **Detect background sounds** in the sidebar (or pass `--sounds`) to caption sounds that are not
+speech. The format follows subtitling practice for Deaf and hard-of-hearing viewers (SDH):
+
+```text
+4
+00:00:12,000 --> 00:00:13,500
+[door slams]
+
+5
+00:00:13,200 --> 00:00:16,900
+Alex: Who's there?
+
+6
+00:00:15,000 --> 00:00:21,000
+[dog barking]
+```
+
+- **Square brackets** mark a sound. Speech never starts with a bracket; it starts with a speaker name.
+- **Lowercase, present tense.** A sustained sound takes the *-ing* form (`[rain falling]`,
+  `[dog barking]`); an abrupt one takes the plain verb (`[door slams]`, `[glass shatters]`).
+- **Its own cue.** A sound is a separate timed cue, never mixed into someone's words, so it can overlap
+  speech and can be turned off for playback or export without touching the transcript.
+- **Shown when it starts.** A cue marks the onset and stays up for 1.5–6 seconds. Rain that lasts
+  five minutes is announced once, not held on screen; a sound that returns after a pause of more
+  than three seconds is announced again.
+
+Detection uses the public [Audio Spectrogram Transformer](https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593)
+trained on AudioSet. It needs the ML extra but no token; the first run downloads about 350 MB.
+Only a curated list of about 80 sound types is captioned (`VOCABULARY` in `sounds.py`), each with
+fixed wording. Speech classes are excluded on purpose.
+
+Every sound cue can be edited under **Review & edit → Background sounds**: change the wording or
+times, delete a wrong cue, or add a row for a sound the detector missed, then **Save caption edits**. Type the description
+without brackets; they are added on display and export. The original detected wording and its
+confidence stay in the project JSON.
+
 ## Command line
 
 After installing the ML extra and setting `HF_TOKEN`:
@@ -78,7 +122,8 @@ After installing the ML extra and setting `HF_TOKEN`:
 context-caption --input recording.mp4 --device cpu --model base --min-speakers 2 --max-speakers 2 --output outputs
 ```
 
-Add `--emotions` for English text emotion estimates, or `--language en` to fix the language.
+Add `--sounds` for bracketed background-sound cues, `--emotions` for English text emotion
+estimates, or `--language en` to fix the language.
 The token is read from the environment rather than a CLI argument.
 
 Re-export the supplied JSON without ML models:
@@ -98,6 +143,7 @@ src/context_caption/
   media.py                     Bounded FFmpeg conversion
   pipeline.py                  WhisperX → alignment → pyannote → optional emotion
   captions.py                  Speaker-aware cue building and atomic edits
+  sounds.py                    Background-sound detection, cue wording, and sound-cue edits
   player.py                    Synchronized HTML media player
   exporters.py                 SRT, VTT, and JSON exports
   cli.py                       Local processing and project re-export CLI
@@ -115,8 +161,8 @@ python -m ruff check .
 python -m unittest discover -s tests -v
 ```
 
-Tests exercise caption behavior, import/export, security escaping, media conversion, the adapter with
-stubbed ML modules, and the Streamlit editing flow. **Stubbed ML tests do not validate model quality**.
+Tests exercise caption behavior, sound-cue building and formatting, import/export, security escaping,
+media conversion, the adapter with stubbed ML modules, and the Streamlit editing flow. **Stubbed ML tests do not validate model quality**.
 The optional real-model smoke test in [docs/EVALUATION.md](docs/EVALUATION.md) needs your model access.
 CI installs the base/dev package, not GPU dependencies or gated models.
 It uses Ubuntu 24.04 and an FFmpeg executable bundled in the `imageio-ffmpeg==0.6.0` wheel,
@@ -138,11 +184,19 @@ FFmpeg as described above.
   cues by the same speaker are classified together as one speaker turn, so short cues share their turn's
   label. Only predictions at confidence >= 0.60 are shown; low confidence stays unlabeled. Emotion is
   hidden by default. Non-English recordings skip emotion and report that status.
+- Sound cues come from an audio tagger scoring two-second windows, so cue times are approximate
+  and quiet, brief, or unusual sounds can be missed or misnamed. The wording is fixed per sound
+  type and does not say who or what made the sound. Detection adds processing time on CPU.
+  Captioning guides ask for sounds that matter to the story, not every sound: delete cues that
+  do not help. Sound detection is off by default.
 - Speaker colors come from a six-color palette. With more than six speakers, colors repeat; the
   speaker name is always shown with the color, so labels stay distinguishable.
 - Words that diarization cannot attribute are labeled UNKNOWN rather than guessed from the nearest
   speaker. Assign them in Review & edit.
 - SRT uses plain speaker names. VTT adds color classes; external players differ in styling support.
+  Sound cues carry no speaker name or color in either format.
+- Project JSON is schema version 2 (adds `sounds`). Version 1 files still open; projects saved by
+  this version do not open in older copies of the app.
 - Upload limit: 200 MiB; processing limit: 60 minutes. FFmpeg conversion times out after five minutes.
   Model inference is synchronous and may take much longer on CPU. There is no background queue/cancel.
 - Playback embeds media in the local app and uses extra memory. Prefer short clips for class demos.
@@ -191,6 +245,13 @@ The repository excludes access tokens, uploaded recordings, and downloaded model
 - [pyannote.audio official repository](https://github.com/pyannote/pyannote-audio)
 - [Speaker diarization community model](https://huggingface.co/pyannote/speaker-diarization-community-1)
 - [English emotion model card](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base)
+- [Audio Spectrogram Transformer, AudioSet model card](https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593)
+
+### Caption style for sounds
+
+- [DCMP Captioning Key: sound effects and music](https://dcmp.org/learn/602) — bracketed lowercase
+  descriptions; *-ing* form for sustained sounds, plain verb for abrupt ones.
+- [Netflix Timed Text Style Guide: brackets for sound effects](https://backlothelp.netflix.com/hc/en-us/articles/115000239632-Timed-Text-Style-Guide-Supplementals-Marketing-Assets)
 - [Streamlit documentation](https://docs.streamlit.io/)
 
 The implementation uses these existing models; it does not train a new speech recognition model.

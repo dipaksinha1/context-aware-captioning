@@ -1,4 +1,4 @@
-"""Real WhisperX/pyannote adapter. ML dependencies load only for real processing."""
+"""Real WhisperX/pyannote/AST adapter. ML dependencies load only for real processing."""
 from dataclasses import dataclass, field
 import gc
 import os
@@ -8,6 +8,7 @@ from tempfile import TemporaryDirectory
 from .captions import make_captions
 from .media import normalize_audio
 from .schema import Project
+from .sounds import MODEL as SOUND_MODEL, THRESHOLD, detect_sounds
 
 
 @dataclass
@@ -19,6 +20,8 @@ class Settings:
     min_speakers: int | None = None
     max_speakers: int | None = None
     emotions: bool = False
+    sounds: bool = False
+    sound_threshold: float = THRESHOLD
     token: str = field(default="", repr=False)
 
     def validate(self):
@@ -29,6 +32,8 @@ class Settings:
         for value in (self.min_speakers, self.max_speakers):
             if value is not None and value < 1:
                 raise ValueError("Speaker counts must be positive.")
+        if not 0 < self.sound_threshold < 1:
+            raise ValueError("Sound threshold must be between 0 and 1.")
         if self.min_speakers and self.max_speakers and self.min_speakers > self.max_speakers:
             raise ValueError("Minimum speakers cannot exceed maximum speakers.")
         if not (self.token or os.getenv("HF_TOKEN")):
@@ -100,32 +105,50 @@ def process(source: Path, settings: Settings, progress=lambda value, label: None
         language = result.get("language") or settings.language or "en"
         del model
         release_memory(torch)
-        if not result.get("segments"):
-            return Project([], language, metadata={"duration": duration, "mode": "real"})
-        progress(0.4, "Aligning words")
-        aligner, metadata = whisperx.load_align_model(language_code=language, device=settings.device)
-        aligned = whisperx.align(
-            result["segments"], aligner, metadata, audio, settings.device,
-            return_char_alignments=False,
-        )
-        del aligner
-        release_memory(torch)
-        progress(0.65, "Identifying speaker turns")
-        diarizer = DiarizationPipeline(
-            model_name="pyannote/speaker-diarization-community-1",
-            token=settings.token or os.getenv("HF_TOKEN"), device=settings.device,
-        )
-        turns = diarizer(
-            audio, min_speakers=settings.min_speakers, max_speakers=settings.max_speakers
-        )
-        aligned = whisperx.assign_word_speakers(turns, aligned, fill_nearest=False)
-        del diarizer
-        release_memory(torch)
-        project = Project(make_captions(aligned["segments"]), language, metadata={
-            "duration": duration, "mode": "real", "asr_model": settings.model,
-            "diarization_model": "pyannote/speaker-diarization-community-1",
-            "word_timings": "Forced alignment; missing word times remain null.",
-        })
+        metadata = {"duration": duration, "mode": "real", "asr_model": settings.model}
+        captions = []
+        if result.get("segments"):
+            progress(0.4, "Aligning words")
+            aligner, align_metadata = whisperx.load_align_model(
+                language_code=language, device=settings.device
+            )
+            aligned = whisperx.align(
+                result["segments"], aligner, align_metadata, audio, settings.device,
+                return_char_alignments=False,
+            )
+            del aligner
+            release_memory(torch)
+            progress(0.6, "Identifying speaker turns")
+            diarizer = DiarizationPipeline(
+                model_name="pyannote/speaker-diarization-community-1",
+                token=settings.token or os.getenv("HF_TOKEN"), device=settings.device,
+            )
+            turns = diarizer(
+                audio, min_speakers=settings.min_speakers, max_speakers=settings.max_speakers
+            )
+            aligned = whisperx.assign_word_speakers(turns, aligned, fill_nearest=False)
+            del diarizer
+            release_memory(torch)
+            captions = make_captions(aligned["segments"])
+            metadata.update({
+                "diarization_model": "pyannote/speaker-diarization-community-1",
+                "word_timings": "Forced alignment; missing word times remain null.",
+            })
+        project = Project(captions, language, metadata=metadata)
+        if settings.sounds:
+            # Runs even without speech: a recording can be all rain and barking.
+            progress(0.8, "Detecting background sounds")
+            try:
+                project.sounds = detect_sounds(audio, settings.device, settings.sound_threshold)
+                project.metadata["sound_model"] = SOUND_MODEL
+                project.metadata["sound_status"] = (
+                    f"Audio tagging on 2 s windows; threshold {settings.sound_threshold:.2f}. "
+                    "Cue times are approximate; review before export."
+                )
+            except Exception:
+                # Sound cues are optional; a failure must not discard a usable transcript.
+                project.metadata["sound_status"] = "Unavailable. Captions retained without cues."
+            release_memory(torch)
         if settings.emotions and project.captions:
             progress(0.9, "Estimating text emotion")
             try:

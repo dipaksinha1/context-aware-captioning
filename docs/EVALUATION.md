@@ -16,8 +16,11 @@ accuracy, real-model runtime, or accessibility conformance. No measured model re
 6. Inspect Word timestamps. Verify captions near the start, middle, and end by listening and seeking.
 7. Correct one caption and rename both speakers. Save JSON, reopen it, and compare exported subtitles.
 8. Enable emotion on an English sample separately. Verify that transcript content is unchanged.
-9. Repeat with no speech and with an invalid/corrupted media file. Confirm errors or empty results are clear.
-10. Record package versions, hardware, model names, settings, media duration, and elapsed processing time.
+9. Enable sound detection on a recording with a known sound at a known time (a door, a dog, rain).
+   Check the cue wording, that it is bracketed and separate from speech, and how far its start is from
+   the sound. Note sounds that were missed and cues for sounds that are not there.
+10. Repeat with no speech and with an invalid/corrupted media file. Confirm errors or empty results are clear.
+11. Record package versions, hardware, model names, settings, media duration, and elapsed processing time.
 
 Keep actual recordings and tokens out of the repository. Use `python -m pip freeze > outputs/environment.txt`
 in the active environment to retain the exact dependencies used for your evaluation.
@@ -31,6 +34,8 @@ in the active environment to retain the exact dependencies used for your evaluat
 | Short utterances and rapid turns | Cue boundaries and ambiguous speaker attribution |
 | Overlapping speech | Identify limitations rather than assuming complete recovery |
 | Background noise | ASR and diarization robustness |
+| Distinct sounds under and between speech | Sound-cue wording, timing, misses, and false cues |
+| Speech only, quiet room | Sound detector should add no cues |
 | Numbers, currencies, and proper nouns | Untimed-token handling and transcription errors |
 | Non-English recording | Alignment availability and emotion skipped status |
 | Silence | Empty transcript behavior |
@@ -44,6 +49,8 @@ in the active environment to retain the exact dependencies used for your evaluat
   Map arbitrary predicted labels to reference speakers before comparisons.
 - **Timestamp quality:** median and 95th-percentile absolute word-start and word-end error on aligned
   matched words; report untimed-word rate separately rather than excluding failures silently.
+- **Sound cues:** event-based precision, recall, and F1 against hand-marked sound events, stating the
+  onset tolerance used (for example ±1 s); report false cues per minute on speech-only recordings.
 - **Runtime:** wall-clock processing seconds / recording seconds (real-time factor), with hardware noted.
 - **Editing effort:** corrections per minute of media, task completion time, and number of speaker relabels.
 
@@ -60,12 +67,13 @@ course and its research requirements. Do not claim a user study has been perform
 Compare ordinary captions with speaker-aware captions using the same recording. Counterbalance the
 order. Ask participants to identify who spoke, locate a sentence, correct a word, rename a speaker,
 and export subtitles. Record success, errors, time, perceived readability, and whether emotion cues
-helped or confused understanding. Make emotion optional and avoid using color as the sole identifier.
+and bracketed sound cues helped or confused understanding. Make emotion optional and avoid using color as the sole identifier.
 
 ## Five-minute class walkthrough
 
 1. Explain the accessibility goal and how transcription differs from diarization.
-2. Load the synthetic sample and demonstrate speaker colors, synchronized cues, and word highlighting.
+2. Load the synthetic sample and demonstrate speaker colors, synchronized cues, word highlighting,
+   and the bracketed `[doorbell rings]` and `[beeping]` sound cues.
 3. Rename a speaker; edit text and explain why its original alignment is retained separately.
 4. Export SRT/VTT/JSON, then reopen the JSON and attach audio.
 5. Show a separately processed real recording if model access is ready; label demo versus model results.

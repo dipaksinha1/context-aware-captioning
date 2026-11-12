@@ -9,11 +9,12 @@ import pandas as pd
 import streamlit as st
 
 from context_caption.captions import apply_edits
-from context_caption.exporters import to_json, to_srt, to_vtt
+from context_caption.exporters import timeline, to_json, to_srt, to_vtt
 from context_caption.media import MAX_BYTES, SUPPORTED
 from context_caption.pipeline import Settings, process
 from context_caption.player import player_html
 from context_caption.schema import Project
+from context_caption.sounds import apply_sound_edits, format_sound
 
 ROOT = Path(__file__).parent
 st.set_page_config(page_title="Context Caption", page_icon="💬", layout="wide")
@@ -34,6 +35,8 @@ with st.sidebar:
     count = st.number_input("Known speaker count (0 = detect)", min_value=0, max_value=20, value=0)
     batch = st.select_slider("Batch size", [1, 2, 4, 8, 16], value=4)
     emotions = st.checkbox("Estimate English text emotion", value=False)
+    sounds = st.checkbox("Detect background sounds", value=False,
+                         help="Adds bracketed cues such as [dog barking]. Slower on CPU.")
     token = st.text_input("Hugging Face read token", type="password", value=os.getenv("HF_TOKEN", ""))
     st.caption("Token stays in this session and is excluded from project exports.")
     st.link_button("Accept diarization model access", "https://huggingface.co/pyannote/speaker-diarization-community-1")
@@ -66,7 +69,7 @@ with upload_tab:
             settings = Settings(model=model, device=device, batch_size=batch,
                                 language=language.strip() or None,
                                 min_speakers=int(count) or None, max_speakers=int(count) or None,
-                                emotions=emotions, token=token)
+                                emotions=emotions, sounds=sounds, token=token)
             settings.validate()
             bar = st.progress(0, text="Starting")
             with TemporaryDirectory(prefix="caption-upload-") as directory:
@@ -106,14 +109,17 @@ if project is None:
 
 revision = st.session_state.get("revision", 0)
 if project.metadata.get("mode") == "demo":
-    st.info("Sample project: predefined captions and synthetic speech. No model inference was performed.")
+    st.info("Sample project: predefined captions and sound cues over synthetic speech and effects. "
+            "No model inference was performed.")
 if not project.captions:
     st.warning("No speech was detected. Try a recording with clearer speech.")
-    st.stop()
-metrics = st.columns(3)
+    if not project.sounds:
+        st.stop()
+metrics = st.columns(4)
 metrics[0].metric("Caption cues", len(project.captions))
 metrics[1].metric("Speaker labels", len(project.speakers))
-metrics[2].metric("Language", project.language.upper())
+metrics[2].metric("Sound cues", len(project.sounds))
+metrics[3].metric("Language", project.language.upper())
 
 preview, editor, words, export = st.tabs(["Playback", "Review & edit", "Word timestamps", "Export"])
 with editor:
@@ -133,32 +139,55 @@ with editor:
                "Text edits clear emotion estimates; playback then shows the edited cue without word highlighting.")
     rows = [{"id": c.id, "start": c.start, "end": c.end,
              "speaker": c.speaker, "text": c.text} for c in project.captions]
-    frame = st.data_editor(pd.DataFrame(rows), hide_index=True, disabled=["id"],
+    frame = st.data_editor(pd.DataFrame(rows, columns=["id", "start", "end", "speaker", "text"]),
+        hide_index=True, disabled=["id"],
         key=f"editor-{revision}", width="stretch",
         column_config={"speaker": st.column_config.SelectboxColumn(options=list(project.speakers)),
                        "start": st.column_config.NumberColumn(min_value=0, format="%.3f"),
                        "end": st.column_config.NumberColumn(min_value=0, format="%.3f"),
                        "text": st.column_config.TextColumn(width="large")})
+    st.subheader("Background sounds")
+    st.caption("Describe non-speech sounds in lowercase present tense, such as dog barking or "
+               "door slams. Brackets are added for you. Add rows for sounds that were missed; "
+               "delete rows that are wrong or unimportant. Save caption edits stores both tables.")
+    sound_rows = pd.DataFrame(
+        [{"id": s.id, "start": s.start, "end": s.end, "text": s.text} for s in project.sounds],
+        columns=["id", "start", "end", "text"],
+    ).astype({"id": "Int64", "start": "float64", "end": "float64", "text": "object"})
+    sound_frame = st.data_editor(sound_rows, hide_index=True, disabled=["id"], num_rows="dynamic",
+        key=f"sounds-{revision}", width="stretch",
+        column_config={"start": st.column_config.NumberColumn(min_value=0, format="%.3f"),
+                       "end": st.column_config.NumberColumn(min_value=0, format="%.3f"),
+                       "text": st.column_config.TextColumn("sound", width="large")})
+    # One save for both tables: saving resets the editors, so a second button would drop
+    # whatever was still unsaved in the other table.
     if st.button("Save caption edits", type="primary"):
         try:
-            st.session_state.project = apply_edits(project, frame.to_dict("records"))
+            cleaned = sound_frame.astype(object).where(sound_frame.notna(), None)
+            st.session_state.project = apply_sound_edits(
+                apply_edits(project, frame.to_dict("records")), cleaned.to_dict("records"))
             st.session_state.revision = revision + 1
             st.rerun()
         except (ValueError, TypeError) as exc:
             st.error(str(exc))
 with preview:
     show_emotions = st.checkbox("Show available emotion cues", value=False)
-    st.caption("Speaker names accompany colors. Text emotion is an uncertain inference, not a measurement of feelings.")
+    show_sounds = st.checkbox("Show background sound cues", value=True)
+    st.caption("Speaker names accompany colors. Text emotion is an uncertain inference, not a measurement of feelings. "
+               "Sounds appear in brackets, apart from speech.")
     if st.session_state.get("media"):
         st.iframe(player_html(st.session_state.media, st.session_state.mime,
-                                    project, show_emotions), height=650, alt="Recording with synchronized speaker captions")
+                                    project, show_emotions, show_sounds), height=650,
+                  alt="Recording with synchronized speaker captions and sound cues")
     else:
         st.info("Attach the original recording in Open saved project to enable synchronized playback.")
     query = st.text_input("Search transcript")
-    for c in project.captions:
-        if not query or query.casefold() in c.text.casefold():
-            st.write(f"{c.start:.2f}–{c.end:.2f}s · **{project.speakers[c.speaker]}**")
-            st.text(c.text)
+    for is_sound, c in timeline(project, show_sounds):
+        text = format_sound(c) if is_sound else c.text
+        if not query or query.casefold() in text.casefold():
+            who = "Sound" if is_sound else project.speakers[c.speaker]
+            st.write(f"{c.start:.2f}–{c.end:.2f}s · **{who}**")
+            st.text(text)
 with words:
     st.caption("These are original model/sample words. Empty times mean alignment was unavailable.")
     st.dataframe(pd.DataFrame([
@@ -166,13 +195,15 @@ with words:
     ]), hide_index=True, width="stretch")
 with export:
     include_emotions = st.checkbox("Include available emotion cues in subtitles")
+    include_sounds = st.checkbox("Include background sound cues in subtitles", value=True)
     cols = st.columns(3)
-    cols[0].download_button("Download SRT", to_srt(project, include_emotions),
+    cols[0].download_button("Download SRT", to_srt(project, include_emotions, include_sounds),
                           "captions.srt", "text/plain", width="stretch")
-    cols[1].download_button("Download VTT", to_vtt(project, include_emotions),
+    cols[1].download_button("Download VTT", to_vtt(project, include_emotions, include_sounds),
                           "captions.vtt", "text/vtt", width="stretch")
     cols[2].download_button("Save project JSON", to_json(project),
                           "caption-project.json", "application/json", width="stretch")
-    st.caption("JSON preserves names, edits, original words, and model metadata. Media and tokens are excluded. "
-               "SRT carries speaker names; VTT adds color styling where supported.")
+    st.caption("JSON preserves names, edits, original words, sound cues, and model metadata. "
+               "Media and tokens are excluded. SRT carries speaker names; VTT adds color styling "
+               "where supported. Sound cues export as their own bracketed cues, such as [dog barking].")
     st.json(project.metadata, expanded=False)
